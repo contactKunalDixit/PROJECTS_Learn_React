@@ -44,13 +44,14 @@ todo: This automatic reloading is known as "Hot module reloading"
 */
 
 // Now we need to render this output "Hello World" inside real DOM, and that's why we have imported the object 'ReactDOM' from 'react-dom' module.
-let reactOutput=ReactDOM
-console.log(reactOutput)
+// let reactOutput=ReactDOM
+// console.log(reactOutput)
+console.log(ReactDOM)
 
 ReactDOM.render(element, document.getElementById("root"))
 
 /*
  * In real world application, instead of rendering one JSX element in the DOM, we'd like to replace this simple JSX expression <h1>Hello World</h1>, with the app component
-* This app component is the root component for our application, it includes children like navigation bar, side bar, profile etc and other elements. so we'll have a tree of components, and which will produce a complex looking markup. 
+* This app component is the root component for our application, it includes children like navigation bar, side bar, profile etc and other elements. so we'll have a tree of components, and which will eventually produce a complex looking markup. 
 */
 
