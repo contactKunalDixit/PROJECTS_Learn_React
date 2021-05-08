@@ -1,0 +1,1 @@
+// For detailed notes on ES6 features and explanation, refer to es6-refresher >> src >> index.js
