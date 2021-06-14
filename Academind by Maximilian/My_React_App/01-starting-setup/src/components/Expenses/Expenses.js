@@ -28,13 +28,15 @@ function Expenses(props) {
 	*/
 
 	const filterChangeHandler = (selectedYear) => {
-		setFilteredYear(selectedYear);					/* This function will do 2 things: 1st it will assign a new value (the arguemnt that is being passed) to the STATE aka the variable 'filteredYear' . 2nd, It'll also trigger REACT to re-EVALUATE the entire component again, thereby resetting all places where the state was being used, with the new value of the STATE
+		setFilteredYear(
+			selectedYear
+		); /* This function will do 2 things: 1st it will assign a new value (the arguemnt that is being passed) to the STATE aka the variable 'filteredYear' . 2nd, It'll also trigger REACT to re-EVALUATE the entire component again, thereby resetting all places where the state was being used, with the new value of the STATE
 		React will observe any changes it detects compared from the last time it evaluated this component and shows it on to the screen
 		*/
-		/* 
-		*  calling the setFilteredYear () MAY not change the value right away but rather SCHEDULES this STATE UPDATE to be executed and implemented post the re-EVALUATION cycle. 
- 		*/
-		
+		/*
+		 *  calling the setFilteredYear () MAY not change the value right away but rather SCHEDULES this STATE UPDATE to be executed and implemented post the re-EVALUATION cycle.
+		 */
+
 		console.log(selectedYear);
 	};
 	return (
@@ -45,7 +47,7 @@ function Expenses(props) {
 					onChangeFilter={filterChangeHandler}
 				/>
 				{props.itemData.map((i) => {
-					/* Using array.map(), we are transforming each item in the array 'props.itemData, to a new array with each item having trasnformed into a JSX elements */
+					/* Using array.map(), we are transforming each item in the array 'props.itemData, to a new array with each item having trasnformed into a JSX elements...Thus handling it dyna,ically */
 					return (
 						<ExpenseItem title={i.title} date={i.date} amount={i.amount} />
 					);
