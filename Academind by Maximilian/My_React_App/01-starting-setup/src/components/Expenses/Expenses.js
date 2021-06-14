@@ -20,7 +20,7 @@ function Expenses(props) {
 					onChangeFilter={filterChangeHandler}
 				/>
 				{props.itemData.map((i) => {
-					/* Using array.map(), we are transforming each item in the array props.itemData, to a new array with each item having trasnformed into a JSX elements */
+					/* Using array.map(), we are transforming each item in the array 'props.itemData, to a new array with each item having trasnformed into a JSX elements */
 					return (
 						<ExpenseItem title={i.title} date={i.date} amount={i.amount} />
 					);
