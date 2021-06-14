@@ -19,31 +19,12 @@ function Expenses(props) {
 					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
-				<ExpenseItem
-					title={props.itemData[0].title}
-					date={props.itemData[0].date}
-					amount={props.itemData[0].amount}
-				/>
-				<ExpenseItem
-					title={props.itemData[1].title}
-					date={props.itemData[1].date}
-					amount={props.itemData[1].amount}
-				/>
-				<ExpenseItem
-					title={props.itemData[2].title}
-					date={props.itemData[2].date}
-					amount={props.itemData[2].amount}
-				/>
-				<ExpenseItem
-					title={props.itemData[3].title}
-					date={props.itemData[3].date}
-					amount={props.itemData[3].amount}
-				/>
-				<ExpenseItem
-					title={props.itemData[4].title}
-					date={props.itemData[4].date}
-					amount={props.itemData[4].amount}
-				/>
+				{props.itemData.map((i) => {
+					/* Using array.map(), we are transforming each item in the array props.itemData, to a new array with each item having trasnformed into a JSX elements */
+					return (
+						<ExpenseItem title={i.title} date={i.date} amount={i.amount} />
+					);
+				})}
 			</Card>
 		</div>
 	);
