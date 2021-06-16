@@ -2,7 +2,6 @@ import React from 'react';
 import './ExpenseItem.css';
 import Card from '../UI/Card';
 import ExpenseDate from './ExpenseDate';
-// ! This component also happens to be a 'stateless' aka 'presentational' aka 'Dumb' component because it doesnt have any internal state. Its just there to output/ return some data
 
 const ExpenseItem = (props) => {
 	return (
@@ -17,3 +16,5 @@ const ExpenseItem = (props) => {
 };
 
 export default ExpenseItem;
+
+// ! This component also happens to be a 'stateless' aka 'presentational' aka 'Dumb' component because it doesnt have any internal state. Its just there to output/ return some data
