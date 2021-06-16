@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from './ExpensesFilter';
+import ExpensesList from "./ExpensesList"
 
 function Expenses(props) {
 	const [filteredYear, setFilteredYear] = useState('2020'); /* 1 */
@@ -15,29 +16,58 @@ function Expenses(props) {
 	const filteredExpenses = props.itemData.filter((i) => {
 		return i.date.getFullYear().toString() === filteredYear;
 	});
-
 	/* 3 */
 
+
+								// **********************************
+								/* 8  ** All of the below content has been made a seperate component - ExpensesList.js*/ 
+
+									// let expensesContent = <p>No Expenses found</p>				/* 7 */
+									
+									// if (filteredExpenses.length > 0) {
+									// 	expensesContent = filteredExpenses.map((i) => {
+									
+									// 						return (
+									// 							<ExpenseItem
+									// 								key={i.id}
+									// 								title={i.title}
+									// 								date={i.date}
+									// 								amount={i.amount}
+									// 							/>
+									// 						);
+									// 					})
+									// 
+								// **********************************
+	
 	return (
 		<div>
-			<Card className='expenses'>
+			<Card className='expenses'>			 
 				<ExpensesFilter
 					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
 
-				{/* {props.itemData.map((i) => {  Switching from this to below */}
-				{filteredExpenses.map((i) => {
-					/* 4 */
-					return (
-						<ExpenseItem
-							key={i.id}
-							title={i.title}
-							date={i.date}
-							amount={i.amount}
-						/>
-					);
-				})}
+									{/* 8  ** All of the below content has been made a seperate component - ExpensesList.js*/  }
+
+									{/* {expensesContent}	7 */}
+									
+									{/* {filteredExpenses.length === 0 && <p>No Exxxpenses to Show</p>} */}
+									{/* {filteredExpenses.length > 0 && (filteredExpenses.map((i) => { */}
+									{/* 4 */
+									/* 6 */}
+										{/* return ( */}
+											{/* <ExpenseItem */}
+												{/* key={i.id} */}
+												{/* title={i.title} */}
+												{/* date={i.date} */}
+												{/* amount={i.amount} */}
+											{/* /> */}
+										{/* ); */}
+									{/* })) */}
+				
+
+{ <ExpensesList items={filteredExpenses}/>}
+
 			</Card>
 		</div>
 	);
@@ -113,3 +143,49 @@ props.itemData.map((i,index) => {
 					);
 				})}
  */
+
+
+/*
+!	6.
+*	Implementing a condition which can be done in either of below ways:
+	
+	*	The use of Ternerary operator instead of usual 'conditional' statements:
+	{filteredExpenses.length===0?(<p>There is no Expense to show</p>):(
+	filteredExpenses.map((i)=>{
+		return (
+			<Expense Item 
+			key = {i.id} 
+			title={i.title}
+			amount = {i.amount}
+			date = {i.date}
+			/> 
+			))}
+	)}
+
+	*	Or else use of '&&' operator: 
+			If the first condition in first line is true, then the follow up instruction after '&&' gets executed. Else, the second line condition gets checked and the follow up instruction gets executed.
+   
+			{filteredYear.length === 0 && (<p>There is No expense</p>)}
+			{filteredYear.length > 0 && (filteredExpenses.map((i)=>{
+		return (
+			<Expense Item 
+			key = {i.id} 
+			title={i.title}
+			amount = {i.amount}
+			date = {i.date}
+			/> 
+			))})}
+
+	*	Or refer to the point 7		
+*/
+
+/*
+!	7. 
+*	Only the calculated value of expensesContent gets through to here. All the conbdional aspect has been taken care off outside of the component return statement
+
+ */
+
+/*
+! 8. 
+*	The conditional part has been made a seperate <ExpensesList/> component 
+*/
