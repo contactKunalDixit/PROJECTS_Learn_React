@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from './ExpensesFilter';
-import ExpensesList from "./ExpensesList"
+import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
 function Expenses(props) {
 	const [filteredYear, setFilteredYear] = useState('2020'); /* 1 */
@@ -18,56 +19,54 @@ function Expenses(props) {
 	});
 	/* 3 */
 
+	// **********************************
+	/* 8  ** All of the below content has been made a seperate component - ExpensesList.js*/
 
-								// **********************************
-								/* 8  ** All of the below content has been made a seperate component - ExpensesList.js*/ 
+	// let expensesContent = <p>No Expenses found</p>				/* 7 */
 
-									// let expensesContent = <p>No Expenses found</p>				/* 7 */
-									
-									// if (filteredExpenses.length > 0) {
-									// 	expensesContent = filteredExpenses.map((i) => {
-									
-									// 						return (
-									// 							<ExpenseItem
-									// 								key={i.id}
-									// 								title={i.title}
-									// 								date={i.date}
-									// 								amount={i.amount}
-									// 							/>
-									// 						);
-									// 					})
-									// 
-								// **********************************
-	
+	// if (filteredExpenses.length > 0) {
+	// 	expensesContent = filteredExpenses.map((i) => {
+
+	// 						return (
+	// 							<ExpenseItem
+	// 								key={i.id}
+	// 								title={i.title}
+	// 								date={i.date}
+	// 								amount={i.amount}
+	// 							/>
+	// 						);
+	// 					})
+	//
+	// **********************************
+
 	return (
 		<div>
-			<Card className='expenses'>			 
+			<Card className='expenses'>
 				<ExpensesFilter
 					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
 
-									{/* 8  ** All of the below content has been made a seperate component - ExpensesList.js*/  }
+				{/* 8  ** All of the below content has been made a seperate component - ExpensesList.js*/}
 
-									{/* {expensesContent}	7 */}
-									
-									{/* {filteredExpenses.length === 0 && <p>No Exxxpenses to Show</p>} */}
-									{/* {filteredExpenses.length > 0 && (filteredExpenses.map((i) => { */}
-									{/* 4 */
-									/* 6 */}
-										{/* return ( */}
-											{/* <ExpenseItem */}
-												{/* key={i.id} */}
-												{/* title={i.title} */}
-												{/* date={i.date} */}
-												{/* amount={i.amount} */}
-											{/* /> */}
-										{/* ); */}
-									{/* })) */}
-				
+				{/* {expensesContent}	7 */}
 
-{ <ExpensesList items={filteredExpenses}/>}
+				{/* {filteredExpenses.length === 0 && <p>No Exxxpenses to Show</p>} */}
+				{/* {filteredExpenses.length > 0 && (filteredExpenses.map((i) => { */}
+				{/* 4 */
+				/* 6 */}
+				{/* return ( */}
+				{/* <ExpenseItem */}
+				{/* key={i.id} */}
+				{/* title={i.title} */}
+				{/* date={i.date} */}
+				{/* amount={i.amount} */}
+				{/* /> */}
+				{/* ); */}
+				{/* })) */}
+				<ExpensesChart expenses={filteredExpenses}></ExpensesChart>
 
+				{<ExpensesList items={filteredExpenses} />}
 			</Card>
 		</div>
 	);
@@ -143,7 +142,6 @@ props.itemData.map((i,index) => {
 					);
 				})}
  */
-
 
 /*
 !	6.
