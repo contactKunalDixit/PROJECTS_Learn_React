@@ -21,10 +21,10 @@ class Counters extends Component {
 		// finding index value of the specific object from newCounters array;
 
 		newCounters[index] = { ...countersItem };
-		// destructuring : the specific object recieved through uplifting ..Establishing the specific uplifted object's clone that gets to reside at that specific index position
+		//...REFER TO #1 BELOW:
 
 		newCounters[index].value++;
-		// incrementing the value property of the object (by 1) positioned at that index value
+		// incrementing the value property of the object (by 1) positioned at that index value. This object is the same object which was cloned in the last step
 
 		this.setState({ counters: newCounters });
 		// Updating the state
@@ -74,3 +74,10 @@ class Counters extends Component {
 }
 
 export default Counters;
+
+/*
+
+REFERENCE: 
+
+#1.	Spread Operators: Since we are using  a spread operator on a nested object, hence it wouldve deep copied only the 1st top most data and shallow copied the nested objects. Thus, we need to use a spread operator again here so that we dont end up mutating the original object
+*/
