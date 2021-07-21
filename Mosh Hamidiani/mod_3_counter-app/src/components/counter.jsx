@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-	// constructor() {
-	// 	super();
-	// 	console.log(this);
-	// 	this.handleIncrement = this.handleIncrement.bind(this); //or else, in order to avoid binding of each event handler like this, USE ARROW function
-	// }
-
 	formatCount() {
 		const { value } = this.props.countersItem;
 		return value === 0 ? 'Zero' : value;
