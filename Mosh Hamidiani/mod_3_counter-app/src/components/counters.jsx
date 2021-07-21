@@ -3,22 +3,21 @@ import Counter from './counter';
 
 class Counters extends Component {
 	render() {
-		if (this.props.counters.length === 0) {
+		const { onReset, counters, onIncrement, onDelete } = this.props; // Destructuring being used for clean up purpose
+
+		if (counters.length === 0) {
 			return <h4>There is noting to show in the list..Pls refresh</h4>;
 		}
 		return (
 			<div>
-				<button
-					onClick={this.props.onReset}
-					className='btn btn-sm btn-primary m-2'
-				>
+				<button onClick={onReset} className='btn btn-sm btn-primary m-2'>
 					Reset
 				</button>
-				{this.props.counters.map((countersItem) => (
+				{counters.map((countersItem) => (
 					<Counter
 						key={countersItem.id}
-						onDelete={this.props.onDelete}
-						onIncrement={this.props.onIncrement}
+						onDelete={onDelete}
+						onIncrement={onIncrement}
 						countersItem={countersItem}
 					></Counter>
 				))}
