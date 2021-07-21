@@ -3,7 +3,8 @@ import Counter from './counter';
 
 class Counters extends Component {
 	render() {
-		const { onReset, counters, onIncrement, onDelete } = this.props; // Destructuring being used for clean up purpose
+		const { onReset, counters, onIncrement, onDelete, onDecrement } =
+			this.props; // Destructuring being used for clean up purpose
 
 		if (counters.length === 0) {
 			return <h4>There is noting to show in the list..Pls refresh</h4>;
@@ -19,6 +20,7 @@ class Counters extends Component {
 						onDelete={onDelete}
 						onIncrement={onIncrement}
 						countersItem={countersItem}
+						onDecrement={onDecrement}
 					></Counter>
 				))}
 			</div>
