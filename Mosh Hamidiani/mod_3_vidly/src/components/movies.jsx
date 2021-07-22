@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { getMovies } from '../services/fakeMovieService';
 
+import Like from './common/like';
+
 class Movies extends Component {
 	state = {
 		movies: getMovies(),
@@ -11,6 +13,16 @@ class Movies extends Component {
 		const newMovies = this.state.movies.filter((item) => {
 			return item._id !== placeholder._id;
 		});
+		this.setState({ movies: newMovies });
+	};
+
+	handleLike = (movieItem) => {
+		console.log(movieItem);
+		const newMovies = [...this.state.movies];
+		const index = newMovies.indexOf(movieItem);
+
+		newMovies[index] = { ...movieItem };
+		newMovies[index].liked = !newMovies[index].liked;
 		this.setState({ movies: newMovies });
 	};
 
@@ -32,6 +44,7 @@ class Movies extends Component {
 							<th>Stock</th>
 							<th>Rate</th>
 							<th></th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -42,6 +55,18 @@ class Movies extends Component {
 									<td> {i.genre.name}</td>
 									<td>{i.numberInStock}</td>
 									<td>{i.dailyRentalRate}</td>
+
+									<td>
+										{
+											<Like
+												liked={i.liked}
+												onClick={() => {
+													this.handleLike(i);
+												}}
+											></Like>
+										}
+									</td>
+
 									<td>
 										{' '}
 										<button
