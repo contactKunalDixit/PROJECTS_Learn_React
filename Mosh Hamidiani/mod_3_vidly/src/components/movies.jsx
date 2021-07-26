@@ -5,6 +5,7 @@ import Pagination from './common/pagination';
 import { paginate } from '../utils/paginate';
 import ListGroup from './common/listGroup';
 import MoviesTable from './moviesTable';
+import _ from 'lodash';
 
 class Movies extends Component {
 	state = {
@@ -12,10 +13,11 @@ class Movies extends Component {
 		genres: [],
 		pageSize: 4,
 		currentPage: 1,
+		sortColumn: { path: 'title', order: 'asc' },
 	};
 
 	componentDidMount() {
-		const genres = [{ name: 'All Genres' }, ...getGenres()]; // 4
+		const genres = [{ name: 'All Genres', _id: '' }, ...getGenres()]; // 4
 		this.setState({ movies: getMovies(), genres: genres });
 	}
 
@@ -44,6 +46,9 @@ class Movies extends Component {
 		this.setState({ selectedGenre: genre, currentPage: 1 }); // 3.1 && 3.2
 	};
 
+	handleSort = (path) => {
+		this.state({ sortColumn: { path: path, order: 'asc' } });
+	};
 	render() {
 		const { length: count } = this.state.movies;
 		const { pageSize, currentPage, selectedGenre, movies } = this.state; // 5
@@ -76,6 +81,7 @@ class Movies extends Component {
 						Like={this.Like}
 						onDelete={this.handleDelete}
 						onLike={this.handleLike}
+						onSort={this.handlerSort}
 					></MoviesTable>
 					<Pagination // *1
 						itemsCount={filteredMovies.length}
