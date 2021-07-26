@@ -6,8 +6,10 @@ const Pagination = (props) => {
 	const { itemsCount, pageSize, onPageChange, currentPage } = props;
 	console.log(currentPage);
 	const pagesCount = Math.ceil(itemsCount / pageSize);
+
 	if (pagesCount === 1) return null;
-	const pages = _.range(1, pagesCount + 1); //This function has been used from a lodash library ; This function returns an array of range of 1st arguement's value and second arguement's values and stores this range in the pages variable
+
+	const pages = _.range(1, pagesCount + 1); //This function has been used from a lodash library ; This function returns an array of range of 1st arguement's value and till second arguement's values and stores this range in the variable 'pages'
 
 	return (
 		<nav>
