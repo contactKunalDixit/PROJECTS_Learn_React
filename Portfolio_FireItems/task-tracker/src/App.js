@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import './';
 import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 
 const App = () => {
 	const _tasks = [
@@ -26,7 +27,15 @@ const App = () => {
 	];
 
 	const [tasks, setTasks] = useState(_tasks);
-	// const [value, setValue] = useState(false);
+
+	// Add a task
+	const addTask = (task) => {
+		const id = Math.floor(Math.random() * 1000) + 1;
+		let newTask = { id, ...task };
+		console.log(newTask);
+		let newTaskList = [...tasks, newTask];
+		setTasks(newTaskList);
+	};
 
 	// Delete a task
 	const delTask = (item) => {
@@ -46,7 +55,8 @@ const App = () => {
 	return (
 		<div className='container'>
 			<Header></Header>
-			{tasks.length !== 0 ? (
+			<AddTask onAdd={addTask}></AddTask>
+			{tasks.length > 0 ? (
 				<Tasks tasks={tasks} onDelete={delTask} onToggle={toggleReminder} />
 			) : (
 				<h4>All the tasks have been completed. Please add more to the list</h4>

@@ -11,7 +11,7 @@ const Task = ({ item, onDelete, onToggle }) => {
 				{item.text}
 				<FaTimes
 					style={{ color: 'red', cursor: 'pointer' }}
-					onClick={() => {
+					onDoubleClick={() => {
 						onDelete(item);
 					}}
 				></FaTimes>
