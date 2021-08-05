@@ -26,7 +26,7 @@ const App = () => {
 	];
 
 	const [tasks, setTasks] = useState(_tasks);
-	const [value, setValue] = useState(false);
+	// const [value, setValue] = useState(false);
 
 	// Delete a task
 	const delTask = (item) => {
@@ -38,6 +38,10 @@ const App = () => {
 	// Toggle Reminder
 	const toggleReminder = (item) => {
 		console.log(item);
+		const data = tasks.map((i) =>
+			i.id === item.id ? { ...i, reminder: !i.reminder } : i
+		);
+		setTasks(data);
 	};
 	return (
 		<div className='container'>
