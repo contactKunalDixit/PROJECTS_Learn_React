@@ -27,9 +27,11 @@ const App = () => {
 	];
 
 	const [tasks, setTasks] = useState(_tasks);
+	const [showAddTask, setShowAddTask] = useState(false);
 
 	// Add a task
 	const addTask = (task) => {
+		// 'task' arguement would be an object here
 		const id = Math.floor(Math.random() * 1000) + 1;
 		let newTask = { id, ...task };
 		console.log(newTask);
@@ -52,10 +54,16 @@ const App = () => {
 		);
 		setTasks(data);
 	};
+
+	//ToggleAddButton
+
+	const toggleAddButton = () => {
+		setShowAddTask(!showAddTask);
+	};
 	return (
 		<div className='container'>
-			<Header></Header>
-			<AddTask onAdd={addTask}></AddTask>
+			<Header onAdd={toggleAddButton} showAdd={showAddTask}></Header>
+			{showAddTask && <AddTask onAdd={addTask}></AddTask>}
 			{tasks.length > 0 ? (
 				<Tasks tasks={tasks} onDelete={delTask} onToggle={toggleReminder} />
 			) : (
