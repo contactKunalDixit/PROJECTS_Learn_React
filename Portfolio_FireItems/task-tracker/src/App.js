@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
-import './';
+import { Route } from 'react-router-dom';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import Footer from './components/Footer';
+import About from './components/About';
 
 const App = () => {
 	const [tasks, setTasks] = useState([]);
@@ -80,8 +82,6 @@ const App = () => {
 	// 		tasks.map((task) =>
 	// 			task.id === id ? { ...task, reminder: data.reminder } : task
 	// 		)
-	// 	);
-	// };
 
 	//ToggleAddButton
 
@@ -90,13 +90,32 @@ const App = () => {
 	};
 	return (
 		<div className='container'>
-			<Header onAdd={toggleAddButton} showAdd={showAddTask}></Header>
-			{showAddTask && <AddTask onAdd={addTask}></AddTask>}
-			{tasks.length > 0 ? (
-				<Tasks tasks={tasks} onDelete={delTask} onToggle={toggleReminder} />
-			) : (
-				<h4>All the tasks have been completed. Please add more to the list</h4>
-			)}
+			<Header onAdd={toggleAddButton} showAdd={showAddTask} />
+
+			<Route
+				path='/'
+				exact
+				render={(props) => {
+					return (
+						<>
+							{showAddTask && <AddTask onAdd={addTask}></AddTask>}
+							{tasks.length > 0 ? (
+								<Tasks
+									tasks={tasks}
+									onDelete={delTask}
+									onToggle={toggleReminder}
+								/>
+							) : (
+								<h4>
+									All the tasks have been completed. Please add more to the list
+								</h4>
+							)}
+						</>
+					);
+				}}
+			></Route>
+			<Route path='/about' component={About}></Route>
+			<Footer></Footer>
 		</div>
 	);
 };
