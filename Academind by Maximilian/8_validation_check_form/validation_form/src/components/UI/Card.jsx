@@ -18,5 +18,9 @@ props.children is used to display whatever you include between the opening and c
 
 /*
   'props.className' is being passed as any other props from the parent to the child component.
-  This is being done because unlike other html elements e.g. label, form, input..Card is our own created customized component and hence would not understand what 'className' should do. It just treats className as any other named attribute that we have witnessed in the customised components. Thus we pass it as any other props and then define it in the child component i.e. in here above <div> where the <div> woul;d understand that 'className' is an alternative for 'class' in React
+  This is being done because unlike other html elements e.g. label, form, input..'Card' is our own created customized component and hence would not understand what 'className' should do. It just treats className as any other named attribute that we have been using in the customised components. Thus we pass it as any other props and then define it in the child component with <div>.
+
+  Here, above, we are joining 2 CSS oriented classes. one, is internally coming from the module 'Card', the second one is externally being passed as a prop from parent component.
+
+  .. and that's how the internal and external classes can be merged together
  */
