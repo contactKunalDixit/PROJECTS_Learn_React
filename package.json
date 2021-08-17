@@ -2,5 +2,8 @@
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-plugin-react": "^7.23.2"
+  },
+  "dependencies": {
+    "typescript": "^4.3.5"
   }
 }
