@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from './topbar.module.css';
-import { Assessment, NotificationsNone } from '@material-ui/icons';
+import {
+	Assessment,
+	NotificationsNone,
+	Language,
+	Settings,
+} from '@material-ui/icons';
 
 const TopBar = () => {
 	return (
@@ -16,6 +21,10 @@ const TopBar = () => {
 					<div className={styles.iconWrapper}>
 						<div className={styles.topbarIconContainer}>
 							<NotificationsNone fontSize='medium' />
+							<span className={styles.topIconBadge}>2</span>
+							<Language></Language>
+							<span className={styles.topIconBadge}>2</span>
+							<Settings></Settings>
 							<span className={styles.topIconBadge}>2</span>
 						</div>
 					</div>
