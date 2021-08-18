@@ -1,9 +1,15 @@
-import TopBar from './components/TopBar';
+import TopBar from './components/topbar/TopBar';
+import Sidebar from './components/sidebar/Sidebar';
 
+import styles from './App.module.css';
 function App() {
 	return (
 		<div>
-			<TopBar>Hello World</TopBar>
+			<TopBar></TopBar>
+			<div className={styles.container}>
+				<Sidebar className={styles.sidebar}></Sidebar>
+				<div className={styles.otherPiece}> This is a temporary piece</div>
+			</div>
 		</div>
 	);
 }

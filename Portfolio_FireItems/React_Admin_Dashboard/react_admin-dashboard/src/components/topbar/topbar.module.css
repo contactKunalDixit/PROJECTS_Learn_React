@@ -2,6 +2,9 @@
 	width: 100%;
 	height: 50px;
 	background-color: rgb(241, 178, 136);
+	position: sticky;
+	top: 0;
+	z-index: 999;
 }
 
 .topbarWrapper {
@@ -10,6 +13,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	color: rgb(55, 53, 53);
 }
 
 .iconWrapper {
@@ -17,11 +21,16 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	cursor: pointer;
 }
 
 .topbarIconContainer {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(55, 53, 53);
+	cursor: pointer;
+	margin: 0 2px;
 }
 
 .topIconBadge {
@@ -37,4 +46,10 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 10px;
+}
+
+.topAvatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
 }

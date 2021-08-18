@@ -20,13 +20,22 @@ const TopBar = () => {
 				<div className={styles.topRight}>
 					<div className={styles.iconWrapper}>
 						<div className={styles.topbarIconContainer}>
-							<NotificationsNone fontSize='medium' />
-							<span className={styles.topIconBadge}>2</span>
-							<Language></Language>
-							<span className={styles.topIconBadge}>2</span>
-							<Settings></Settings>
+							<NotificationsNone fontSize='medium'></NotificationsNone>
+							<span className={styles.topIconBadge}>1</span>
+						</div>
+						<div className={styles.topbarIconContainer}>
+							<Language fontSize='medium'></Language>
 							<span className={styles.topIconBadge}>2</span>
 						</div>
+						<div className={styles.topbarIconContainer}>
+							<Settings fontSize='medium'></Settings>
+							<span className={styles.topIconBadge}>3</span>
+						</div>
+						<img
+							src='https://images.pexels.com/photos/5704720/pexels-photo-5704720.jpeg?cs=srgb&dl=pexels-anastasia-shuraeva-5704720.jpg&fm=jpg'
+							alt=''
+							className={`${styles.topAvatar} ${styles.topbarIconContainer}`}
+						/>
 					</div>
 				</div>
 			</div>
