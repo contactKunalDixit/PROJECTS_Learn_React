@@ -1,19 +1,25 @@
 import React from 'react';
 import styles from './topbar.module.css';
-import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
-import './topbar.css';
-import { red } from '@material-ui/core/colors';
+import { Assessment, NotificationsNone } from '@material-ui/icons';
+
 const TopBar = () => {
 	return (
-		<div className={styles.wrapper}>
+		<div className={styles.topbar}>
 			<div className={styles.topbarWrapper}>
 				<div className={styles.topLeft}>
 					<div className={styles.iconWrapper}>
-						<AssessmentIcon fontSize='large'></AssessmentIcon>
+						<Assessment fontSize='large'></Assessment>
 						<div>Smart_Analytics</div>
 					</div>
 				</div>
-				<div className={styles.topRight}>Right</div>
+				<div className={styles.topRight}>
+					<div className={styles.iconWrapper}>
+						<div className={styles.topbarIconContainer}>
+							<NotificationsNone fontSize='medium' />
+							<span className={styles.topIconBadge}>2</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
