@@ -3,6 +3,6 @@
 }
 .otherPiece {
 	flex: 4;
-	background-color: blueviolet;
+	background-color: rgb(188, 132, 241);
 	color: white;
 }
