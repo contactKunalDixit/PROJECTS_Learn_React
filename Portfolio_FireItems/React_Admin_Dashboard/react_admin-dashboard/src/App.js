@@ -6,7 +6,7 @@ function App() {
 	return (
 		<div>
 			<TopBar></TopBar>
-			<div style={{ display: 'flex' }}>
+			<div style={{ display: 'flex', marginTop: '10px' }}>
 				<Sidebar></Sidebar>
 				<Home> </Home>
 			</div>
