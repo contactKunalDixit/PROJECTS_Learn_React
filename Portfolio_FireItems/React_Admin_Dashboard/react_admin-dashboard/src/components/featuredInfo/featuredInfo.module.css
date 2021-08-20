@@ -19,5 +19,19 @@
 }
 
 .featuredMoneyContainer {
-	margin: 0 10px;
+	margin: 10px 0px;
+	display: flex;
+
+	align-items: center;
+}
+
+.featuredMoney {
+	font-style: 30px;
+	font-weight: 600;
+}
+
+.featuredMoneyRate {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
 }
