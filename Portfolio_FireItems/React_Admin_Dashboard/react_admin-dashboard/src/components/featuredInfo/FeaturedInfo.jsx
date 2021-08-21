@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './featuredInfo.module.css';
-import { ArrowDownward, ArrowUpward } from '@material-ui/icons';
+import {
+	ArrowDownward,
+	ArrowUpward,
+	DragHandleOutlined,
+} from '@material-ui/icons';
 const FeaturedInfo = () => {
 	return (
 		<div className={styles.featured}>
@@ -10,7 +14,10 @@ const FeaturedInfo = () => {
 					<span className={styles.featuredMoney}>$2454</span>
 					<span className={styles.featuredMoneyRate}>
 						-11.4
-						<ArrowDownward />
+						<ArrowDownward
+							className={`${styles.featuredIcon} ${styles.negative}`}
+							fontSize='small'
+						/>
 					</span>
 				</div>
 				<span className={styles.featuredSub}>Compared to Last month</span>
@@ -21,8 +28,11 @@ const FeaturedInfo = () => {
 				<div className={styles.featuredMoneyContainer}>
 					<span className={styles.featuredMoney}>$4454</span>
 					<span className={styles.featuredMoneyRate}>
-						-1.4
-						<ArrowDownward />
+						0
+						<DragHandleOutlined
+							className={`${styles.featuredIcon} ${styles.neutral}`}
+							fontSize='small'
+						/>
 					</span>
 				</div>
 				<span className={styles.featuredSub}>Compared to Last month</span>
@@ -34,7 +44,10 @@ const FeaturedInfo = () => {
 					<span className={styles.featuredMoney}>$2023</span>
 					<span className={styles.featuredMoneyRate}>
 						+2.1
-						<ArrowUpward />
+						<ArrowUpward
+							className={`${styles.featuredIcon} `}
+							fontSize='small'
+						/>
 					</span>
 				</div>
 				<span className={styles.featuredSub}>Compared to Last month</span>

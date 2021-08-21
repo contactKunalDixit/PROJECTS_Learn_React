@@ -15,7 +15,7 @@
 }
 
 .featuredTitle {
-	font-style: 20px;
+	font-size: 20px;
 }
 
 .featuredMoneyContainer {
@@ -26,7 +26,7 @@
 }
 
 .featuredMoney {
-	font-style: 30px;
+	font-size: 30px;
 	font-weight: 600;
 }
 
@@ -34,4 +34,22 @@
 	display: flex;
 	align-items: center;
 	margin-left: 20px;
+}
+
+.featuredIcon {
+	margin-left: 5px;
+	color: green;
+}
+
+.negative {
+	color: red;
+}
+
+.neutral {
+	color: black;
+}
+
+.featuredSub {
+	font-size: 15px;
+	color: rgb(113, 109, 109);
 }
