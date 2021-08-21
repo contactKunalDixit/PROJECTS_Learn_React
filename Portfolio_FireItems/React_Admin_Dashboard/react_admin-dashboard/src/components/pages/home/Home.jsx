@@ -3,6 +3,8 @@ import styles from './home.module.css';
 import FeaturedInfo from '../../featuredInfo/FeaturedInfo';
 import Charts from '../../charts/Charts';
 import { userData } from '../../dummyData';
+import WidgetSm from '../../widgetSmall/WidgetSm';
+import WidgetLg from '../../widgetLarge/WidgetLg';
 
 const Home = ({ dummyData }) => {
 	return (
@@ -15,6 +17,10 @@ const Home = ({ dummyData }) => {
 				grid
 				dataKey='Active users'
 			></Charts>
+			<div className={styles.homeWidgets}>
+				<WidgetSm></WidgetSm>
+				<WidgetLg></WidgetLg>
+			</div>
 		</div>
 	);
 };
