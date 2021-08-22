@@ -16,6 +16,12 @@
 	color: rgb(55, 53, 53);
 }
 
+.logoTitle {
+	font-family: 'Caveat', cursive;
+
+	font-size: 32px;
+}
+
 .iconWrapper {
 	height: 100%;
 	display: flex;

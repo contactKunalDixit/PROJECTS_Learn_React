@@ -6,6 +6,7 @@ import {
 	AttachMoney,
 	AssessmentOutlined,
 } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const QuickMenuSidebar = () => {
 	return (
@@ -14,7 +15,7 @@ const QuickMenuSidebar = () => {
 			<ul className={styles.sidebarList}>
 				<li className={styles.sidebarListItem}>
 					<PersonOutline fontSize='small' style={{ marginRight: '5px' }} />
-					Users
+					<Link to='/users'>Users</Link>
 				</li>
 
 				<li className={styles.sidebarListItem}>

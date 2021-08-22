@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './sidebar.module.css';
 import { HomeOutlined, TimelineOutlined, TrendingUp } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const DashboardSidebar = () => {
 	return (
@@ -9,7 +10,7 @@ const DashboardSidebar = () => {
 			<ul className={styles.sidebarList}>
 				<li className={`${styles.sidebarListItem} ${styles.active}`}>
 					<HomeOutlined fontSize='small' style={{ marginRight: '5px' }} />
-					Home
+					<Link to='/'>Home</Link>
 				</li>
 
 				<li className={styles.sidebarListItem}>

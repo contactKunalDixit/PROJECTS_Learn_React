@@ -9,12 +9,30 @@
 	font-weight: 600;
 }
 
+.widgetLgTable {
+	width: 100%;
+	border-spacing: 20px;
+	text-align: center;
+}
+
+.widgetLgUser {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+
 .widgetLgImg {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	margin-right: 30px;
 }
 
+.widgetLgDate,
+.widgetLgAmount {
+	font-weight: 400;
+}
 .widgetLgButton {
 	border: none;
 	border-radius: 10px;
@@ -23,11 +41,11 @@
 }
 
 .widgetLgButton.Approved {
-	background-color: #39cf95;
+	background-color: #30be5d;
 }
 .widgetLgButton.Declined {
-	background-color: #cf4f39;
+	background-color: #d63818;
 }
 .widgetLgButton.Pending {
-	background-color: #cfc039;
+	background-color: #d4cf9d;
 }

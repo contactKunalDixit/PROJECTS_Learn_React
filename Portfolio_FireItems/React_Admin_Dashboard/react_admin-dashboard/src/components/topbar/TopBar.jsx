@@ -14,7 +14,7 @@ const TopBar = () => {
 				<div className={styles.topLeft}>
 					<div className={styles.iconWrapper}>
 						<Assessment fontSize='large'></Assessment>
-						<div>Smart_Analytics</div>
+						<div className={styles.logoTitle}>Smart_Analytics</div>
 					</div>
 				</div>
 				<div className={styles.topRight}>
