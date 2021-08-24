@@ -5,6 +5,10 @@ import UserList from './components/pages/userList/UserList';
 import ProductList from './components/pages/productList/ProductList';
 import { Switch, Route } from 'react-router-dom';
 import User from './components/pages/SpecificUser/User';
+import NewUser from './components/pages/newUserPage/NewUser';
+import Product from './components/pages/SpecificProduct/Product';
+import NewProduct from './components/pages/newProductPage/NewProduct';
+
 function App() {
 	return (
 		<div>
@@ -13,9 +17,9 @@ function App() {
 				<Sidebar></Sidebar>
 				<Switch>
 					<Route path='/newUser'>
-						<newUser></newUser>
+						<NewUser></NewUser>
 					</Route>
-					<Route path='/users/:userId'>
+					<Route path='/user/:userId'>
 						<User />
 					</Route>
 					<Route path='/users'>
@@ -24,6 +28,12 @@ function App() {
 
 					<Route path='/products'>
 						<ProductList />
+					</Route>
+					<Route path='/newProduct'>
+						<NewProduct></NewProduct>
+					</Route>
+					<Route path='/product/:productId'>
+						<Product />
 					</Route>
 					<Route exact path='/'>
 						<Home />

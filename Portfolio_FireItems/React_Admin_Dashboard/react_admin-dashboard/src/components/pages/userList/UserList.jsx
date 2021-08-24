@@ -57,7 +57,7 @@ const UserList = () => {
 			renderCell: (params) => {
 				return (
 					<div className={styles.ActionsBox}>
-						<Link to={`${/users/}${params.row.id}`}>
+						<Link to={`${/user/}${params.row.id}`}>
 							<button className={styles.userListEdit}>Edit</button>
 						</Link>
 

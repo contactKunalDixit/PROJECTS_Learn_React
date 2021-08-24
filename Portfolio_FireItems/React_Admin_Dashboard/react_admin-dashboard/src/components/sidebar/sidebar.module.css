@@ -31,7 +31,7 @@
 .sidebarListItem {
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-end;
 	margin: 5px 0;
 	padding: 5px;
 	cursor: pointer;
@@ -41,4 +41,9 @@
 .sidebarListItem.active,
 .sidebarListItem:hover {
 	background-color: rgb(196, 196, 247);
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
 }

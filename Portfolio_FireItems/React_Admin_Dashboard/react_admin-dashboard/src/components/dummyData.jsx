@@ -150,3 +150,111 @@ export const userRows = [
 		transaction: '$120.00',
 	},
 ];
+
+export const prodData = [
+	{
+		name: 'Jan',
+		Unit_Sales: 3500,
+	},
+	{
+		name: 'Feb',
+		Unit_Sales: 1500,
+	},
+	{
+		name: 'Mar',
+		Unit_Sales: 5580,
+	},
+];
+
+export const productRows = [
+	{
+		id: 1,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 2,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 3,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 4,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 5,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 6,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 7,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 8,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 9,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+	{
+		id: 10,
+		productName: 'Apple AirPods',
+		Image:
+			'https://images.pexels.com/photos/7205060/pexels-photo-7205060.jpeg?cs=srgb&dl=pexels-levi-loot-7205060.jpg&fm=jpg',
+		stock: 123,
+		status: 'active',
+		price: '$120.00',
+	},
+];
