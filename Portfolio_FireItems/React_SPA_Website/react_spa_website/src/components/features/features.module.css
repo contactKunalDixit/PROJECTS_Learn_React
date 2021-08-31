@@ -1,0 +1,30 @@
+.featureContainer {
+	display: flex;
+}
+
+.leftSide {
+	width: 50%;
+}
+
+.AppImg {
+	width: 40%;
+}
+
+.rightSide {
+	width: 50%;
+}
+
+.title {
+}
+
+.subTitle {
+}
+
+.desc {
+}
+
+.Button {
+}
+
+.introShape {
+}

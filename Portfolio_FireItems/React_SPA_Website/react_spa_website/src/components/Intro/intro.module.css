@@ -1,0 +1,81 @@
+.introContainer {
+	/* height: calc(100vh - 50px); */
+	display: flex;
+	padding: 20px;
+}
+
+.left {
+	width: 50%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-size: 60px;
+	width: 70%;
+}
+
+.desc {
+	width: 70%;
+	margin-top: 20px;
+}
+
+.right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info {
+	width: 60%;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.infoButton {
+	padding: 15px;
+	background-color: darkblue;
+	color: white;
+	border-radius: 10px;
+	font-weight: bold;
+	border: none;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+}
+
+.phone {
+	color: rgb(201, 49, 75);
+	font-weight: bold;
+}
+
+.phoneText {
+	color: grey;
+	margin-top: 5px;
+}
+
+.rightImage {
+	width: 90%;
+	margin-left: 20%;
+}
+
+.introShape {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	clip-path: polygon(67% 0%, 100% 0%, 100% 100%, 55% 100%);
+	background-color: crimson;
+}
