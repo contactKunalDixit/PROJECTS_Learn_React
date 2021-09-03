@@ -6,7 +6,7 @@
 	position: absolute;
 	top: -60px;
 	left: -60px;
-	z-index: -2;
+	z-index: -10;
 	animation: square 20s linear alternate infinite;
 }
 
@@ -25,7 +25,7 @@
 	position: absolute;
 	top: 600px;
 	left: -50px;
-	z-index: -2;
+	z-index: -10;
 	animation: circle 25s linear alternate infinite;
 }
 
@@ -42,7 +42,7 @@
 	position: absolute;
 	top: 400px;
 	left: -50px;
-	z-index: -2;
+	z-index: -10;
 	animation: rectangle 15s linear alternate infinite;
 }
 @keyframes rectangle {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Woman from '../Img/surprised-young-asia_success.png';
+import Woman from '../Img/surprised-young-asia_success1.png';
 import AnimatedShapes from './AnimatedShapes';
 
 const IntroContainer = styled.div`
@@ -95,9 +95,7 @@ const PhoneText = styled.p`
 
 const Right = styled.div`
 	width: 40%;
-	/* display: flex;
-	justify-content: center; */
-	/* align-items: center; */
+
 	@media only screen and (max-width: 480px) {
 		display: none;
 	}
@@ -129,7 +127,6 @@ const Intro = () => {
 			</Left>
 			<Right>
 				<Image src={Woman}></Image>{' '}
-				{/* modify the image ...smooth the rough edges throug GIMP */}
 			</Right>
 			<AnimatedShapes></AnimatedShapes>
 		</IntroContainer>

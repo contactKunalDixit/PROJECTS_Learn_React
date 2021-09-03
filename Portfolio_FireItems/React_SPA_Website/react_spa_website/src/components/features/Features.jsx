@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './features.module.css';
-import AnimationShapes from '../AnimatedShapes/AnimatedShapes';
+import AnimatedShapes from '../AnimatedShapes/AnimatedShapes';
 const Features = () => {
 	return (
 		<div className={styles.featureContainer}>
@@ -10,16 +10,16 @@ const Features = () => {
 			<div className={styles.rightSide}>
 				<div className={styles.title}>
 					<div className={styles.title1}>
-						<h1>
-							<span>good </span>
+						<p>
+							<span className={styles.boldTitle}>good </span>
 							design
-						</h1>
+						</p>
 					</div>
 					<div className={styles.title2}>
-						<h1>
-							<span>good </span>
+						<p>
+							<span className={styles.boldTitle}>good </span>
 							business
-						</h1>
+						</p>
 					</div>
 				</div>
 				<div className={styles.subTitle}>
@@ -31,14 +31,16 @@ const Features = () => {
 					experiences, and print materials that communicate clearly, achieve
 					marketing goals, and look fantastic.
 				</div>
-				<div className={styles.subTitle}>
-					{' '}
+				<div className={styles.desc}>
 					We care your business and guarantee you to achieve marketing goals.
 				</div>
 
-				<button className={styles.Button}>Learn More</button>
-				<AnimationShapes></AnimationShapes>
+				<button className={styles.featureButton}>Learn More</button>
+
 				<div className={styles.introShape}></div>
+			</div>
+			<div className={styles.AnimatedShapes}>
+				<AnimatedShapes></AnimatedShapes>
 			</div>
 		</div>
 	);
