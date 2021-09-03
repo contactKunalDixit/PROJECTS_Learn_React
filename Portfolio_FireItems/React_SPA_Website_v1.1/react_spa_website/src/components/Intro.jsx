@@ -7,24 +7,39 @@ const IntroContainer = styled.div`
 	height: calc(100vh - 50px);
 	display: flex;
 	padding: 20px;
+	@media only screen and (max-width: 480px) {
+		flex-direction: column;
+	}
 `;
 
 const Left = styled.div`
-	width: 50%;
+	width: 60%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		height: 100%;
+	}
 `;
 
 const Title = styled.h1`
+	width: 60%;
 	font-size: 60px;
-	width: 70%;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		font-size: 50px;
+	}
 `;
 
 const Desc = styled.p`
 	width: 70%;
 	margin-top: 20px;
+	font-size: 20px;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+	}
 `;
 
 const Info = styled.div`
@@ -33,6 +48,10 @@ const Info = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		flex-direction: column;
+	}
 `;
 
 const InfoButton = styled.button`
@@ -48,6 +67,9 @@ const InfoButton = styled.button`
 		background-color: cyan;
 		color: black;
 	}
+	@media only screen and (max-width: 480px) {
+		margin-bottom: 20px;
+	}
 `;
 
 const Contact = styled.div`
@@ -58,23 +80,33 @@ const Contact = styled.div`
 const Phone = styled.p`
 	color: rgb(201, 49, 75);
 	font-weight: bold;
+	@media only screen and (max-width: 480px) {
+		color: black;
+	}
 `;
 
 const PhoneText = styled.p`
 	color: grey;
 	margin-top: 5px;
+	@media only screen and (max-width: 480px) {
+		color: black;
+	}
 `;
 
 const Right = styled.div`
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 40%;
+	/* display: flex;
+	justify-content: center; */
+	/* align-items: center; */
+	@media only screen and (max-width: 480px) {
+		display: none;
+	}
 `;
 
 const Image = styled.img`
-	width: 100%;
-	margin-left: 50px;
+	width: 110%;
+	margin-left: 10px;
+	margin-top: 80px;
 `;
 
 const Intro = () => {

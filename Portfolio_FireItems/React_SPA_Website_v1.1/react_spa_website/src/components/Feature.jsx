@@ -6,10 +6,17 @@ import AnimatedShapes from './AnimatedShapes';
 const FeatureContainer = styled.div`
 	display: flex;
 	height: 100vh;
+	@media only screen and (max-width: 480px) {
+		flex-direction: column;
+		padding: 30px 20px;
+	}
 `;
 
 const Left = styled.div`
 	width: 50%;
+	@media only screen and (max-width: 480px) {
+		display: none;
+	}
 `;
 
 const Image = styled.img`
@@ -21,6 +28,9 @@ const Right = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+	}
 `;
 
 const Title = styled.span`

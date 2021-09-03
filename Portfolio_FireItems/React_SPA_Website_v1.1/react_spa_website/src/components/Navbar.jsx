@@ -40,6 +40,9 @@ const MenuGroup = styled.ul`
 	align-items: center;
 	padding-left: 0;
 	margin-left: 30px;
+	@media only screen and (max-width: 480px) {
+		display: none;
+	}
 `;
 
 const MenuItem = styled.li`
