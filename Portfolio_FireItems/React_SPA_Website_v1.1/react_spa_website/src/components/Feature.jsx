@@ -5,6 +5,7 @@ import AnimatedShapes from './AnimatedShapes';
 
 const FeatureContainer = styled.div`
 	display: flex;
+	height: 100vh;
 `;
 
 const Left = styled.div`
