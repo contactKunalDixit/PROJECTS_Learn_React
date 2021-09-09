@@ -61,6 +61,7 @@ function App() {
 			</Container>
 			<Container>
 				<Service></Service>
+				<ServiceShape></ServiceShape>
 			</Container>
 			<Container>
 				<Price></Price>

@@ -22,8 +22,8 @@ const Left = styled.div`
 
 const Image = styled.img`
 	display: ${(props) => props.open && 'none'};
-	height: 100%;
-	margin-left: 100px;
+	height: 120%;
+	margin-left: -50px;
 `;
 
 const Video = styled.video`
@@ -126,10 +126,12 @@ const Service = () => {
 				<Wrapper>
 					<Title>Simple process to start</Title>
 					<Desc>
-						We provide digital experience services to startups and small
-						businesses to looking for a partner of their digital media, design &
-						development, lead generation and communications requirents. We work
-						with you, not for you. Although we have a great resources
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+						nostrum exercitationem ex amet unde id nesciunt autem atque est ut
+						officia illum debitis, expedita natus suscipit? Reiciendis tempora
+						omnis dicta nobis? Sint ratione iste, doloribus corrupti et quidem
+						natus. Ipsum unde soluta animi officiis quisquam quia esse
+						reprehenderit tempore excepturi!
 					</Desc>
 					<CardContainer>
 						<MiniCard />
