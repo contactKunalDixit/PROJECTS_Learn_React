@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 
+import { sliderItems } from '../data';
+
 const Container = styled.div`
 	width: 100%;
-	/* height: calc(100vh - 90px); */
-	height: 100vh;
+	height: calc(100vh - 90px);
+	/* height: 100vh; */
 	display: flex;
 
 	position: relative;
@@ -29,12 +31,14 @@ const Arrow = styled.div`
 	right: ${(props) => props.direction === 'Right' && '10px'};
 	cursor: pointer;
 	opacity: 0.5;
-	z-index: 100;
+	z-index: 2;
 `;
 
 const Wrapper = styled.div`
 	height: 100%;
 	display: flex;
+	transform: translateX(${(props) => props.slideIndex * -100}vw);
+	transition: all 1.5s ease;
 `;
 
 const SlideContainer = styled.div`
@@ -73,53 +77,43 @@ const Button = styled.button`
 	background-color: transparent;
 	letter-spacing: 1px;
 	cursor: pointer;
+
+	&:hover {
+		background-color: darkblue;
+		color: white;
+	}
 `;
 
 const Slider = () => {
+	const [slideIndex, setSlideIndex] = useState(0);
+
+	const handleClick = (direction) => {
+		if (direction === 'Left') {
+			setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+		} else {
+			setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+		}
+	};
 	return (
 		<Container>
-			<Arrow direction='Left'>
+			<Arrow direction='Left' onClick={() => handleClick('Left')}>
 				<ArrowBackIosOutlinedIcon style={{ color: 'black' }} />
 			</Arrow>
-			<Wrapper>
-				<SlideContainer bg='f5fafd'>
-					<ImgContainer>
-						<Image src='https://i.ibb.co/XsdmR2c/1.png' />
-					</ImgContainer>
-					<InfoContainer>
-						<Title>Summer Sale</Title>
-						<Desc>
-							DON'T COMPROMISE ON STYLE! GET FLAT 50% OFF ON NEW ARRIVALS
-						</Desc>
-						<Button>SHOP NOW</Button>
-					</InfoContainer>
-				</SlideContainer>
-				<SlideContainer bg='fcf1ed'>
-					<ImgContainer>
-						<Image src='https://i.ibb.co/XsdmR2c/1.png' />
-					</ImgContainer>
-					<InfoContainer>
-						<Title>Winter Sale</Title>
-						<Desc>
-							DON'T COMPROMISE ON STYLE! GET FLAT 50% OFF ON NEW ARRIVALS
-						</Desc>
-						<Button>SHOP NOW</Button>
-					</InfoContainer>
-				</SlideContainer>
-				<SlideContainer bg='fbf0f4'>
-					<ImgContainer>
-						<Image src='https://i.ibb.co/XsdmR2c/1.png' />
-					</ImgContainer>
-					<InfoContainer>
-						<Title>Popular Sale</Title>
-						<Desc>
-							DON'T COMPROMISE ON STYLE! GET FLAT 50% OFF ON NEW ARRIVALS
-						</Desc>
-						<Button>SHOP NOW</Button>
-					</InfoContainer>
-				</SlideContainer>
+			<Wrapper slideIndex={slideIndex}>
+				{sliderItems.map((item) => (
+					<SlideContainer bg={item.bg} key={item.id}>
+						<ImgContainer>
+							<Image src={item.img} />
+						</ImgContainer>
+						<InfoContainer>
+							<Title>{item.title}</Title>
+							<Desc>{item.desc}</Desc>
+							<Button>SHOP NOW</Button>
+						</InfoContainer>
+					</SlideContainer>
+				))}
 			</Wrapper>
-			<Arrow direction='Right'>
+			<Arrow direction='Right' onClick={() => handleClick('Right')}>
 				<ArrowForwardIosOutlinedIcon style={{ color: 'black' }} />
 			</Arrow>
 		</Container>
