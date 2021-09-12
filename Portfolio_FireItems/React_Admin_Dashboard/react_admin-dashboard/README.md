@@ -1,3 +1,12 @@
+Libbraries n Dependencies:
+
+material-ui/core
+material-ui/icons
+material-ui/data-grid
+react-icons
+react-router-dom
+recharts
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
