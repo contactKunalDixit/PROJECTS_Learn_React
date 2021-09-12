@@ -81,6 +81,7 @@ const Button = styled.button`
 	&:hover {
 		background-color: darkblue;
 		color: white;
+		transform: scale(1.1);
 	}
 `;
 
