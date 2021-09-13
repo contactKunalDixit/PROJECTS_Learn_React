@@ -32,11 +32,7 @@ export const categories = [
 		img: 'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 		title: 'LOUNGEWEAR LOVE',
 	},
-	// {
-	// 	id: 3,
-	// 	img: 'https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-	// 	title: 'LIGHT JACKETS',
-	// },
+
 	{
 		id: 3,
 		img: 'https://images.pexels.com/photos/1839904/pexels-photo-1839904.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
@@ -46,6 +42,11 @@ export const categories = [
 		id: 4,
 		img: 'https://images.pexels.com/photos/4427622/pexels-photo-4427622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 		title: 'BUSINESS WEAR',
+	},
+	{
+		id: 5,
+		img: 'https://images.pexels.com/photos/4723521/pexels-photo-4723521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+		title: 'THE PERFECT JEANS',
 	},
 ];
 

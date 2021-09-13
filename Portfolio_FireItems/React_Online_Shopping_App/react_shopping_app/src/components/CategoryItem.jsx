@@ -4,8 +4,13 @@ import styled from 'styled-components';
 const Container = styled.div`
 	flex: 1;
 	margin: 3px;
-	height: 90vh;
+	min-width: 300px;
+	height: 80vh;
 	position: relative;
+	transition: all 0.5s ease;
+	&:hover {
+		transform: scale(1.02);
+	}
 `;
 const Image = styled.img`
 	width: 100%;

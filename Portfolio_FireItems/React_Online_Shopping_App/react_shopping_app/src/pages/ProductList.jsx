@@ -6,9 +6,7 @@ import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import Products from '../components/Products';
 
-const Container = styled.div`
-	width: 100vw;
-`;
+const Container = styled.div``;
 const Title = styled.h1`
 	margin: 20px;
 `;
@@ -37,8 +35,8 @@ const Option = styled.option``;
 const ProductList = () => {
 	return (
 		<Container>
-			<Navbar></Navbar>
 			<Announcement></Announcement>
+			<Navbar></Navbar>
 			<Title>Dresses</Title>
 			<FilterContainer>
 				<Filter>
@@ -74,7 +72,6 @@ const ProductList = () => {
 					</Select>
 				</Filter>
 			</FilterContainer>
-
 			<Products />
 			<Newsletter />
 			<Footer />
