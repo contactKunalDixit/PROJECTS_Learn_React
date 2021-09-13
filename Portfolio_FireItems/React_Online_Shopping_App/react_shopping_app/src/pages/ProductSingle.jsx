@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
+import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 
 const Container = styled.div``;
 
@@ -55,6 +57,7 @@ const Filter = styled.div`
 const FilterTitle = styled.span`
 	font-size: 20px;
 	font-weight: 200;
+	margin-right: 20px;
 `;
 
 const FilterColor = styled.div`
@@ -66,6 +69,49 @@ const FilterColor = styled.div`
 	cursor: pointer;
 `;
 
+const FilterSize = styled.select`
+	margin-left: 10px;
+	padding: 5px;
+`;
+
+const FilterSizeOption = styled.option``;
+
+const AddContainer = styled.div`
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+`;
+const QuantityContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* width: 40%; */
+	font-weight: 700;
+`;
+
+const Quantity = styled.div`
+	width: 30px;
+	height: 30px;
+	border-radius: 10px;
+	border: 1px solid teal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 5px;
+`;
+
+const Button = styled.button`
+	padding: 15px;
+	font-weight: 500;
+	border: 2px solid teal;
+	background-color: white;
+	cursor: pointer;
+	&:hover {
+		background-color: #f8f4f4;
+	}
+`;
+
 const ProductSingle = () => {
 	return (
 		<Container>
@@ -73,7 +119,7 @@ const ProductSingle = () => {
 			<Navbar />
 			<Wrapper>
 				<ImgContainer>
-					<Image></Image>
+					<Image src='https://i.ibb.co/S6qMxwr/jean.jpg'></Image>
 				</ImgContainer>
 				<InfoContainer>
 					<Title></Title>
@@ -90,7 +136,7 @@ const ProductSingle = () => {
 						<Filter>
 							<FilterTitle>Color:</FilterTitle>
 							<FilterColor color='Black'></FilterColor>
-							<FilterColor color='Dark Blue'></FilterColor>
+							<FilterColor color='orange'></FilterColor>
 							<FilterColor color='Gray'></FilterColor>
 						</Filter>
 						<Filter>
@@ -106,9 +152,9 @@ const ProductSingle = () => {
 					</FilterContainer>
 					<AddContainer>
 						<QuantityContainer>
-							<Remove />
-							<Amount>1</Amount>
-							<Add />
+							<RemoveOutlinedIcon />
+							<Quantity>1</Quantity>
+							<AddOutlinedIcon />
 						</QuantityContainer>
 						<Button>ADD TO CART</Button>
 					</AddContainer>
