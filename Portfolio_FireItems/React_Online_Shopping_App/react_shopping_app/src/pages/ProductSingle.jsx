@@ -122,7 +122,7 @@ const ProductSingle = () => {
 					<Image src='https://i.ibb.co/S6qMxwr/jean.jpg'></Image>
 				</ImgContainer>
 				<InfoContainer>
-					<Title></Title>
+					<Title>Denim Full Length</Title>
 					<Desc>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis,
 						enim labore eaque in voluptas repudiandae ipsa architecto quam

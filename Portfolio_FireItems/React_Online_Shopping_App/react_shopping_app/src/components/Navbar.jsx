@@ -48,7 +48,9 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
-	font-weight: bold;
+	font-weight: 400;
+	font-family: 'Caveat', cursive;
+	font-size: 48px;
 `;
 
 const LogoIcon = styled.img`
