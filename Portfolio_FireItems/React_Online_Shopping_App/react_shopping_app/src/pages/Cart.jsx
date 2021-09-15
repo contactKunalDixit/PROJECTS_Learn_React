@@ -47,8 +47,68 @@ const Bottom = styled.div`
 const Info = styled.div`
 	flex: 3;
 `;
-const Summary = styled.div`
+
+const Product = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+const ProductDetail = styled.div`
 	flex: 2;
+	display: flex;
+`;
+
+const Image = styled.img`
+	width: 200px;
+`;
+
+const Details = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 20px;
+`;
+
+const ProductName = styled.span``;
+const ProductId = styled.span``;
+const ProductColor = styled.div`
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #${(props) => props.color};
+`;
+const ProductSize = styled.span``;
+
+const PriceDetail = styled.div`
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+const ProductAmountContainer = styled.div`
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+`;
+
+const ProductPrice = styled.div`
+	font-size: 30px;
+	font-weight: 200;
+	${mobile({ marginBottom: '20px' })}
+`;
+
+const Hr = styled.hr`
+	background-color: #eee;
+	border: none;
+	height: 1px;
+`;
+
+const Summary = styled.div`
+	flex: 1;
+	border: 0.5px solid lightgray;
+	border-radius: 10px;
+	padding: 20px;
+	height: 50vh;
 `;
 
 const Cart = () => {
