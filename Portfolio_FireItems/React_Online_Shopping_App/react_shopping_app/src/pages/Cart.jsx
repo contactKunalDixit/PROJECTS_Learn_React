@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 
 const Container = styled.div`
 	/* width: 100vw;
@@ -18,6 +20,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
 	font-weight: 300;
 	text-align: center;
+	font-size: 28px;
 `;
 const Top = styled.div`
 	display: flex;
@@ -33,6 +36,11 @@ const TopButton = styled.button`
 	background-color: ${(props) =>
 		props.type === 'filled' ? 'black' : 'transparent'};
 	color: ${(props) => props.type === 'filled' && 'white'};
+	border-radius: 5px;
+
+	&:hover {
+		transform: scale(1.02);
+	}
 `;
 const TopTexts = styled.div``;
 const TopText = styled.span`
@@ -43,6 +51,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
 	display: flex;
 	justify-content: space-between;
+	width: 90vw;
 `;
 const Info = styled.div`
 	flex: 3;
@@ -91,10 +100,13 @@ const ProductAmountContainer = styled.div`
 	margin-bottom: 20px;
 `;
 
+const ProductAmount = styled.div`
+	font-size: 24px;
+	margin: 5px;
+`;
 const ProductPrice = styled.div`
 	font-size: 30px;
 	font-weight: 200;
-	${mobile({ marginBottom: '20px' })}
 `;
 
 const Hr = styled.hr`
@@ -109,6 +121,35 @@ const Summary = styled.div`
 	border-radius: 10px;
 	padding: 20px;
 	height: 50vh;
+`;
+
+const SummaryTitle = styled.h1`
+	font-weight: 200;
+`;
+
+const SummaryItem = styled.div`
+	margin: 30px;
+	display: flex;
+	justify-content: space-between;
+	font-weight: ${(props) => props.type === 'total' && '500'};
+	font-size: ${(props) => props.type === 'total' && '24px'};
+`;
+
+const SummaryItemText = styled.span``;
+const SummaryItemPrice = styled.span``;
+const Button = styled.button`
+	width: 100%;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 5px;
+	&:hover {
+		transform: scale(1.02);
+		transition: all 0.5s ease;
+	}
+	}
 `;
 
 const Cart = () => {
@@ -148,9 +189,9 @@ const Cart = () => {
 							</ProductDetail>
 							<PriceDetail>
 								<ProductAmountContainer>
-									<Add />
+									<AddIcon />
 									<ProductAmount>2</ProductAmount>
-									<Remove />
+									<RemoveIcon />
 								</ProductAmountContainer>
 								<ProductPrice>$ 30</ProductPrice>
 							</PriceDetail>
@@ -174,9 +215,9 @@ const Cart = () => {
 							</ProductDetail>
 							<PriceDetail>
 								<ProductAmountContainer>
-									<Add />
+									<AddIcon />
 									<ProductAmount>1</ProductAmount>
-									<Remove />
+									<RemoveIcon />
 								</ProductAmountContainer>
 								<ProductPrice>$ 20</ProductPrice>
 							</PriceDetail>
