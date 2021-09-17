@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
-
 import { sliderItems } from '../data';
+import { mobile } from '../components/responsive';
 
 const Container = styled.div`
 	width: 100%;
@@ -13,6 +13,8 @@ const Container = styled.div`
 
 	position: relative;
 	overflow: hidden;
+
+	${mobile({ display: 'none' })}
 `;
 
 const Arrow = styled.div`

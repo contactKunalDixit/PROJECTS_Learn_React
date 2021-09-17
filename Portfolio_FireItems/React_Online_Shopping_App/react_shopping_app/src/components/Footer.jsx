@@ -7,9 +7,11 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 import RoomIcon from '@material-ui/icons/Room';
 import PhoneInTalkOutlinedIcon from '@material-ui/icons/PhoneInTalkOutlined';
 import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
+import { mobile } from '../components/responsive';
 
 const Container = styled.div`
 	display: flex;
+	${mobile({ flexDirection: 'column' })}
 `;
 const Left = styled.div`
 	flex: 1;
@@ -18,7 +20,9 @@ const Left = styled.div`
 	padding: 20px;
 `;
 
-const Logo = styled.h1``;
+const Logo = styled.h1`
+	${mobile({ display: 'flex', justifyContent: 'center' })}
+`;
 const Desc = styled.p`
 	margin: 20px 0;
 `;
@@ -42,10 +46,12 @@ const SocialIcon = styled.div`
 const Center = styled.div`
 	flex: 1;
 	padding: 20px;
+	${mobile({ display: 'none' })}
 `;
 
 const Title = styled.h3`
 	margin-bottom: 30px;
+	${mobile({ display: 'flex', justifyContent: 'center' })}
 `;
 
 const List = styled.ul`

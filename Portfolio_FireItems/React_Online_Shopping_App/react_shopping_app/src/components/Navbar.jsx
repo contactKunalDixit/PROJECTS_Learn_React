@@ -4,9 +4,11 @@ import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import LovelyBees from '../Img/lovely-bees.png';
 import Badge from '@material-ui/core/Badge';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import { mobile } from '../components/responsive';
 
 const Container = styled.div`
 	height: 60px;
+	${mobile({ height: '120px', marginBottom: '15px' })}
 `;
 
 const Wrapper = styled.div`
@@ -14,17 +16,28 @@ const Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	${mobile({
+		padding: '10px 0px;',
+		flexDirection: 'Column',
+		justifyContent: 'center;',
+		alignItems: 'center',
+	})}
 `;
 
 const Left = styled.div`
 	flex: 1;
 	display: flex;
 	align-items: center;
+	${mobile({
+		display: 'flex',
+		justifyContent: 'center',
+	})}
 `;
 
 const Language = styled.span`
 	font-size: 14px;
 	cursor: pointer;
+	${mobile({ display: 'none' })}
 `;
 const SearchContainer = styled.div`
 	border: 0.5px solid gray;
@@ -34,10 +47,12 @@ const SearchContainer = styled.div`
 	margin-left: 25px;
 	padding: 5px;
 	border-radius: 10px;
+	${mobile({ marginLeft: '-25px' })}
 `;
 
 const Input = styled.input`
 	border: none;
+	/* ${mobile({ width: '50px' })} */
 `;
 
 const Center = styled.div`
@@ -51,6 +66,7 @@ const Logo = styled.h1`
 	font-weight: 400;
 	font-family: 'Caveat', cursive;
 	font-size: 48px;
+	${mobile({ fontSize: '38px' })}
 `;
 
 const LogoIcon = styled.img`
@@ -65,12 +81,17 @@ const Right = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	${mobile({ flex: '2', justifyContent: 'space-between' })}
 `;
 
 const MenuItem = styled.div`
 	font-size: 14px;
 	cursor: pointer;
 	margin: 0px 25px;
+	${mobile({
+		fontSize: '18px',
+		// marginLeft: '10px',
+	})}
 `;
 
 const Navbar = () => {
@@ -81,7 +102,7 @@ const Navbar = () => {
 					<Left>
 						<Language>EN</Language>
 						<SearchContainer>
-							<Input />
+							<Input placeholder='search' />
 							<SearchOutlinedIcon style={{ fontSize: '16px', color: 'grey' }} />
 						</SearchContainer>
 					</Left>

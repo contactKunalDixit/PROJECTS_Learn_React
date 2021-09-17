@@ -1,6 +1,7 @@
 import React from 'react';
-
 import styled from 'styled-components';
+import { mobile } from '../components/responsive';
+
 const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
@@ -19,10 +20,12 @@ const Wrapper = styled.div`
 	width: 25%;
 	padding: 20px;
 	background-color: white;
+	${mobile({ width: '75%' })}
 `;
 const Title = styled.h1`
 	font-size: 24px;
 	font-weight: 300;
+	${mobile({ display: 'flex', alignItems: 'center', justifyContent: 'center' })}
 `;
 const Form = styled.form`
 	display: flex;
@@ -42,13 +45,15 @@ const Button = styled.button`
 	background-color: teal;
 	color: white;
 	cursor: pointer;
-	margin-bottom: 10px; ;
+	margin-bottom: 10px;
+	${mobile({ margin: '0 auto', marginBottom: '25px' })}
 `;
 const Link = styled.a`
 	margin: 5px 0px;
 	font-size: 12px;
 	text-decoration: underline;
 	cursor: pointer;
+	${mobile({ margin: '0 auto', marginBottom: '15px' })}
 `;
 const Login = () => {
 	return (
