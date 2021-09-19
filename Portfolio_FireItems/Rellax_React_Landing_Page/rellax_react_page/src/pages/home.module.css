@@ -1,0 +1,111 @@
+.Container {
+	width: 100%;
+
+	background-color: #2e2356;
+	background-image: url('https://i.ibb.co/PhVR2Vh/bg1.png');
+	/* ${mobile({ overflow: ' hidden' })} */
+	background-size: cover;
+}
+
+.Top {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('https://i.ibb.co/PhVR2Vh/bg1.png');
+	background-size: cover;
+}
+
+.TopLeft {
+	flex: 1;
+	/* ${mobile({ display: 'none' })} */
+}
+
+.TopRight {
+	flex: 1;
+	/* ${mobile({
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignItems: 'center',
+		padding: '15px',
+	})} */
+}
+
+/* .Title {
+	color: `#${(props) => (props.usage === 'mainTitle' ? `ffffff` : props.usage === 'subTitle' ? `fff333` : `f5a676`)}`;
+	font-size: ${(props) =>
+		props.usage === 'mainTitle'
+			? `68px`
+			: props.usage === 'subTitle'
+			? `32px`
+			: `24px`};
+	font-weight: 400;
+
+	margin: ${(props) => (props.color !== 'white' ? `10px` : `30px`)} 0px;
+	opacity: 100%;
+
+	${mobile({
+		fontSize: '54px',
+	})}
+`; */
+
+.ButtonTop {
+	width: 20%;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 5px;
+	margin-top: 50px;
+}
+.ButtonTop:hover {
+	background-color: #f3aeae;
+	transform: scale(0.95);
+	transition: all 0.8s ease;
+}
+/* ${mobile({ width: '80vw' })} `*/
+
+.Middle {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.MiddleLeft {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Image {
+	width: 50%;
+	object-fit: cover;
+}
+
+.MiddleRight {
+	flex: 1;
+	height: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+}
+
+.SubSection {
+	opacity: 80;
+	border-radius: 5px;
+	border: 1px solid #f3aeae;
+	padding: 0 10px;
+	margin: 20px 20px;
+}
+
+.Desc {
+	color: white;
+}
+
+.Bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
