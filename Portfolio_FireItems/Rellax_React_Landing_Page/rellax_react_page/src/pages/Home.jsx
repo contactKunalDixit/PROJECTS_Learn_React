@@ -42,6 +42,7 @@ const ButtonTop = styled.button`
 	padding: 10px;
 	font-size: 14px;
 	border-radius: 5px;
+	cursor: pointer;
 
 	margin-top: 50px;
 	&&:hover {
