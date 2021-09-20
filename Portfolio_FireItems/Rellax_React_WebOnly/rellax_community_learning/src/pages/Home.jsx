@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Footer from '../components/Footer';
 import Play from '../Images/play-button.png';
+import Parallax from 'react-rellax';
 
 // import VideoCameraFrontIcon from '@material-ui/icons/VideoCameraFrontOutlined';
 // import GroupsOutlinedIcon from '@material-ui/icons/GroupsOutlinedIcon';
@@ -98,72 +99,94 @@ const Bottom = styled.div`
 const Home = () => {
 	return (
 		<>
-			<Container>
-				<Top>
-					<TopLeft></TopLeft>
-					<TopRight>
-						<Title color='white' size='60px'>
-							Community Based Learning
-						</Title>
-						<ButtonTop>Learn More</ButtonTop>
-					</TopRight>
-				</Top>
-				<Middle>
-					<MiddleLeft>
-						<Image src={Play}></Image>
-					</MiddleLeft>
-					<MiddleRight>
-						<SubSection>
-							<Title margin='10px'>Stream Everything</Title>
-							<Desc>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Corporis dolor neque distinctio suscipit ducimus, perferend
-								margin-bottom: 35px;is incidunt odit maiores soluta? Dolorem ea
-								iure reiciendis illum voluptas!
-							</Desc>
-						</SubSection>
-						<SubSection>
-							<Title margin='10px'>Short is the New Long</Title>
-							<Desc>
-								Lorem ipsum dolor sit amet consectetur margin: '20px
-								20px'adipisicing elit. Corporis dolor neque distinctio suscipit
-								ducimus, perferendis incidunt odit maiores soluta? Dolorem ea
-								iure reiciendis illum voluptas!
-							</Desc>
-						</SubSection>
-					</MiddleRight>
-				</Middle>
-				<Bottom>
-					<SubSection>
-						{/* <VideoCameraFrontIcon /> */}
-						<Title>Watch</Title>
-						<Desc>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Velit,
-							consequuntur.
-						</Desc>
-					</SubSection>
-					<SubSection>
-						{/* <GroupsOutlinedIcon /> */}
-						<Title>Learn</Title>{' '}
-						<Desc>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Velit,
-							consequuntur.
-						</Desc>
-					</SubSection>
-					<SubSection>
-						{/* <ShareOutlinedIcon /> */}
-						<Title>Share</Title>{' '}
-						<Desc>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Velit,
-							consequuntur.
-						</Desc>
-					</SubSection>
-				</Bottom>
-			</Container>
-			<Footer></Footer>
+			<Parallax speed={-5}>
+				<Container>
+					<Top>
+						<TopLeft></TopLeft>
+
+						<TopRight>
+							<Parallax speed={5}>
+								<Title color='white' size='60px'>
+									Community Based Learning
+								</Title>
+							</Parallax>
+							<Parallax speed={3}>
+								<ButtonTop>Learn More</ButtonTop>
+							</Parallax>
+						</TopRight>
+					</Top>
+
+					<Middle>
+						<Parallax speed={1}>
+							<MiddleLeft>
+								<Image src={Play}></Image>
+							</MiddleLeft>
+						</Parallax>
+
+						<MiddleRight>
+							<Parallax speed={4}>
+								<SubSection>
+									<Title margin='10px'>Stream Everything</Title>
+									<Desc>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Corporis dolor neque distinctio suscipit ducimus, perferend
+										margin-bottom: 35px;is incidunt odit maiores soluta? Dolorem
+										ea iure reiciendis illum voluptas!
+									</Desc>
+								</SubSection>
+							</Parallax>
+							<Parallax speed={2}>
+								<SubSection>
+									<Title margin='10px'>Short is the New Long</Title>
+									<Desc>
+										Lorem ipsum dolor sit amet consectetur margin: '20px
+										20px'adipisicing elit. Corporis dolor neque distinctio
+										suscipit ducimus, perferendis incidunt odit maiores soluta?
+										Dolorem ea iure reiciendis illum voluptas!
+									</Desc>
+								</SubSection>
+							</Parallax>
+						</MiddleRight>
+					</Middle>
+
+					<Bottom>
+						<Parallax speed={1}>
+							<SubSection>
+								{/* <VideoCameraFrontIcon /> */}
+								<Title>Watch</Title>
+								<Desc>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Velit,
+									consequuntur.
+								</Desc>
+							</SubSection>
+						</Parallax>
+						<Parallax speed={2}>
+							<SubSection>
+								{/* <GroupsOutlinedIcon /> */}
+								<Title>Learn</Title>{' '}
+								<Desc>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Velit,
+									consequuntur.
+								</Desc>
+							</SubSection>
+						</Parallax>
+						<Parallax speed={3}>
+							<SubSection>
+								{/* <ShareOutlinedIcon /> */}
+								<Title>Share</Title>{' '}
+								<Desc>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Velit,
+									consequuntur.
+								</Desc>
+							</SubSection>
+						</Parallax>
+					</Bottom>
+				</Container>
+				<Footer></Footer>
+			</Parallax>
 		</>
 	);
 };
