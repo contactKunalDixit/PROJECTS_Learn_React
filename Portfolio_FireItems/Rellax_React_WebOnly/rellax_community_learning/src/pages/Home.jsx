@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Footer from '../components/Footer';
 import Play from '../Images/play-button.png';
 
+import { mobile } from '../responsive';
 // import VideoCameraFrontIcon from '@material-ui/icons/VideoCameraFrontOutlined';
 // import GroupsOutlinedIcon from '@material-ui/icons/GroupsOutlinedIcon';
 // import ShareOutlinedIcon from '@material-ui/icons/ShareOutlinedIcon';
@@ -12,6 +13,7 @@ import Play from '../Images/play-button.png';
 const Container = styled.div`
 	width: 100%;
 	background-color: #2e2356;
+	${mobile({ overflow: 'hidden' })}
 `;
 const Top = styled.div`
 	height: 100vh;
@@ -19,15 +21,26 @@ const Top = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-image: url('https://i.ibb.co/PhVR2Vh/bg1.png');
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 `;
 
 const TopLeft = styled.div`
 	flex: 1.5;
+	${mobile({ display: 'none' })}
 `;
 
 const TopRight = styled.div`
 	flex: 2;
+	${mobile({
+		height: '100vh',
+		marginTop: `20px`,
+		width: '100vw',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignItems: 'center',
+	})}
 `;
 const Title = styled.h1`
 	color: #${(props) => (props.color === 'white' ? `ffffff` : `f5a676`)};
@@ -36,12 +49,19 @@ const Title = styled.h1`
 	/* letter-spacing: 1px; */
 	margin: ${(props) => (props.color !== 'white' ? `10px` : `30px`)} 0px;
 	opacity: 100%;
+
+	${mobile({
+		width: '90%',
+		fontSize: '48px',
+		margin: `20px auto`,
+		textAlign: 'center',
+	})}
 `;
 const ButtonTop = styled.button`
-	width: 20%;
+	width: 30%;
 	padding: 10px;
 	font-size: 14px;
-	border-radius: 5px;
+	border-radius: 25px;
 	cursor: pointer;
 
 	margin-top: 50px;
@@ -50,6 +70,10 @@ const ButtonTop = styled.button`
 		transform: scale(0.95);
 		transition: all 0.8s ease;
 	}
+
+	${mobile({
+		width: '90%',
+	})}
 `;
 
 const Middle = styled.div`
@@ -57,17 +81,30 @@ const Middle = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	${mobile({
+		// width: '90%',
+		height: '100vh',
+		flexDirection: 'column',
+		justifyContent: 'space-around',
+	})}
 `;
+
 const MiddleLeft = styled.div`
 	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	${mobile({
+		marginBottom: '30px',
+	})}
 `;
 
 const Image = styled.img`
 	width: 50%;
 	object-fit: cover;
+	${mobile({
+		width: '150px',
+	})}
 `;
 const MiddleRight = styled.div`
 	flex: 1;
@@ -76,6 +113,10 @@ const MiddleRight = styled.div`
 	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;
+	${mobile({
+		display: 'flex',
+		height: 'auto',
+	})}
 `;
 const SubSection = styled.div`
 	opacity: 80%;
@@ -86,6 +127,9 @@ const SubSection = styled.div`
 `;
 const Desc = styled.p`
 	color: white;
+	${mobile({
+		fontSize: '14px',
+	})}
 `;
 
 const Bottom = styled.div`
@@ -102,7 +146,7 @@ const Home = () => {
 				<Top>
 					<TopLeft></TopLeft>
 					<TopRight>
-						<Title color='white' size='60px'>
+						<Title color='white' size='60px' style={{ marginBottom: '50px' }}>
 							Community Based Learning
 						</Title>
 						<ButtonTop>Learn More</ButtonTop>
@@ -114,7 +158,9 @@ const Home = () => {
 					</MiddleLeft>
 					<MiddleRight>
 						<SubSection>
-							<Title margin='10px'>Stream Everything</Title>
+							<Title margin='10px' style={{ fontSize: '32px' }}>
+								Stream Everything
+							</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
 								Corporis dolor neque distinctio suscipit ducimus, perferend
@@ -123,7 +169,9 @@ const Home = () => {
 							</Desc>
 						</SubSection>
 						<SubSection>
-							<Title margin='10px'>Short is the New Long</Title>
+							<Title margin='10px' style={{ fontSize: '32px' }}>
+								Short is the New Long
+							</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur margin: '20px
 								20px'adipisicing elit. Corporis dolor neque distinctio suscipit
@@ -136,7 +184,7 @@ const Home = () => {
 				<Bottom>
 					<SubSection>
 						{/* <VideoCameraFrontIcon /> */}
-						<Title>Watch</Title>
+						<Title tyle={{ fontSize: '32px' }}>Watch</Title>
 						<Desc>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 							ipsum dolor sit amet consectetur adipisicing elit. Velit,
@@ -145,7 +193,7 @@ const Home = () => {
 					</SubSection>
 					<SubSection>
 						{/* <GroupsOutlinedIcon /> */}
-						<Title>Learn</Title>{' '}
+						<Title style={{ fontSize: '32px' }}>Learn</Title>{' '}
 						<Desc>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 							ipsum dolor sit amet consectetur adipisicing elit. Velit,
@@ -154,7 +202,7 @@ const Home = () => {
 					</SubSection>
 					<SubSection>
 						{/* <ShareOutlinedIcon /> */}
-						<Title>Share</Title>{' '}
+						<Title style={{ fontSize: '32px' }}>Share</Title>{' '}
 						<Desc>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 							ipsum dolor sit amet consectetur adipisicing elit. Velit,
