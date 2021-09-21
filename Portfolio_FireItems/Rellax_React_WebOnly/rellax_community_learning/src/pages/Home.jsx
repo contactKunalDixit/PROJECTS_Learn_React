@@ -223,7 +223,7 @@ const Home = () => {
 					<Parallax speed={1}>
 						<SubSection>
 							{/* <VideoCameraFrontIcon /> */}
-							<Title style={{ fontSize: '32px' }}>Watch</Title>
+							<Title style={{ fontSize: '24px' }}>Watch</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 								ipsum dolor sit amet consectetur adipisicing elit. Velit,
@@ -234,7 +234,7 @@ const Home = () => {
 					<Parallax speed={2.25}>
 						<SubSection>
 							{/* <GroupsOutlinedIcon /> */}
-							<Title style={{ fontSize: '32px' }}>Learn</Title>
+							<Title style={{ fontSize: '24px' }}>Learn</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 								ipsum dolor sit amet consectetur adipisicing elit. Velit,
@@ -245,7 +245,7 @@ const Home = () => {
 					<Parallax speed={3.25}>
 						<SubSection>
 							{/* <ShareOutlinedIcon /> */}
-							<Title style={{ fontSize: '32px' }}>Share</Title>
+							<Title style={{ fontSize: '24px' }}>Share</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 								ipsum dolor sit amet consectetur adipisicing elit. Velit,
