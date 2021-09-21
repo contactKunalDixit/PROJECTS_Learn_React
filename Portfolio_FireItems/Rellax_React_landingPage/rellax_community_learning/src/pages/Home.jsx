@@ -5,11 +5,6 @@ import Play from '../Images/play-button.png';
 import Parallax from 'react-rellax';
 
 import { mobile } from '../responsive';
-// import VideoCameraFrontIcon from '@material-ui/icons/VideoCameraFrontOutlined';
-// import GroupsOutlinedIcon from '@material-ui/icons/GroupsOutlinedIcon';
-// import ShareOutlinedIcon from '@material-ui/icons/ShareOutlinedIcon';
-
-// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Container = styled.div`
 	width: 100%;
@@ -222,7 +217,6 @@ const Home = () => {
 				<Bottom>
 					<Parallax speed={1}>
 						<SubSection>
-							{/* <VideoCameraFrontIcon /> */}
 							<Title style={{ fontSize: '24px' }}>Watch</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
@@ -233,7 +227,6 @@ const Home = () => {
 					</Parallax>
 					<Parallax speed={2.25}>
 						<SubSection>
-							{/* <GroupsOutlinedIcon /> */}
 							<Title style={{ fontSize: '24px' }}>Learn</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
@@ -244,7 +237,6 @@ const Home = () => {
 					</Parallax>
 					<Parallax speed={3.25}>
 						<SubSection>
-							{/* <ShareOutlinedIcon /> */}
 							<Title style={{ fontSize: '24px' }}>Share</Title>
 							<Desc>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
