@@ -161,19 +161,25 @@ const Home = () => {
 	return (
 		<>
 			<Container>
-				<Top>
-					<TopLeft></TopLeft>
-					<TopRight>
-						<Parallax speed={7}>
-							<Title color='white' size='60px' style={{ marginBottom: '50px' }}>
-								Community Based Learning
-							</Title>
-						</Parallax>
-						<Parallax speed={5}>
-							<ButtonTop>Learn More</ButtonTop>
-						</Parallax>
-					</TopRight>
-				</Top>
+				<Parallax speed={-2}>
+					<Top>
+						<TopLeft></TopLeft>
+						<TopRight>
+							<Parallax speed={7}>
+								<Title
+									color='white'
+									size='60px'
+									style={{ marginBottom: '50px' }}
+								>
+									Community Based Learning
+								</Title>
+							</Parallax>
+							<Parallax speed={5}>
+								<ButtonTop>Learn More</ButtonTop>
+							</Parallax>
+						</TopRight>
+					</Top>
+				</Parallax>
 
 				<Middle>
 					<Parallax speed={0}>
