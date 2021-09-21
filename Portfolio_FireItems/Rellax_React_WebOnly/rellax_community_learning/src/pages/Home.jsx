@@ -73,7 +73,8 @@ const ButtonTop = styled.button`
 	}
 
 	${mobile({
-		width: '90%',
+		width: '90vw',
+		letterSpacing: '2px',
 	})}
 `;
 
@@ -143,152 +144,104 @@ const Bottom = styled.div`
 const Home = () => {
 	return (
 		<>
-			{/* <Parallax speed={-5}> */}
 			<Container>
-<<<<<<< HEAD
-				<Top>
-					<TopLeft></TopLeft>
-					<TopRight>
-						<Title color='white' size='60px' style={{ marginBottom: '50px' }}>
-							Community Based Learning
-						</Title>
-						<ButtonTop>Learn More</ButtonTop>
-					</TopRight>
-				</Top>
-=======
 				<Parallax speed={-5}>
-					<Top>
-						<TopLeft></TopLeft>
-
-						<TopRight>
-							<Parallax speed={7}>
-								<Title color='white' size='60px'>
-									Community Based Learning
-								</Title>
-							</Parallax>
-							<Parallax speed={5}>
-								<ButtonTop>Learn More</ButtonTop>
-							</Parallax>
-						</TopRight>
-					</Top>
-				</Parallax>
->>>>>>> 26eb7020f4a5ab05b62bd8a55c26d5aba8ba5c12
-				<Middle>
-					<Parallax speed={0}>
-						<MiddleLeft>
-							<Image src={Play}></Image>
-						</MiddleLeft>
+					<Parallax speed={-8}>
+						<Top>
+							<TopLeft></TopLeft>
+							<TopRight>
+								<Parallax speed={7}>
+									<Title
+										color='white'
+										size='60px'
+										style={{ marginBottom: '50px' }}
+									>
+										Community Based Learning
+									</Title>
+								</Parallax>
+								<Parallax speed={5}>
+									<ButtonTop>Learn More</ButtonTop>
+								</Parallax>
+							</TopRight>
+						</Top>
 					</Parallax>
 
-					<MiddleRight>
-						<Parallax speed={4}>
+					<Middle>
+						<Parallax speed={0}>
+							<MiddleLeft>
+								<Image src={Play}></Image>
+							</MiddleLeft>
+						</Parallax>
+
+						<MiddleRight>
+							<Parallax speed={4}>
+								<SubSection>
+									<Title margin='10px' style={{ fontSize: '32px' }}>
+										Stream Everything{' '}
+									</Title>
+									<Desc>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Corporis dolor neque distinctio suscipit ducimus, perferend
+										margin-bottom: 35px;is incidunt odit maiores soluta? Dolorem
+										ea iure reiciendis illum voluptas!
+									</Desc>
+								</SubSection>
+							</Parallax>
+
+							<Parallax speed={3}>
+								<SubSection>
+									<Title margin='10px' style={{ fontSize: '32px' }}>
+										Stream Everything{' '}
+									</Title>
+									<Desc>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Corporis dolor neque distinctio suscipit ducimus, perferend
+										margin-bottom: 35px;is incidunt odit maiores soluta? Dolorem
+										ea iure reiciendis illum voluptas!
+									</Desc>
+								</SubSection>
+							</Parallax>
+						</MiddleRight>
+					</Middle>
+
+					<Bottom>
+						<Parallax speed={1}>
 							<SubSection>
-								<Title margin='10px'>Stream Everything</Title>
+								{/* <VideoCameraFrontIcon /> */}
+								<Title style={{ fontSize: '32px' }}>Watch</Title>
 								<Desc>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Corporis dolor neque distinctio suscipit ducimus, perferend
-									margin-bottom: 35px;is incidunt odit maiores soluta? Dolorem
-									ea iure reiciendis illum voluptas!
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Velit,
+									consequuntur.
+								</Desc>
+							</SubSection>
+						</Parallax>
+						<Parallax speed={2}>
+							<SubSection>
+								{/* <GroupsOutlinedIcon /> */}
+								<Title style={{ fontSize: '32px' }}>Learn</Title>
+								<Desc>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Velit,
+									consequuntur.
 								</Desc>
 							</SubSection>
 						</Parallax>
 						<Parallax speed={3}>
 							<SubSection>
-								<Title margin='10px'>Short is the New Long</Title>
+								{/* <ShareOutlinedIcon /> */}
+								<Title style={{ fontSize: '32px' }}>Share</Title>
 								<Desc>
-									Lorem ipsum dolor sit amet consectetur margin: '20px
-									20px'adipisicing elit. Corporis dolor neque distinctio
-									suscipit ducimus, perferendis incidunt odit maiores soluta?
-									Dolorem ea iure reiciendis illum voluptas!
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Velit,
+									consequuntur.
 								</Desc>
 							</SubSection>
 						</Parallax>
-					</MiddleRight>
-				</Middle>
-
-				<Bottom>
-					<Parallax speed={1}>
-						<SubSection>
-<<<<<<< HEAD
-							<Title margin='10px' style={{ fontSize: '32px' }}>
-								Stream Everything
-							</Title>
-=======
-							{/* <VideoCameraFrontIcon /> */}
-							<Title>Watch</Title>
->>>>>>> 26eb7020f4a5ab05b62bd8a55c26d5aba8ba5c12
-							<Desc>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-								ipsum dolor sit amet consectetur adipisicing elit. Velit,
-								consequuntur.
-							</Desc>
-						</SubSection>
-					</Parallax>
-					<Parallax speed={2}>
-						<SubSection>
-<<<<<<< HEAD
-							<Title margin='10px' style={{ fontSize: '32px' }}>
-								Short is the New Long
-							</Title>
-=======
-							{/* <GroupsOutlinedIcon /> */}
-							<Title>Learn</Title>{' '}
->>>>>>> 26eb7020f4a5ab05b62bd8a55c26d5aba8ba5c12
-							<Desc>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-								ipsum dolor sit amet consectetur adipisicing elit. Velit,
-								consequuntur.
-							</Desc>
-						</SubSection>
-<<<<<<< HEAD
-					</MiddleRight>
-				</Middle>
-				<Bottom>
-					<SubSection>
-						{/* <VideoCameraFrontIcon /> */}
-						<Title tyle={{ fontSize: '32px' }}>Watch</Title>
-						<Desc>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Velit,
-							consequuntur.
-						</Desc>
-					</SubSection>
-					<SubSection>
-						{/* <GroupsOutlinedIcon /> */}
-						<Title style={{ fontSize: '32px' }}>Learn</Title>{' '}
-						<Desc>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Velit,
-							consequuntur.
-						</Desc>
-					</SubSection>
-					<SubSection>
-						{/* <ShareOutlinedIcon /> */}
-						<Title style={{ fontSize: '32px' }}>Share</Title>{' '}
-						<Desc>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Velit,
-							consequuntur.
-						</Desc>
-					</SubSection>
-=======
-					</Parallax>
-					<Parallax speed={3}>
-						<SubSection>
-							{/* <ShareOutlinedIcon /> */}
-							<Title>Share</Title>{' '}
-							<Desc>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-								ipsum dolor sit amet consectetur adipisicing elit. Velit,
-								consequuntur.
-							</Desc>
-						</SubSection>
-					</Parallax>
->>>>>>> 26eb7020f4a5ab05b62bd8a55c26d5aba8ba5c12
-				</Bottom>
+					</Bottom>
+				</Parallax>
 			</Container>
 			<Footer></Footer>
-			{/* </Parallax> */}
 		</>
 	);
 };
