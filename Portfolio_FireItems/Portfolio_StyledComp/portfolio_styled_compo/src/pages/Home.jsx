@@ -6,16 +6,25 @@ import AboutMe from './AboutMe';
 import Testimonials from './Testimonials';
 import ContactMe from './ContactMe';
 
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+`;
+
 const Home = () => {
 	return (
-		<div>
+		<Wrapper>
 			<Navbar />
 			<Intro />
 			<PortfolioProjects />
 			<AboutMe />
 			<Testimonials />
 			<ContactMe></ContactMe>
-		</div>
+		</Wrapper>
 	);
 };
 
