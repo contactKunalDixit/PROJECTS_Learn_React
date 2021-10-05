@@ -4,6 +4,7 @@ import { init } from 'ityped';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Guylaptop from '../components/assets/guylaptop.png';
 
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 const Wrapper = styled.div`
 	background-color: white;
 	display: flex;
@@ -62,14 +63,18 @@ const RightSecWrapper = styled.div`
 const Greeting = styled.h1`
 	font-size: 60px;
 	margin: 10px 0;
+	font-weight: 400;
 `;
 
 const SubGreeting1 = styled.h2`
-	font-size: 40px;
+	font-size: 45px;
+	margin: 20px 0;
+	font-weight: 400;
 `;
 
-const SubGreeting2 = styled.h3`
-	font-size: 30px;
+const BigText = styled.span`
+	font-size: 60px;
+	font-weight: 400;
 `;
 
 const Intro = () => {
@@ -80,7 +85,7 @@ const Intro = () => {
 			typeSpeed: 100,
 			backspeed: 50,
 			backDelay: 1500,
-			strings: ['Design Content', 'Develop Content', 'Conduct Trainings'],
+			strings: ['Designing ', 'Developing ', 'Facilitating '],
 		});
 	}, []);
 
@@ -95,10 +100,21 @@ const Intro = () => {
 				<Right>
 					<RightSecWrapper>
 						<Greeting>Hi..</Greeting>
-						<SubGreeting1>I am Kunal Dixit</SubGreeting1>
-						<SubGreeting2>
-							I Love to <span ref={textRef}></span>
-						</SubGreeting2>
+						<SubGreeting1>
+							I am <BigText>Kunal Dixit</BigText>
+						</SubGreeting1>
+						<SubGreeting1>
+							I{' '}
+							<FavoriteOutlinedIcon
+								style={{
+									fontSize: '50px',
+									color: 'red',
+									position: 'relative',
+									top: '10px',
+								}}
+							/>{' '}
+							<span ref={textRef}></span>
+						</SubGreeting1>
 					</RightSecWrapper>
 				</Right>
 			</MainSec>

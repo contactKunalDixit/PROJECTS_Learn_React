@@ -16,6 +16,12 @@ const Wrapper = styled.div`
 	/* padding: 10px 0; */
 `;
 
+const Container = styled.div`
+	height: 100%;
+	width: 100%;
+	display: flex;
+`;
+
 const Left = styled.div`
 	flex: 1;
 	padding: 10px;
@@ -74,32 +80,34 @@ const Navbar = () => {
 	return (
 		<>
 			<Wrapper>
-				<Left>
-					<ImportantDevicesTwoToneIcon
-						fontSize='large'
-						style={{ margin: '10px' }}
-					/>
-					<LogoText>KunalD.</LogoText>
-				</Left>
+				<Container>
+					<Left>
+						<ImportantDevicesTwoToneIcon
+							fontSize='large'
+							style={{ margin: '10px' }}
+						/>
+						<LogoText>KunalD.</LogoText>
+					</Left>
 
-				<Center>
-					<NavItems>
-						<Item>Home</Item>
-						<Item>Projects</Item>
-						<Item>Testiomonials</Item>
-						<Item>About Me</Item>
-						<Item>Contact</Item>
-					</NavItems>
-				</Center>
-				<Right>
-					<DarkModeIcon
-						style={{
-							cursor: 'pointer',
-							transition: 'all 0.5s ease',
-							'& :hover': { transform: 'scale(1.3)' },
-						}}
-					></DarkModeIcon>
-				</Right>
+					<Center>
+						<NavItems>
+							<Item>Home</Item>
+							<Item>Projects</Item>
+							<Item>Testiomonials</Item>
+							<Item>About Me</Item>
+							<Item>Contact</Item>
+						</NavItems>
+					</Center>
+					<Right>
+						<DarkModeIcon
+							style={{
+								cursor: 'pointer',
+								transition: 'all 0.5s ease',
+								'& :hover': { transform: 'scale(1.3)' },
+							}}
+						></DarkModeIcon>
+					</Right>
+				</Container>
 			</Wrapper>
 		</>
 	);
