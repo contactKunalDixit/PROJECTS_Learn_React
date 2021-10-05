@@ -80,7 +80,7 @@ const Intro = () => {
 			typeSpeed: 100,
 			backspeed: 50,
 			backDelay: 1500,
-			strings: ['Designer', 'Developer', 'Creator', 'Curator', 'Facilitator'],
+			strings: ['Design Content', 'Develop Content', 'Conduct Trainings'],
 		});
 	}, []);
 
@@ -97,7 +97,7 @@ const Intro = () => {
 						<Greeting>Hi..</Greeting>
 						<SubGreeting1>I am Kunal Dixit</SubGreeting1>
 						<SubGreeting2>
-							Content <span ref={textRef}></span>
+							I Love to <span ref={textRef}></span>
 						</SubGreeting2>
 					</RightSecWrapper>
 				</Right>
