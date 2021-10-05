@@ -4,12 +4,11 @@ import SelfPhoto from '../components/assets/KunalCartoonPotrait.jpg';
 
 const Wrapper = styled.div`
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	height: calc(100vh - 70px);
-	margin-top: 70px;
+	margin-top: 10px;
 `;
 const Container1 = styled.div`
 	display: flex;
@@ -22,16 +21,18 @@ const Left = styled.div`
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	height: 80vh;
 `;
 const ImgContainer = styled.div`
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	height: 90%;
 `;
 const Image = styled.img`
 	width: 100%;
-	max-width: 400px;
+	max-width: 425px;
 	-webkit-box-shadow: 0px 0px 17px 5px rgba(12, 7, 8, 0.57);
 	box-shadow: 0px 0px 17px 5px rgba(44, 2, 10, 0.57);
 	margin: 10px;
@@ -39,22 +40,20 @@ const Image = styled.img`
 `;
 const Right = styled.div`
 	flex: 0.6;
-	align-items: center;
-	height: 100%;
-	width: 100%;
+	height: 80vh;
+	width: 80%;
 	margin: 10px;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
 `;
 const ArticleContainer = styled.div`
 	overflow-y: hidden;
-	width: 85%; //////
+	width: 90%; //////
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 `;
 const TitleBox = styled.h1`

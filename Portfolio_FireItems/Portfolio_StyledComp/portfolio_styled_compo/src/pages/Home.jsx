@@ -23,7 +23,7 @@ const Home = () => {
 			{/* <PortfolioProjects /> */}
 			<AboutMe />
 			{/* <Testimonials /> */}
-			<ContactMe></ContactMe>
+			{/* <ContactMe></ContactMe> */}
 		</Wrapper>
 	);
 };
