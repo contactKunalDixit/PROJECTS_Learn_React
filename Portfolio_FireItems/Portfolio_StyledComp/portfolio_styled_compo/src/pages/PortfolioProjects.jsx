@@ -1,6 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import picImage from '../components/assets/Coding.jpg';
+// import SwipeReactJS from '../components/SwipeReactJS';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+export function SwipeReactJS() {
+	return (
+		<Swiper
+			modules={[Navigation, Pagination, Scrollbar, A11y]}
+			spaceBetween={50}
+			slidesPerView={3}
+			centeredSlides='true'
+			onSlideChange={() => console.log('slide change')}
+			onSwiper={(swiper) => console.log(swiper)}
+		>
+			<SwiperSlide></SwiperSlide>
+			<SwiperSlide></SwiperSlide>
+			<SwiperSlide></SwiperSlide>
+			<SwiperSlide></SwiperSlide>
+		</Swiper>
+	);
+}
+
 const Wrapper = styled.div`
 	width: 100vw;
 	height: calc(100vh - 50px);
@@ -22,13 +47,13 @@ const Title = styled.h1`
 const Container = styled.div`
 	-webkit-box-shadow: 0px 0px 17px 5px rgba(12, 7, 8, 0.57);
 	box-shadow: 0px 0px 17px 5px rgba(44, 2, 10, 0.57);
-	width: 360px;
-	height: 70vh;
+	width: 90%;
+	height: 60vh;
 	padding: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	/* flex-direction: column; */
 `;
 const PicImage = styled.img`
 	max-width: 250px;
@@ -60,18 +85,20 @@ const PortfolioProjects = () => {
 			</TitleBox>
 
 			<Container>
-				<PicImage src={picImage}></PicImage>
-				<Description>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-					consectetur harum tempora nostrum modi vel labore ratione corporis
-					fugit, natus id error in, ducimus deleniti. Doloremque hic saepe sequi
-					numquam totam explicabo soluta rerum rem, asperiores corporis repellat
-					dolore distinctio a nostrum quod magnam! Quo eos libero inventore
-					sapiente dignissimos.
-				</Description>
-				<TechUsed>
+				<SwipeReactJS>
 					<PicImage src={picImage}></PicImage>
-				</TechUsed>
+					<Description>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+						consectetur harum tempora nostrum modi vel labore ratione corporis
+						fugit, natus id error in, ducimus deleniti. Doloremque hic saepe
+						sequi numquam totam explicabo soluta rerum rem, asperiores corporis
+						repellat dolore distinctio a nostrum quod magnam! Quo eos libero
+						inventore sapiente dignissimos.
+					</Description>
+					<TechUsed>
+						<PicImage src={picImage}></PicImage>
+					</TechUsed>
+				</SwipeReactJS>
 			</Container>
 		</Wrapper>
 	);

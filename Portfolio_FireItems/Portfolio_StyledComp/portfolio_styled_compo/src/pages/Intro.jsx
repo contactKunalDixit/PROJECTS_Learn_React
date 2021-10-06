@@ -43,6 +43,7 @@ const ImgContainer = styled.div`
 const Image = styled.img`
 	border-radius: 4%;
 	width: 100%;
+	max-width: 400px;
 	height: 100%;
 	object-fit: contain;
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ImportantDevicesTwoToneIcon from '@mui/icons-material/ImportantDevicesTwoTone';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import UseSwitchesCustom from './DarkModeSwitch';
 
 const Wrapper = styled.div`
 	width: 100vw;
@@ -99,13 +100,14 @@ const Navbar = () => {
 						</NavItems>
 					</Center>
 					<Right>
-						<DarkModeIcon
+						{/* <DarkModeIcon
 							style={{
 								cursor: 'pointer',
 								transition: 'all 0.5s ease',
 								'& :hover': { transform: 'scale(1.3)' },
 							}}
-						></DarkModeIcon>
+						></DarkModeIcon> */}
+						<UseSwitchesCustom />
 					</Right>
 				</Container>
 			</Wrapper>
