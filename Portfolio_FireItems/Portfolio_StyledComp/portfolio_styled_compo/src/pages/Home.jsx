@@ -20,10 +20,10 @@ const Home = () => {
 		<Wrapper>
 			<Navbar />
 			<Intro />
-			{/* <PortfolioProjects /> */}
+			<PortfolioProjects />
 			{/* <AboutMe /> */}
 			{/* <Testimonials /> */}
-			<ContactMe></ContactMe>
+			{/* <ContactMe></ContactMe> */}
 		</Wrapper>
 	);
 };
