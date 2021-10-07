@@ -13,20 +13,24 @@ const Wrapper = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
+	background-color: red;
 
 	/* padding: 10px 0; */
 `;
 
 const Container = styled.div`
 	height: 100%;
+	height: 50px;
 	width: 100%;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const Left = styled.div`
 	flex: 1;
-	padding: 10px;
-	height: 100%;
+	/* padding: 10px; */
+	/* height: 100%; */
 	background-color: #e5e1f3;
 	display: flex;
 	justify-content: center;
@@ -41,8 +45,8 @@ const LogoText = styled.span`
 const Center = styled.div`
 	flex: 5.5;
 	background-color: #e1dcf5;
-	padding: 10px;
-	height: 100%;
+	/* padding: 10px; */
+	/* height: 100%; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -71,7 +75,7 @@ const Right = styled.div`
 	flex: 0.5;
 	background-color: #ded7fa;
 	padding: 10px;
-	height: 100%;
+	/* height: 100%; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
