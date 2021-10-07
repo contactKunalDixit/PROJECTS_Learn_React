@@ -21,9 +21,9 @@ const Home = () => {
 			<Navbar />
 			<Intro />
 			<PortfolioProjects />
-			{/* <AboutMe /> */}
+			<AboutMe />
 			{/* <Testimonials /> */}
-			{/* <ContactMe></ContactMe> */}
+			<ContactMe></ContactMe>
 		</Wrapper>
 	);
 };
