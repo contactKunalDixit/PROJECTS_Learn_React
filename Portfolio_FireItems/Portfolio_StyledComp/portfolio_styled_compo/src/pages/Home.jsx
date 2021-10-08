@@ -9,33 +9,59 @@ import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+	height: 100vh;
 	margin: 0px;
 	padding: 0px;
 	position: relative;
 	overflow: hidden;
 `;
 
+const Sections = styled.div`
+	width: 100%;
+	height: calc(100vh - 50px);
+	/* background-color: lightsalmon; */
+	position: relative;
+	top: 50px;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: none; //for firefox
+	//for other browsers
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	// For all the children element within(>*)..do
+	> * {
+		width: 100vw;
+		height: calc(100vh - 50px);
+		scroll-snap-align: start;
+	}
+`;
+
 const Home = () => {
 	return (
 		<Wrapper>
 			<Navbar />
-			<Switch>
-				<Route path='/Projects'>
-					<PortfolioProjects />
-				</Route>
-				<Route path='/AboutMe'>
-					<AboutMe />
-				</Route>
-				<Route path='/Testimonials'>
-					<Testimonials />
-				</Route>
-				<Route path='/ContactMe'>
-					<ContactMe />
-				</Route>
-				<Route path='/'>
-					<Intro />
-				</Route>
-			</Switch>
+
+			<Sections>
+				<Switch>
+					<Route path='/Projects'>
+						<PortfolioProjects />
+					</Route>
+					<Route path='/AboutMe'>
+						<AboutMe />
+					</Route>
+					<Route path='/Testimonials'>
+						<Testimonials />
+					</Route>
+					<Route path='/ContactMe'>
+						<ContactMe />
+					</Route>
+					<Route path='/'>
+						<Intro />
+					</Route>
+				</Switch>
+			</Sections>
 		</Wrapper>
 	);
 };

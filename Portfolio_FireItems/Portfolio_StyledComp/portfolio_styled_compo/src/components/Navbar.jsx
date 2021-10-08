@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ImportantDevicesTwoToneIcon from '@mui/icons-material/ImportantDevicesTwoTone';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import UseSwitchesCustom from './DarkModeSwitch';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.div`
 	width: 100vw;
@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: red;
 	z-index: 10;
 
 	/* padding: 10px 0; */
@@ -100,41 +99,62 @@ const Navbar = () => {
 					<Center>
 						<NavItems>
 							<Item>
-								<Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+								<NavLink
+									to='/'
+									style={{ textDecoration: 'none', color: '	#72777b' }}
+									exact
+									activeStyle={{
+										color: 'black',
+										textDecoration: 'underline',
+									}}
+									// id='intro'
+								>
 									Home
-								</Link>
+								</NavLink>
 							</Item>
 							<Item>
-								<Link
-									to='Projects'
-									style={{ textDecoration: 'none', color: 'black' }}
+								<NavLink
+									to='/Projects'
+									style={{ textDecoration: 'none', color: '#72777b' }}
+									exact
+									activeStyle={{ color: 'black', textDecoration: 'underline' }}
+									// id='#Projects'
 								>
 									Projects
-								</Link>
+								</NavLink>
 							</Item>
 							<Item>
-								<Link
-									to='Testimonials'
-									style={{ textDecoration: 'none', color: 'black' }}
+								<NavLink
+									to='/Testimonials'
+									style={{ textDecoration: 'none', color: '#72777b' }}
+									exact
+									activeStyle={{ color: 'black', textDecoration: 'underline' }}
+									// id='Testimonials'
 								>
-									Testiomonials
-								</Link>
+									Testimonials
+								</NavLink>
 							</Item>
 							<Item>
-								<Link
-									to='AboutMe'
-									style={{ textDecoration: 'none', color: 'black' }}
+								<NavLink
+									to='/AboutMe'
+									style={{ textDecoration: 'none', color: '#72777b' }}
+									exact
+									activeStyle={{ color: 'black', textDecoration: 'underline' }}
+									// id='AboutMe'
 								>
 									About Me
-								</Link>
+								</NavLink>
 							</Item>
 							<Item>
-								<Link
-									to='ContactMe'
-									style={{ textDecoration: 'none', color: 'black' }}
+								<NavLink
+									to='/ContactMe'
+									style={{ textDecoration: 'none', color: '#72777b' }}
+									exact
+									activeStyle={{ color: 'black', textDecoration: 'underline' }}
+									// id='ContactMe'
 								>
 									Contact
-								</Link>
+								</NavLink>
 							</Item>
 						</NavItems>
 					</Center>

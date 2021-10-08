@@ -177,7 +177,7 @@ const SwipeReactJS = () => {
 
 const PortfolioProjects = () => {
 	return (
-		<Wrapper>
+		<Wrapper id='Projects'>
 			{/* <TitleBox> */}
 			<WrapperHeader>Projects</WrapperHeader>
 			{/* </TitleBox> */}

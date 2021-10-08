@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { init } from 'ityped';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Guylaptop from '../components/assets/guylaptop.png';
-
+import { Link } from 'react-router-dom';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 const Wrapper = styled.div`
 	background-color: white;
@@ -11,9 +11,6 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: calc(100vh - 70px);
-	margin-top: 70px;
 `;
 
 const MainSec = styled.div`
@@ -78,6 +75,8 @@ const BigText = styled.span`
 	font-weight: 400;
 `;
 
+const DownArrow = styled.a``;
+
 const Intro = () => {
 	const textRef = useRef();
 	useEffect(() => {
@@ -91,7 +90,7 @@ const Intro = () => {
 	}, []);
 
 	return (
-		<Wrapper>
+		<Wrapper id='intro'>
 			<MainSec>
 				<Left>
 					<ImgContainer>
@@ -119,10 +118,11 @@ const Intro = () => {
 					</RightSecWrapper>
 				</Right>
 			</MainSec>
-
-			<KeyboardArrowDownIcon
-				style={{ fontSize: '50px', marginTop: '30px', cursor: 'pointer' }}
-			/>
+			<Link to='/Projects'>
+				<KeyboardArrowDownIcon
+					style={{ fontSize: '50px', marginTop: '30px', cursor: 'pointer' }}
+				/>
+			</Link>
 		</Wrapper>
 	);
 };

@@ -6,9 +6,9 @@ const Wrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
+	/* width: 100vw;
 	height: calc(100vh - 70px);
-	margin-top: 10px;
+	margin-top: 10px; */
 `;
 const Container1 = styled.div`
 	display: flex;
@@ -91,7 +91,7 @@ const CvDownload = styled.div`
 const AboutMe = () => {
 	return (
 		<>
-			<Wrapper>
+			<Wrapper id='AboutMe'>
 				<Container1>
 					<Left>
 						<ImgContainer>

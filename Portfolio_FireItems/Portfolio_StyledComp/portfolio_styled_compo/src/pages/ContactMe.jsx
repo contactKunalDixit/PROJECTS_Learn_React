@@ -69,7 +69,7 @@ const Contact = () => {
 		setMessage(true);
 	};
 	return (
-		<Wrapper>
+		<Wrapper id='ContactMe'>
 			<Left>
 				<Image src={ContactMeImg}></Image>
 			</Left>
