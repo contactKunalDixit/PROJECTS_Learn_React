@@ -35,7 +35,7 @@ const WrapperHeader = styled.h1`
 const Container = styled.div`
 	-webkit-box-shadow: 0px 0px 17px 5px rgba(12, 7, 8, 0.57);
 	box-shadow: 0px 0px 17px 5px rgba(44, 2, 10, 0.57);
-	width: 90%;
+	width: 75vw;
 
 	padding: 20px;
 	margin-top: 10px;
@@ -134,7 +134,7 @@ const SwipeReactJS = () => {
 			lazy={true}
 			loop={true}
 			pagination={{ clickable: true }}
-			slidesPerView={'auto'}
+			slidesPerView={3}
 			centeredSlides={true}
 			onSlideChange={() => console.log('slide change')}
 			onSwiper={(swiper) => console.log(swiper)}
@@ -152,7 +152,7 @@ const SwipeReactJS = () => {
 					spaceBetween: 40,
 				},
 				1024: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 					spaceBetween: 50,
 				},
 			}}

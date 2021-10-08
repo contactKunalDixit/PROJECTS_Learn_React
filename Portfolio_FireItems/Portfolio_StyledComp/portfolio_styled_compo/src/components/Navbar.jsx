@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ImportantDevicesTwoToneIcon from '@mui/icons-material/ImportantDevicesTwoTone';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import UseSwitchesCustom from './DarkModeSwitch';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
 	width: 100vw;
@@ -67,6 +68,7 @@ const Item = styled.li`
 	font-size: 18px;
 	font-weight: 500;
 	transition: all 0.5s ease;
+
 	&:hover {
 		transform: scale(1.2, 1.2);
 	}
@@ -97,11 +99,43 @@ const Navbar = () => {
 
 					<Center>
 						<NavItems>
-							<Item>Home</Item>
-							<Item>Projects</Item>
-							<Item>Testiomonials</Item>
-							<Item>About Me</Item>
-							<Item>Contact</Item>
+							<Item>
+								<Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+									Home
+								</Link>
+							</Item>
+							<Item>
+								<Link
+									to='Projects'
+									style={{ textDecoration: 'none', color: 'black' }}
+								>
+									Projects
+								</Link>
+							</Item>
+							<Item>
+								<Link
+									to='Testimonials'
+									style={{ textDecoration: 'none', color: 'black' }}
+								>
+									Testiomonials
+								</Link>
+							</Item>
+							<Item>
+								<Link
+									to='AboutMe'
+									style={{ textDecoration: 'none', color: 'black' }}
+								>
+									About Me
+								</Link>
+							</Item>
+							<Item>
+								<Link
+									to='ContactMe'
+									style={{ textDecoration: 'none', color: 'black' }}
+								>
+									Contact
+								</Link>
+							</Item>
 						</NavItems>
 					</Center>
 					<Right>
