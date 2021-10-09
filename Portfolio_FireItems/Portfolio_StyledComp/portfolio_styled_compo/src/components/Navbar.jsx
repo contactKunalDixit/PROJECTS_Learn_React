@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.div`
 	width: 100vw;
-	height: 50px;
+	height: 70px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 0;
+	top: -10px;
 	left: 0;
 	z-index: 10;
 
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
 	height: 100%;
-	height: 50px;
+	/* height: 70px; */
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -99,7 +99,8 @@ const Navbar = () => {
 					<Center>
 						<NavItems>
 							<Item>
-								<NavLink
+								<a href='#intro'>Home</a>
+								{/* <NavLink
 									to='/'
 									style={{ textDecoration: 'none', color: '	#72777b' }}
 									exact
@@ -107,54 +108,58 @@ const Navbar = () => {
 										color: 'black',
 										textDecoration: 'underline',
 									}}
-									// id='intro'
+									id='intro'
 								>
 									Home
-								</NavLink>
+								</NavLink> */}
 							</Item>
 							<Item>
-								<NavLink
+								{/* <NavLink
 									to='/Projects'
 									style={{ textDecoration: 'none', color: '#72777b' }}
 									exact
 									activeStyle={{ color: 'black', textDecoration: 'underline' }}
-									// id='#Projects'
+									id='#Projects'
 								>
 									Projects
-								</NavLink>
+								</NavLink> */}
+								<a href='#Projects'>Projects </a>
 							</Item>
 							<Item>
-								<NavLink
+								{/* <NavLink
 									to='/Testimonials'
 									style={{ textDecoration: 'none', color: '#72777b' }}
 									exact
 									activeStyle={{ color: 'black', textDecoration: 'underline' }}
-									// id='Testimonials'
+									id='Testimonials'
 								>
 									Testimonials
-								</NavLink>
+								</NavLink> */}
+								<a href='#Testimonials'>Testimonials</a>
 							</Item>
 							<Item>
-								<NavLink
+								{/* <NavLink
 									to='/AboutMe'
 									style={{ textDecoration: 'none', color: '#72777b' }}
 									exact
 									activeStyle={{ color: 'black', textDecoration: 'underline' }}
-									// id='AboutMe'
+									id='AboutMe'
 								>
 									About Me
-								</NavLink>
+								</NavLink> */}
+								<a href='#AboutMe'>About Me</a>
 							</Item>
 							<Item>
-								<NavLink
+								{/* <NavLink
 									to='/ContactMe'
 									style={{ textDecoration: 'none', color: '#72777b' }}
 									exact
 									activeStyle={{ color: 'black', textDecoration: 'underline' }}
-									// id='ContactMe'
+									id='ContactMe'
 								>
 									Contact
-								</NavLink>
+								</NavLink> */}
+								<a href='#ContactMe'>Contact Me</a>
 							</Item>
 						</NavItems>
 					</Center>

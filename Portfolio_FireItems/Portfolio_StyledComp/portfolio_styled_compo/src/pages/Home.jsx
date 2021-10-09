@@ -13,15 +13,14 @@ const Wrapper = styled.div`
 	margin: 0px;
 	padding: 0px;
 	position: relative;
-	overflow: hidden;
 `;
 
 const Sections = styled.div`
 	width: 100%;
-	height: calc(100vh - 50px);
+	height: calc(100vh - 70px);
 	/* background-color: lightsalmon; */
 	position: relative;
-	top: 50px;
+	top: 70px;
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory;
 	scrollbar-width: none; //for firefox
@@ -33,7 +32,7 @@ const Sections = styled.div`
 	// For all the children element within(>*)..do
 	> * {
 		width: 100vw;
-		height: calc(100vh - 50px);
+		height: calc(100vh - 70px);
 		scroll-snap-align: start;
 	}
 `;
@@ -44,7 +43,7 @@ const Home = () => {
 			<Navbar />
 
 			<Sections>
-				<Switch>
+				{/* <Switch>
 					<Route path='/Projects'>
 						<PortfolioProjects />
 					</Route>
@@ -60,7 +59,12 @@ const Home = () => {
 					<Route path='/'>
 						<Intro />
 					</Route>
-				</Switch>
+				</Switch> */}
+
+				<Intro></Intro>
+				<PortfolioProjects />
+				<AboutMe />
+				<ContactMe />
 			</Sections>
 		</Wrapper>
 	);
