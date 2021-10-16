@@ -13,7 +13,7 @@ const IntroContainer = styled.div`
 `;
 
 const Left = styled.div`
-	width: 60%;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -94,17 +94,20 @@ const PhoneText = styled.p`
 `;
 
 const Right = styled.div`
-	width: 40%;
-
+	width: 50%;
+	position: relative;
 	@media only screen and (max-width: 480px) {
 		display: none;
 	}
 `;
 
 const Image = styled.img`
-	width: 110%;
+	width: 120%;
 	/* margin-left: 10px; */
-	margin-top: -70px;
+	/* margin-top: -70px; */
+	position: absolute;
+	bottom: 0;
+	object-fit: cover;
 `;
 
 const Intro = () => {
@@ -126,7 +129,7 @@ const Intro = () => {
 				</Info>
 			</Left>
 			<Right>
-				<Image src={Woman}></Image>{' '}
+				<Image src={Woman}></Image>
 			</Right>
 			<AnimatedShapes></AnimatedShapes>
 		</IntroContainer>
