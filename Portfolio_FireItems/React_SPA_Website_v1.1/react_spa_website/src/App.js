@@ -26,25 +26,30 @@ const Shape = css`
 const IntroShape = styled.div`
 	${Shape}
 	clip-path: polygon(67% 0%, 100% 0%, 100% 100%, 55% 100%);
-	background-color: crimson;
+	background-color: #264653;
 `;
 
 const FeatureShape = styled.div`
 	${Shape}
 	clip-path: polygon(0 0, 55% 0%, 33% 100%, 0 100%);
-	background-color: #9dc9ed;
+	background-color: #2a9d8f;
 `;
 
 const ServiceShape = styled.div`
 	${Shape}
 	clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
-	background-color: #f88497;
+	background-color: #e9c46a;
 `;
 
 const PriceShape = styled.div`
 	${Shape}
 	clip-path: polygon(33% 0, 100% 0%, 100% 100%, 67% 100%);
-	background-color: crimson;
+	background-color: #f4a261;
+`;
+const ContactShape = styled.div`
+	${Shape}
+	clip-path: polygon(67% 0, 100% 0, 100% 100%, 67% 100%);
+	background-color: #e76f51;
 `;
 
 const App = () => {
@@ -71,6 +76,7 @@ const App = () => {
 			<Container>
 				<Contact></Contact>
 				<Footer></Footer>
+				<ContactShape />
 			</Container>
 		</>
 	);
