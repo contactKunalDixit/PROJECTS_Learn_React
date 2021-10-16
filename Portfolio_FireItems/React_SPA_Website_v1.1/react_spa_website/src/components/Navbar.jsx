@@ -58,8 +58,8 @@ const Button = styled.button`
 	cursor: pointer;
 	border-radius: 10px;
 	border: 2px solid rgb(255, 255, 255);
-	background-color: crimson;
-	color: white;
+	background-color: #e9c46a;
+	color: #121212;
 
 	&:hover {
 		background-color: rgb(13, 44, 100);
