@@ -5,8 +5,9 @@
 	justify-content: center;
 	width: 100%;
 	box-sizing: border-box;
-	height: 80px;
-	background-color: aquamarine;
+	height: 100px;
+	background-color: #030305;
+	color: rgb(172, 230, 252);
 }
 
 .left {
