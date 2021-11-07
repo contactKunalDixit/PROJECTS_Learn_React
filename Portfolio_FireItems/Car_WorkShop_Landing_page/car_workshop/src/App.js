@@ -6,10 +6,12 @@ import Footer from './components/Footer';
 function App() {
 	return (
 		<div className={styles.App}>
-			<Navbar></Navbar>
-			<div className={styles.Sections}>
-				<Main></Main>
-				<Footer></Footer>
+			<div className={styles.AppWrapper}>
+				<Navbar style={{ backgroundColor: 'blue' }}></Navbar>
+				{/* <div className={styles.Sections}> */}
+				<Main />
+				<Footer />
+				{/* </div> */}
 			</div>
 		</div>
 	);

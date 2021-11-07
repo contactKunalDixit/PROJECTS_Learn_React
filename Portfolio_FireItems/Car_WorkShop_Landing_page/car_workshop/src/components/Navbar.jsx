@@ -6,10 +6,19 @@ const Navbar = () => {
 		<div className={styles.navbar}>
 			<div className={styles.left}>Car Workshop</div>
 			<div className={styles.right}>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+				<ul className={styles.ul}>
+					<li className={styles.li}>
+						{' '}
+						<a href='#bookings'></a> Bookings
+					</li>
+					<li className={styles.li}>
+						{' '}
+						<a href='#About'></a> About Us
+					</li>
+					<li className={styles.li}>
+						{' '}
+						<a href='#contact'></a> Contact Us
+					</li>
 				</ul>
 			</div>
 		</div>
