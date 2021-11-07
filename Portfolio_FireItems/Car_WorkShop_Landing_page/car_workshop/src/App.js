@@ -7,7 +7,7 @@ function App() {
 	return (
 		<div className={styles.App}>
 			<div className={styles.AppWrapper}>
-				<Navbar style={{ backgroundColor: 'blue' }}></Navbar>
+				<Navbar></Navbar>
 				{/* <div className={styles.Sections}> */}
 				<Main />
 				<Footer />
