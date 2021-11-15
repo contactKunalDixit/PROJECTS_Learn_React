@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import SlideMenu from './components/SlideMenu';
 import ToastiItem from './components/Toasti_Item';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 			<ToastiItem />
 			<div className='App'>
 				<Navbar />
+				<SlideMenu />
 			</div>
 		</div>
 	);

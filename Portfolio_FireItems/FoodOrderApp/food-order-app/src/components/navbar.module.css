@@ -1,10 +1,13 @@
 .navbar {
-	background-color: pink;
+	background-color: rgb(228, 198, 203);
 	width: 100vw;
 	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0px;
 }
 .navbar_left {
 	flex: 1;
@@ -14,12 +17,29 @@
 	flex: 2;
 	background-color: antiquewhite;
 	text-align: center;
-	font-size: 32px;
+	/* font-size: 32px; */
+	display: flex;
+}
+form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* font-size: 40px; */
 }
 .navbar_right {
 	flex: 1;
 	text-align: center;
 }
 #userInput {
-	font-size: 32px;
+	width: 100%;
+	font-size: 16px;
+	border: none;
+	font-style: italic;
+	font-family: 'Hind Madurai', sans-serif;
+}
+
+#menuButton {
+	background-color: transparent;
+	border: none;
 }

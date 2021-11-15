@@ -13,7 +13,7 @@ const ToastiItem = () => {
 				closeOnClick: true,
 				pauseOnHover: true,
 				draggable: true,
-				progress: undefined,
+				progress: 1,
 			}
 		);
 	};
