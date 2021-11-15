@@ -1,7 +1,16 @@
 import './App.css';
+import Navbar from './components/Navbar';
+import ToastiItem from './components/Toasti_Item';
 
 function App() {
-	return <div className='App'>Hello World</div>;
+	return (
+		<div>
+			<ToastiItem />
+			<div className='App'>
+				<Navbar />
+			</div>
+		</div>
+	);
 }
 
 export default App;

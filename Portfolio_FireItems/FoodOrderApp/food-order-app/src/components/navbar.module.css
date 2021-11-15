@@ -1,0 +1,25 @@
+.navbar {
+	background-color: pink;
+	width: 100vw;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar_left {
+	flex: 1;
+	text-align: center;
+}
+.navbar_center {
+	flex: 2;
+	background-color: antiquewhite;
+	text-align: center;
+	font-size: 32px;
+}
+.navbar_right {
+	flex: 1;
+	text-align: center;
+}
+#userInput {
+	font-size: 32px;
+}
