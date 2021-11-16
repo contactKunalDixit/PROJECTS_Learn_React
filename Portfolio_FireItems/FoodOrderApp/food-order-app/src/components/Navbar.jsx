@@ -4,8 +4,10 @@ import { MdFastfood } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiSearchAlt } from 'react-icons/bi';
 import { GrClose } from 'react-icons/gr';
+import SlideMenu from './SlideMenu';
+
 const Navbar = () => {
-	const [menu, setMenu] = useState(true);
+	const [menu, setMenu] = useState(false);
 
 	const ToggleMenu = () => {
 		console.log(menu, 'button has been clicked');
@@ -23,7 +25,6 @@ const Navbar = () => {
 						id={styles.userInput}
 						name='userInput'
 						placeholder='Search your item here..'
-						value=''
 					/>
 				</form>
 				<BiSearchAlt
@@ -46,6 +47,7 @@ const Navbar = () => {
 					/>
 				</button>
 			</div>
+			{menu && <SlideMenu />}
 		</div>
 	);
 };

@@ -1,15 +1,17 @@
 .SlideMenu {
-	width: 80vw;
-	background-color: aqua;
+	width: 100%;
 	position: absolute;
 	top: 100px;
+}
+
+.Wrapper {
+	width: 80%;
+	background-color: pink;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-}
-
-.Wrapper {
+	/* padding: 20px; */
 }
 
 .ulist {
@@ -20,4 +22,6 @@
 }
 
 .list {
+	margin: 8px;
+	cursor: pointer;
 }
