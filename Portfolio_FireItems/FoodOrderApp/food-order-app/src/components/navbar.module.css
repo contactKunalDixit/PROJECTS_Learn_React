@@ -12,13 +12,18 @@
 .navbar_left {
 	flex: 1;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .navbar_center {
 	flex: 2;
 	background-color: antiquewhite;
-	text-align: center;
+
 	/* font-size: 32px; */
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 form {
 	width: 100%;
@@ -29,7 +34,9 @@ form {
 }
 .navbar_right {
 	flex: 1;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #userInput {
 	width: 100%;
