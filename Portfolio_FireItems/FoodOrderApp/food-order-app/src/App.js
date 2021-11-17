@@ -7,6 +7,7 @@ import Main from './Pages/Main/Main';
 import Footer from './components/Footer';
 import styles from './App.module.css';
 import Burgers from './Pages/Prod_burgers/Burgers';
+import Drinks from './Pages/Prod_drinks/Drinks';
 
 function App() {
 	const [menu, setMenu] = useState(false);
@@ -23,7 +24,8 @@ function App() {
 				<Navbar menu={menu} ToggleMenu={ToggleMenu} />
 				{menu && <SlideMenu />}
 				{/* <Main /> */}
-				<Burgers />
+				{/* <Burgers /> */}
+				<Drinks />
 				<Footer />
 			</div>
 			{/* </div> */}
