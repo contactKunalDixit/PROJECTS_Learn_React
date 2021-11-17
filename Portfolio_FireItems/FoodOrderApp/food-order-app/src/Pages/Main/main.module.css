@@ -1,18 +1,25 @@
 .Main {
 	width: 100vw;
 	background-color: plum;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 150px);
 	top: 100px;
-	position: absolute;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .wrapper {
 	display: flex;
-	height: 100%;
+	height: 90%;
 	width: 100%;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	text-align: center;
+	background-image: url('https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/04519d10-cfe5-11eb-bff8-46671950cebd.png');
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: contain;
 }
 .top > h1 {
 	font-size: 32px;

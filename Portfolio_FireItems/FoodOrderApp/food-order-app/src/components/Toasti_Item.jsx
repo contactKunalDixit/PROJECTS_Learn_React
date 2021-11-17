@@ -20,7 +20,7 @@ const ToastiItem = () => {
 
 	useEffect(() => {
 		return notify;
-	});
+	}, []);
 	return (
 		<div>
 			{/* <button onClick={notify}>Notify</button> */}

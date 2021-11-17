@@ -1,0 +1,51 @@
+.Burgers {
+	width: 100vw;
+	background-color: plum;
+	height: calc(100vh - 150px);
+	top: 100px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	display: flex;
+	height: 90%;
+	width: 100%;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.top {
+	text-align: center;
+	background-color: antiquewhite;
+}
+.top > h1 {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.top > h3 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.bottom {
+	width: 100%;
+	background-color: cadetblue;
+}
+
+.scrolling_wrapper_flexbox {
+	height: 55vh;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+.card {
+	flex: 0 0 auto;
+	width: 240px;
+	margin: 0 20px;
+	background-color: darkcyan;
+	height: 100%;
+}

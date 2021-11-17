@@ -1,27 +1,32 @@
 .SlideMenu {
-	width: 100%;
+	width: 40%;
+	height: 90vh;
 	position: absolute;
 	top: 100px;
+	right: 0px;
+	z-index: 10;
 }
 
 .Wrapper {
-	width: 80%;
+	width: 100%;
 	background-color: pink;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	margin: 0 auto;
 	/* padding: 20px; */
 }
 
 .ulist {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	padding: 0;
 	list-style-type: none;
 }
 
 .list {
-	margin: 8px;
+	margin: 18px;
 	cursor: pointer;
 }
