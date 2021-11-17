@@ -23,9 +23,9 @@ function App() {
 			<div className={styles.App}>
 				<Navbar menu={menu} ToggleMenu={ToggleMenu} />
 				{menu && <SlideMenu />}
-				{/* <Main /> */}
+				<Main />
 				{/* <Burgers /> */}
-				<Drinks />
+				{/* <Drinks /> */}
 				<Footer />
 			</div>
 			{/* </div> */}

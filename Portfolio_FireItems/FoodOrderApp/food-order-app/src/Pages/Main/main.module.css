@@ -1,6 +1,10 @@
 .Main {
 	width: 100vw;
-	background-color: plum;
+	background-color: rgb(252, 244, 233);
+	background-image: url('https://cdn2.vectorstock.com/i/1000x1000/70/36/hand-drawn-abstract-tropical-summer-background-vector-27957036.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	/* background-size: contain; */
 	height: calc(100vh - 150px);
 	top: 100px;
 	position: relative;

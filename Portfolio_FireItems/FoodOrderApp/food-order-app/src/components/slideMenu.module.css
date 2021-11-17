@@ -9,7 +9,7 @@
 
 .Wrapper {
 	width: 100%;
-	background-color: pink;
+	background-color: white;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -29,4 +29,6 @@
 .list {
 	margin: 18px;
 	cursor: pointer;
+	font-size: 18px;
+	font-weight: 500;
 }

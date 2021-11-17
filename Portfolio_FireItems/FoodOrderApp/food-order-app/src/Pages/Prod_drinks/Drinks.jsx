@@ -9,7 +9,7 @@ const Drinks = () => {
 			<div className={styles.wrapper}>
 				<div className={styles.top}>
 					<h1>Drinks</h1>
-					<h3>Choose your Favourite</h3>
+					{/* <h3>Pamper yourself</h3> */}
 				</div>
 
 				<div className={styles.bottom}>

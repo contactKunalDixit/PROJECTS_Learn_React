@@ -1,6 +1,9 @@
 .Drinks {
 	width: 100vw;
-	background-color: plum;
+	background-image: url('https://t3.ftcdn.net/jpg/02/46/14/48/360_F_246144813_VSYaSoJgpD90TY566bpXRLTPCIjnD1SY.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: calc(100vh - 150px);
 	top: 100px;
 	position: relative;
@@ -19,21 +22,21 @@
 
 .top {
 	text-align: center;
-	background-color: antiquewhite;
+	/* background-color: antiquewhite; */
 }
 .top > h1 {
-	font-size: 24px;
-	font-weight: 400;
+	font-size: 30px;
+	font-weight: 500;
 }
 
 .top > h3 {
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .bottom {
 	width: 100%;
-	background-color: cadetblue;
+	/* background-color: cadetblue; */
 }
 
 .scrolling_wrapper_flexbox {
@@ -46,7 +49,8 @@
 	flex: 0 0 auto;
 	width: 280px;
 	margin: 0 20px;
-	background-color: darkcyan;
+	background-color: rgb(206, 253, 253, 0.4);
+	opacity: 1;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -96,6 +100,7 @@
 
 .imgDesc {
 	text-align: center;
+	font-weight: 500;
 }
 .prodQty {
 	display: flex;
@@ -132,4 +137,6 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: 2px solid black;
+	border-style: double;
 }
