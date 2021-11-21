@@ -1,5 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
+import ChickenBurgerCarousel from './ChickenBurgerCarousel';
+import Cocktails from './Cocktails';
 import GermanBeerCarousel from './GermanBeerCarousel';
 import styles from './main.module.css';
 const Main = () => {
@@ -8,6 +10,8 @@ const Main = () => {
 			<div className={styles.wrapper}>
 				<Banner />
 				<GermanBeerCarousel />
+				<ChickenBurgerCarousel />
+				<Cocktails />
 			</div>
 		</div>
 	);

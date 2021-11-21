@@ -1,20 +1,21 @@
 import React from 'react';
-import styles from './germanBeer.module.css';
+import styles from './cocktails.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { AiFillMinusSquare } from 'react-icons/ai';
-import { GermanBeerData } from './../../data';
-const GermanBeerCarousel = () => {
+import { productDrinks } from './../../data';
+
+const Cocktails = () => {
 	return (
 		<div className={styles.product}>
-			<h1 className={styles.prodTitle}>GERMAN BEERS</h1>
+			<h1 className={styles.prodTitle}>COCKTAILS</h1>
 
 			<div className={styles.prodCard_scrolling_wrapper}>
-				{GermanBeerData.map((item) => (
+				{productDrinks.map((item) => (
 					<div className={styles.prodCard} key={item.id}>
 						<div className={styles.prodPic}>
 							<img
 								src={item.img}
-								alt='Drink'
+								alt='Burger'
 								className={styles.prodImage}
 							></img>
 						</div>
@@ -52,4 +53,4 @@ const GermanBeerCarousel = () => {
 	);
 };
 
-export default GermanBeerCarousel;
+export default Cocktails;
