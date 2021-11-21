@@ -11,7 +11,13 @@ const GermanBeerCarousel = () => {
 			<div className={styles.prodCard_scrolling_wrapper}>
 				{GermanBeerData.map((item) => (
 					<div className={styles.prodCard}>
-						<div className={styles.prodPic}></div>
+						<div className={styles.prodPic}>
+							<img
+								src={item.img}
+								alt='Drink'
+								className={styles.prodImage}
+							></img>
+						</div>
 						<div className={styles.prodPriceInfo}>
 							<p>{item.prodPriceInfo}</p>
 						</div>
