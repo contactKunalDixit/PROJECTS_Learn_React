@@ -4,47 +4,27 @@ import { MdFastfood } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiSearchAlt } from 'react-icons/bi';
 import { GrClose } from 'react-icons/gr';
+import NavbarItemCarousel from './navbarItemCarousel';
 
 const Navbar = (props) => {
-	// const [menu, setMenu] = useState(false);
-
-	// const ToggleMenu = () => {
-	// 	console.log(menu, 'button has been clicked');
-	// 	setMenu(!menu);
-	// };
 	return (
 		<div className={styles.navbar}>
-			<div className={styles.navbar_left}>
-				<MdFastfood style={{ fontSize: '48px' }}></MdFastfood>
+			<div className={styles.Sec1}>
+				<div className={styles.navbar_left}>
+					<p>Table No. 121</p>
+				</div>
+				<div className={styles.navbar_center}>
+					<h1>
+						{' '}
+						Expériences <span className={styles.titleItal}>divines</span>
+					</h1>
+				</div>
+				<div className={styles.navbar_right}>
+					<p>View bill</p>
+				</div>
 			</div>
-			<div className={styles.navbar_center}>
-				<form>
-					<input
-						type='text'
-						id={styles.userInput}
-						name='userInput'
-						placeholder='Search your item here..'
-					/>
-				</form>
-				<BiSearchAlt
-					style={{ fontSize: '22px', backgroundColor: 'transparent' }}
-				/>
-			</div>
-			<div className={styles.navbar_right}>
-				<button onClick={props.ToggleMenu} id={styles.menuButton}>
-					<GiHamburgerMenu
-						style={{
-							display: !props.menu ? 'block' : 'none',
-							fontSize: '30px',
-						}}
-					/>
-					<GrClose
-						style={{
-							display: props.menu ? 'block' : 'none',
-							fontSize: '28px',
-						}}
-					/>
-				</button>
+			<div className={styles.Sec2}>
+				<NavbarItemCarousel />
 			</div>
 		</div>
 	);

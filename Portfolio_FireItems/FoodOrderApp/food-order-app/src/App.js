@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import styles from './App.module.css';
 import Burgers from './Pages/Prod_burgers/Burgers';
 import Drinks from './Pages/Prod_drinks/Drinks';
+import navbarItemCarousel from './components/navbarItemCarousel';
 
 function App() {
 	const [menu, setMenu] = useState(false);
@@ -21,12 +22,12 @@ function App() {
 			<ToastiItem />
 			{/* <div className={styles.wrapper}> */}
 			<div className={styles.App}>
-				<Navbar menu={menu} ToggleMenu={ToggleMenu} />
-				{menu && <SlideMenu />}
+				<Navbar />
 				<Main />
-				{/* <Burgers /> */}
-				{/* <Drinks /> */}
-				<Footer />
+				{/*}
+				<Burgers />
+				<Drinks /> */}
+				{/* <Footer /> */}
 			</div>
 			{/* </div> */}
 		</div>

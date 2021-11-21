@@ -1,13 +1,21 @@
 .navbar {
-	background-color: rgb(228, 198, 203);
 	width: 100vw;
-	height: 100px;
+	height: 180px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
 	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0px;
+	background-color: rgb(197, 159, 159);
+	z-index: 100;
+}
+.Sec1 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .navbar_left {
 	flex: 1;
@@ -16,29 +24,34 @@
 	justify-content: center;
 	align-items: center;
 }
+.navbar_left > p {
+	font-size: 16px;
+	font-weight: 500;
+}
 .navbar_center {
 	flex: 2;
-	background-color: antiquewhite;
 
 	/* font-size: 32px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-form {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* font-size: 40px; */
+
+.navbar_center > h1 {
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
 }
+
 .navbar_right {
 	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 16px;
+	font-weight: 600;
 }
-#userInput {
+/* #userInput {
 	width: 100%;
 	font-size: 16px;
 	border: none;
@@ -49,4 +62,7 @@ form {
 #menuButton {
 	background-color: transparent;
 	border: none;
+} */
+
+.Sec2 {
 }

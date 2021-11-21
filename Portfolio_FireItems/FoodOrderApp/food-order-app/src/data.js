@@ -64,3 +64,5 @@ export const productDrinks = [
 		desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dignissimos, aliquid!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, iusto',
 	},
 ];
+
+export const GermanBeerData = [{}];
