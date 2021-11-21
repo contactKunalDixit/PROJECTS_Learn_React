@@ -67,11 +67,11 @@ export const productDrinks = [
 
 export const GermanBeerData = [
 	{
-		img: '',
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/Beer1.jpeg',
 		prodPriceInfo: '2 for $22 0.5L Hacker-Pschorr $22.00',
 	},
 	{
-		img: '',
-		prodPriceInfo: '2 for $22 0.5L Hacker-Pschorr $22.00',
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/Beer3.jpeg',
+		prodPriceInfo: '3 for $32 0.5L Hacker-Pschorr $30.00',
 	},
 ];
