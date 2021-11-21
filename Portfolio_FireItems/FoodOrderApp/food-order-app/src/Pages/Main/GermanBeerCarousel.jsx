@@ -6,7 +6,6 @@ import { GermanBeerData } from './../../data';
 const GermanBeerCarousel = () => {
 	return (
 		<div className={styles.product}>
-			{}
 			<h1 className={styles.prodTitle}>GERMAN BEERS</h1>
 
 			<div className={styles.prodCard_scrolling_wrapper}>

@@ -65,4 +65,13 @@ export const productDrinks = [
 	},
 ];
 
-export const GermanBeerData = [{}];
+export const GermanBeerData = [
+	{
+		img: '',
+		prodPriceInfo: '2 for $22 0.5L Hacker-Pschorr $22.00',
+	},
+	{
+		img: '',
+		prodPriceInfo: '2 for $22 0.5L Hacker-Pschorr $22.00',
+	},
+];
