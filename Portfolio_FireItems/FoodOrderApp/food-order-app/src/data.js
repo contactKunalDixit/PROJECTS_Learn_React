@@ -40,7 +40,7 @@ export const productDrinks = [
 	{
 		id: 1,
 		title: 'Ginger Ale',
-		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/Drink1.jpeg',
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/GingerAle.jpeg',
 		desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Dignissimos, aliquid!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, iusto',
 		prodPriceInfo: 'Ginger ALe - 1 for $19',
 	},
