@@ -5,7 +5,7 @@ const NavbarCartButton = () => {
 		<React.Fragment>
 			<button className={styles.button}>
 				<span>Cart</span>
-				<span classNAme={styles.badge}>3</span>
+				<span className={styles.badge}>3</span>
 			</button>
 		</React.Fragment>
 	);

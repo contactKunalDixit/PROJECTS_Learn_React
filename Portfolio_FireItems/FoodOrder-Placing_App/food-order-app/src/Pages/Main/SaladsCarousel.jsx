@@ -4,7 +4,8 @@ import styles from './saladCarousel.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { AiFillMinusSquare } from 'react-icons/ai';
 import { SaladData } from '../../data';
-const Salads = () => {
+import Input from '../../components/utilities/Input';
+const Salads = (props) => {
 	return (
 		<section className={styles.product}>
 			<h1 className={styles.prodTitle}>SALADS</h1>
@@ -22,26 +23,36 @@ const Salads = () => {
 						<div className={styles.prodPriceInfo}>
 							<p>{item.prodPriceInfo}</p>
 						</div>
-						<div className={styles.prodOrderedQty}>
-							<div className={styles.left}>
-								<button className={styles.Qtybutton}>
-									<BsFillPlusSquareFill
-										style={{ fontSize: '32px', fontWeight: '600' }}
-									/>
-								</button>
-							</div>
-							<div className={styles.center}>
-								<div className={styles.chosenQty}>
-									<p>9</p>
+						<div className={styles.prodOrderQty}>
+							<form action=''>
+								<div className={styles.left}>
+									<button className={styles.Qtybutton}>
+										<BsFillPlusSquareFill
+											style={{ fontSize: '32px', fontWeight: '600' }}
+										/>
+									</button>
 								</div>
-							</div>
-							<div className={styles.right}>
-								<button className={styles.Qtybutton}>
-									<AiFillMinusSquare
-										style={{ fontSize: '41px', fontWeight: '600' }}
-									/>
-								</button>
-							</div>
+								<div className={styles.center}>
+									<Input
+										// label='Amount'
+										input={{
+											id: 'amount_' + props.id, // this changed!,
+											type: 'number',
+											min: '1',
+											max: '5',
+											step: '1',
+											defaultValue: '0',
+										}}
+									></Input>
+								</div>
+								<div className={styles.right}>
+									<button className={styles.Qtybutton}>
+										<AiFillMinusSquare
+											style={{ fontSize: '41px', fontWeight: '600' }}
+										/>
+									</button>
+								</div>
+							</form>
 						</div>
 						<div className={styles.readMoreBox}>
 							<button className={styles.ReadMoreButton}>Read More</button>

@@ -5,17 +5,19 @@ import CocktailsCarousel from './CocktailsCarousel';
 import GermanBeerCarousel from './GermanBeerCarousel';
 import styles from './main.module.css';
 import SaladsCarousel from './SaladsCarousel';
+import Cart from '../../components/Cart';
 const Main = () => {
 	return (
-		<div className={styles.Main}>
+		<main className={styles.Main}>
 			<div className={styles.wrapper}>
 				<Banner />
+				<Cart />
 				<GermanBeerCarousel />
 				<ChickenBurgerCarousel />
 				<CocktailsCarousel />
 				<SaladsCarousel />
 			</div>
-		</div>
+		</main>
 	);
 };
 export default Main;

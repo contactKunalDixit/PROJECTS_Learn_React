@@ -1,0 +1,13 @@
+.input {
+	/* font-size: 30px; */
+}
+
+.userInput {
+	width: 0.7rem;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background-color: transparent;
+}

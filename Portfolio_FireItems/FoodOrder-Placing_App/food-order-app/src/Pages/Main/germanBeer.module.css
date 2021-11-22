@@ -52,7 +52,12 @@
 	font-size: 16px;
 }
 
-.prodOrderedQty {
+.prodOrderQty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.prodOrderQty > form {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -66,6 +71,9 @@
 .center {
 	margin: 0 25px;
 }
+/* .center > Input {
+	display: flex;
+} */
 
 .Qtybutton {
 	border: none;
