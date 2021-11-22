@@ -1,9 +1,9 @@
 .navbar {
 	width: 100vw;
-	height: 180px;
+	height: 140px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	position: fixed;
 	top: 0;
@@ -26,7 +26,8 @@
 }
 .navbar_left > p {
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 .navbar_center {
 	flex: 2;
@@ -38,9 +39,10 @@
 }
 
 .navbar_center > h1 {
-	font-size: 18px;
-	font-weight: 500;
+	font-size: 28px;
+	font-weight: 700;
 	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .navbar_right {
@@ -50,19 +52,13 @@
 	align-items: center;
 	font-size: 16px;
 	font-weight: 600;
-}
-/* #userInput {
-	width: 100%;
-	font-size: 16px;
-	border: none;
-	font-style: italic;
-	font-family: 'Hind Madurai', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
-#menuButton {
-	background-color: transparent;
-	border: none;
-} */
-
-.Sec2 {
+.navbar_right > button {
+	border-radius: 0%;
+	border: 1px solid grey;
+	background-color: grey;
+	cursor: pointer;
+	padding: 5px 15px;
 }

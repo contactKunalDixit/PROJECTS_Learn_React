@@ -1,6 +1,9 @@
 .footer {
 	background-color: rgb(71, 70, 70);
-	height: 50px;
+	height: 40px;
+	width: 100vw;
+	position: fixed;
+	bottom: 0px;
 }
 
 .wrapper {

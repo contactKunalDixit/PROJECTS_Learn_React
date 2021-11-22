@@ -107,3 +107,31 @@ export const GermanBeerData = [
 		prodPriceInfo: '3 for $32 0.5L Hacker-Pschorr $30.00',
 	},
 ];
+
+export const SaladData = [
+	{
+		id: 1,
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/salad1.jpeg',
+		prodPriceInfo: '2 for $22 0.5L Hacker-Pschorr $22.00',
+	},
+	{
+		id: 2,
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/salad2.jpeg',
+		prodPriceInfo: '3 for $32 0.5L Hacker-Pschorr $30.00',
+	},
+	{
+		id: 3,
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/salad3.png',
+		prodPriceInfo: '2 for $22 0.5L Hacker-Pschorr $22.00',
+	},
+	{
+		id: 4,
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/salad4.jpeg',
+		prodPriceInfo: '3 for $32 0.5L Hacker-Pschorr $30.00',
+	},
+	{
+		id: 5,
+		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrderApp/food-order-app/src/Img/salad5.jpeg',
+		prodPriceInfo: '3 for $32 0.5L Hacker-Pschorr $30.00',
+	},
+];

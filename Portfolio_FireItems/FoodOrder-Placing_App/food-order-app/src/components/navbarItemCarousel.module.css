@@ -10,7 +10,7 @@
 .card {
 	flex: 0 0 auto;
 	/* height: 100px; */
-	padding: 15px;
+	padding: 5px 15px;
 	margin: 15px;
 	background-color: rgb(219, 219, 219);
 	border-radius: 5px;

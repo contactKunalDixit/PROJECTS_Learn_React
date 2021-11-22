@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import styles from './App.module.css';
 import Burgers from './Pages/Prod_burgers/Burgers';
 import Drinks from './Pages/Prod_drinks/Drinks';
-import navbarItemCarousel from './components/navbarItemCarousel';
 
 function App() {
 	const [menu, setMenu] = useState(false);

@@ -1,10 +1,10 @@
 import React from 'react';
 import Banner from './Banner';
 import ChickenBurgerCarousel from './ChickenBurgerCarousel';
-import Cocktails from './Cocktails';
+import CocktailsCarousel from './CocktailsCarousel';
 import GermanBeerCarousel from './GermanBeerCarousel';
 import styles from './main.module.css';
-import Salads from './SaladsCarousel';
+import SaladsCarousel from './SaladsCarousel';
 const Main = () => {
 	return (
 		<div className={styles.Main}>
@@ -12,8 +12,8 @@ const Main = () => {
 				<Banner />
 				<GermanBeerCarousel />
 				<ChickenBurgerCarousel />
-				<Cocktails />
-				<Salads />
+				<CocktailsCarousel />
+				<SaladsCarousel />
 			</div>
 		</div>
 	);

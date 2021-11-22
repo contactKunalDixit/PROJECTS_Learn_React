@@ -1,16 +1,16 @@
 import React from 'react';
-
-import styles from './saladCarousel.module.css';
+import styles from './cocktails.module.css';
 import { BsFillPlusSquareFill } from 'react-icons/bs';
 import { AiFillMinusSquare } from 'react-icons/ai';
-import { productBurger } from '../../data';
-const Salads = () => {
+import { productDrinks } from '../../data';
+
+const Cocktails = () => {
 	return (
-		<div className={styles.product}>
-			<h1 className={styles.prodTitle}>SALADS</h1>
+		<section className={styles.product}>
+			<h1 className={styles.prodTitle}>COCKTAILS</h1>
 
 			<div className={styles.prodCard_scrolling_wrapper}>
-				{productBurger.map((item) => (
+				{productDrinks.map((item) => (
 					<div className={styles.prodCard} key={item.id}>
 						<div className={styles.prodPic}>
 							<img
@@ -49,8 +49,8 @@ const Salads = () => {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 
-export default Salads;
+export default Cocktails;

@@ -5,28 +5,26 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { BiSearchAlt } from 'react-icons/bi';
 import { GrClose } from 'react-icons/gr';
 import NavbarItemCarousel from './navbarItemCarousel';
+import NavbarCartButton from './NavbarCartButton';
 
 const Navbar = (props) => {
 	return (
-		<div className={styles.navbar}>
+		<header className={styles.navbar}>
 			<div className={styles.Sec1}>
 				<div className={styles.navbar_left}>
 					<p>Table No. 121</p>
 				</div>
 				<div className={styles.navbar_center}>
-					<h1>
-						{' '}
-						Expériences <span className={styles.titleItal}>divines</span>
-					</h1>
+					<h1> Expériences divines</h1>
 				</div>
 				<div className={styles.navbar_right}>
-					<p>View bill</p>
+					<NavbarCartButton />
 				</div>
 			</div>
 			<div className={styles.Sec2}>
 				<NavbarItemCarousel />
 			</div>
-		</div>
+		</header>
 	);
 };
 
