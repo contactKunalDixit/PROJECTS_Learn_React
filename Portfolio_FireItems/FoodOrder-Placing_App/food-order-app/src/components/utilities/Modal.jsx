@@ -1,9 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import styles from './modal.module.css';
 import ReactDOM from 'react-dom';
 
+import { CartContext } from '../../App';
+
 const Backdrop = (props) => {
-	return <div className={styles.backdrop} onClick={props.onClose}></div>;
+	const CartClose = useContext(CartContext);
+
+	return (
+		<div
+			className={styles.backdrop}
+			// onClick={props.onClose}
+			onClick={CartClose.hideFunc}
+			// ContextAPI being used
+		></div>
+	);
 };
 const ModalOverlay = (props) => {
 	return (
