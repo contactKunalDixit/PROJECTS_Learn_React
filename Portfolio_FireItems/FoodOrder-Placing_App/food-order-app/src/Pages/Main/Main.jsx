@@ -11,7 +11,8 @@ const Main = () => {
 		<main className={styles.Main}>
 			<div className={styles.wrapper}>
 				<Banner />
-				<Cart />
+				{/* <Cart /> */}
+				{/* It doesnt matter where we place the 'Cart' because it is being handled through Portal whose opening has been placed in the HTML file  */}
 				<GermanBeerCarousel />
 				<ChickenBurgerCarousel />
 				<CocktailsCarousel />

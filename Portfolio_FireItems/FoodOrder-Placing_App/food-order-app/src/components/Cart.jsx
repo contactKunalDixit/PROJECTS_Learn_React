@@ -5,20 +5,23 @@ import Modal from './utilities/Modal';
 const Cart = (props) => {
 	const cartItems = (
 		<ul className={styles['cart-items']}>
-			{[{ id: '1', name: 'sushi', amount: '2', price: '12.99' }].map((item) => (
+			{[{ id: '1', name: 'Item1', amount: '2', price: '12.99' }].map((item) => (
 				<li>{item.name}</li>
 			))}
 		</ul>
 	);
 	return (
-		<Modal>
-			{cartItems}
-			<div className={styles.totalAmount}>
-				<span>Total Amount</span>;<span>35.62</span>;
-			</div>
-			<div className={styles.actions}>
-				<button className={styles['button--alt']}>Close</button>
-				<button className={styles.button}>Order</button>
+		<Modal style={{ height: '80vh' }}>
+			<div className={styles.ModalCart}>
+				{cartItems}
+				<div className={styles.totalAmount}>
+					<span>Total Amount</span>
+					<span>35.62</span>
+				</div>
+				<div className={styles.actions}>
+					<button className={styles['button--alt']}>Close</button>
+					<button className={styles.button}>Order</button>
+				</div>
 			</div>
 		</Modal>
 	);

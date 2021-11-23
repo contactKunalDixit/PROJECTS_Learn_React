@@ -5,7 +5,7 @@
 	width: 100%;
 	height: 100vh;
 	z-index: 20;
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal {
@@ -13,8 +13,11 @@
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 20vh;
-	left: 5%;
+	/* top: 20vh; */
+	/* left: 5%; */
+
+	/* margin-left: auto;
+	margin-right: auto; */
 	height: 60%;
 	width: 80%;
 	background-color: white;
@@ -23,6 +26,14 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 	z-index: 300;
 	animation: slide-down 300ms ease-out forwards;
+	margin: 25% auto; /* Will not center vertically and won't work in IE6/7. */
+	left: 0;
+	right: 0;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
 }
 
 @media (min-width: 768px) {

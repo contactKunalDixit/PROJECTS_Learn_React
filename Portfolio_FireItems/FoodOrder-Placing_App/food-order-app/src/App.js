@@ -19,10 +19,8 @@ function App() {
 	return (
 		<div className={styles.wrapper}>
 			<ToastiItem />
-			{/* <div className={styles.wrapper}> */}
 			<div className={styles.App}>
 				<Navbar />
-				{/* <Cart /> */}
 				<Main />
 				{/*}
 				<Burgers />
