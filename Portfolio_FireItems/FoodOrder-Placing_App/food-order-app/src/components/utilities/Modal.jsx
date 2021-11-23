@@ -2,10 +2,10 @@ import React, { Fragment, useContext } from 'react';
 import styles from './modal.module.css';
 import ReactDOM from 'react-dom';
 
-import { CartContext } from '../../App';
+import { ModalContext } from '../../App';
 
 const Backdrop = (props) => {
-	const CartClose = useContext(CartContext);
+	const CartClose = useContext(ModalContext);
 
 	return (
 		<div

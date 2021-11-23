@@ -9,8 +9,9 @@ import styles from './App.module.css';
 import Burgers from './Pages/Prod_burgers/Burgers';
 import Drinks from './Pages/Prod_drinks/Drinks';
 import Cart from './components/Cart';
+import CartProvider from './store_context/cartProvider';
 
-export const CartContext = React.createContext();
+export const ModalContext = React.createContext();
 
 function App() {
 	const [CartisShown, setCartisShown] = useState(false);
@@ -24,26 +25,29 @@ function App() {
 	return (
 		<div className={styles.wrapper}>
 			<ToastiItem />
-			<div className={styles.App}>
-				<CartContext.Provider
-					value={{
-						dataState: CartisShown,
-						showFunc: showCartHandler,
-						hideFunc: hideCartHandler,
-					}}
-				>
-					<Navbar
-					// onShowCart={showCartHandler}
-					/>
-					{CartisShown && <Cart onClose={hideCartHandler} />}
-					{/* It doesnt matter where we place the 'Cart' because it is being handled through Portal whose opening has been placed in the HTML file  */}
-					<Main />
-					{/*}
+			<CartProvider>
+				<div className={styles.App}>
+					<ModalContext.Provider
+						value={{
+							dataState: CartisShown,
+							showFunc: showCartHandler,
+							hideFunc: hideCartHandler,
+						}}
+					>
+						<Navbar
+						// onShowCart={showCartHandler}
+						/>
+						{CartisShown && <Cart onClose={hideCartHandler} />}
+						{/* It doesnt matter where we place the 'Cart' because it is being handled through Portal whose opening has been placed in the HTML file  */}
+						<Main />
+						{/*}
 				<Burgers />
 				<Drinks /> */}
-					{/* <Footer /> */}
-				</CartContext.Provider>
-			</div>
+						{/* <Footer /> */}
+					</ModalContext.Provider>
+				</div>
+			</CartProvider>
+
 			{/* </div> */}
 		</div>
 	);
