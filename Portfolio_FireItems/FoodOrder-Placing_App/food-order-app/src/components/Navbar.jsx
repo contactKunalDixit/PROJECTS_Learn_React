@@ -18,7 +18,7 @@ const Navbar = (props) => {
 					<h1> Expériences divines</h1>
 				</div>
 				<div className={styles.navbar_right}>
-					<NavbarCartButton />
+					<NavbarCartButton onShowCart={props.onShowCart} />
 				</div>
 			</div>
 			<div className={styles.Sec2}>

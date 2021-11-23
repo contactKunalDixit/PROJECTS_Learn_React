@@ -9,18 +9,23 @@ import styles from './App.module.css';
 import Burgers from './Pages/Prod_burgers/Burgers';
 import Drinks from './Pages/Prod_drinks/Drinks';
 import Cart from './components/Cart';
-function App() {
-	const [menu, setMenu] = useState(false);
 
-	const ToggleMenu = () => {
-		console.log(menu, 'button has been clicked');
-		setMenu(!menu);
+function App() {
+	const [CartisShown, setCartisShown] = useState(false);
+	const showCartHandler = () => {
+		setCartisShown(true);
 	};
+	const hideCartHandler = () => {
+		setCartisShown(false);
+	};
+
 	return (
 		<div className={styles.wrapper}>
 			<ToastiItem />
 			<div className={styles.App}>
-				<Navbar />
+				<Navbar onShowCart={showCartHandler} />
+				{CartisShown && <Cart onClose={hideCartHandler} />}
+				{/* It doesnt matter where we place the 'Cart' because it is being handled through Portal whose opening has been placed in the HTML file  */}
 				<Main />
 				{/*}
 				<Burgers />
