@@ -5,7 +5,6 @@ import CocktailsCarousel from './CocktailsCarousel';
 import GermanBeerCarousel from './GermanBeerCarousel';
 import styles from './main.module.css';
 import SaladsCarousel from './SaladsCarousel';
-import Cart from '../../components/Cart';
 
 const Main = () => {
 	return (

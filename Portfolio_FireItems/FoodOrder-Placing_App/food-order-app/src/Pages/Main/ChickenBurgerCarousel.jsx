@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './chickenBurgerCarousel.module.css';
-import { BsFillPlusSquareFill } from 'react-icons/bs';
-import { AiFillMinusSquare } from 'react-icons/ai';
 import { productBurger } from '../../data';
-import Input from '../../components/utilities/Input';
+import MealItemForm from '../../components/utilities/MealItemForm';
+import cart_Context from '../../store_context/cart_Context';
+
 const ChickenBurgerCarousel = (props) => {
+	const cartCtx = useContext(cart_Context);
+	const addToCartHandler = (amount) => {
+		cartCtx.addItem({
+			id: props.id,
+			name: props.name,
+			amount: amount,
+			price: props.price,
+		});
+	};
 	return (
 		<section className={styles.product}>
 			<h1 className={styles.prodTitle}>CHICKEN BURGERS</h1>
@@ -23,35 +32,7 @@ const ChickenBurgerCarousel = (props) => {
 							<p>{item.prodPriceInfo}</p>
 						</div>
 						<div className={styles.prodOrderQty}>
-							<form action=''>
-								<div className={styles.left}>
-									<button className={styles.Qtybutton}>
-										<BsFillPlusSquareFill
-											style={{ fontSize: '32px', fontWeight: '600' }}
-										/>
-									</button>
-								</div>
-								<div className={styles.center}>
-									<Input
-										// label='Amount'
-										input={{
-											id: 'amount_' + props.id, // this changed!,
-											type: 'number',
-											min: '1',
-											max: '5',
-											step: '1',
-											defaultValue: '0',
-										}}
-									></Input>
-								</div>
-								<div className={styles.right}>
-									<button className={styles.Qtybutton}>
-										<AiFillMinusSquare
-											style={{ fontSize: '41px', fontWeight: '600' }}
-										/>
-									</button>
-								</div>
-							</form>
+							<MealItemForm onAddToCart={addToCartHandler} />
 						</div>
 						<div className={styles.readMoreBox}>
 							<button className={styles.ReadMoreButton}>Read More</button>

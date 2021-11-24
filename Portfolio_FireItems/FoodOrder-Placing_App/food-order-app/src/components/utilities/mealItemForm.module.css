@@ -1,0 +1,30 @@
+form {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.left,
+.right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.center {
+	margin: 0 25px;
+}
+/* .center > Input {
+	display: flex;
+} */
+
+.Qtybutton {
+	border: none;
+}
+
+.chosenQty {
+	width: 36px;
+	height: 36px;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
