@@ -3,6 +3,7 @@ import styles from './chickenBurgerCarousel.module.css';
 import { productBurger } from '../../data';
 import MealItemForm from '../../components/utilities/MealItemForm';
 import cart_Context from '../../store_context/cart_Context';
+import ReadMoreButton from '../../components/utilities/ReadMoreButton';
 
 const ChickenBurgerCarousel = (props) => {
 	const cartCtx = useContext(cart_Context);
@@ -34,9 +35,8 @@ const ChickenBurgerCarousel = (props) => {
 						<div className={styles.prodOrderQty}>
 							<MealItemForm onAddToCart={addToCartHandler} />
 						</div>
-						<div className={styles.readMoreBox}>
-							<button className={styles.ReadMoreButton}>Read More</button>
-						</div>
+
+						<ReadMoreButton />
 					</div>
 				))}
 			</div>

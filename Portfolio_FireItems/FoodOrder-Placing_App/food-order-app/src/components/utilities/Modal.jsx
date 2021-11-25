@@ -10,7 +10,6 @@ const Backdrop = (props) => {
 	return (
 		<div
 			className={styles.backdrop}
-			// onClick={props.onClose}
 			onClick={CartClose.hideFunc}
 			// ContextAPI being used
 		></div>
@@ -27,10 +26,7 @@ const portalElement = document.getElementById('overlays');
 const Modal = (props) => {
 	return (
 		<Fragment>
-			{ReactDOM.createPortal(
-				<Backdrop onClose={props.onClose} />,
-				portalElement
-			)}
+			{ReactDOM.createPortal(<Backdrop />, portalElement)}
 			{ReactDOM.createPortal(
 				<ModalOverlay>{props.children}</ModalOverlay>,
 				portalElement

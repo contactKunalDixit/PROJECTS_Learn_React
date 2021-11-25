@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './saladCarousel.module.css';
 import { SaladData } from '../../data';
 import MealItemForm from '../../components/utilities/MealItemForm';
+import ReadMoreButton from '../../components/utilities/ReadMoreButton';
 const Salads = (props) => {
 	return (
 		<section className={styles.product}>
@@ -23,9 +24,7 @@ const Salads = (props) => {
 						<div className={styles.prodOrderQty}>
 							<MealItemForm />
 						</div>
-						<div className={styles.readMoreBox}>
-							<button className={styles.ReadMoreButton}>Read More</button>
-						</div>
+						<ReadMoreButton />
 					</div>
 				))}
 			</div>

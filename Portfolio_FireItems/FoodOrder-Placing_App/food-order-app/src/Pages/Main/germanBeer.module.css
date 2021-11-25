@@ -66,16 +66,3 @@
 	align-items: center;
 	justify-content: center;
 }
-.ReadMoreButton {
-	border: none;
-	background-color: transparent;
-	font-size: 14px;
-}
-.readMoreBox {
-	width: 100%;
-	height: 50px;
-	background-color: rgb(195, 195, 197);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}

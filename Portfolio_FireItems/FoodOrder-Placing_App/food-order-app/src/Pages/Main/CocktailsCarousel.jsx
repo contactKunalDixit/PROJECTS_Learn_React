@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './cocktails.module.css';
 import { productDrinks } from '../../data';
 import MealItemForm from '../../components/utilities/MealItemForm';
+import ReadMoreButton from '../../components/utilities/ReadMoreButton';
 
 const Cocktails = (props) => {
 	return (
@@ -24,9 +25,7 @@ const Cocktails = (props) => {
 						<div className={styles.prodOrderQty}>
 							<MealItemForm />
 						</div>
-						<div className={styles.readMoreBox}>
-							<button className={styles.ReadMoreButton}>Read More</button>
-						</div>
+						<ReadMoreButton />
 					</div>
 				))}
 			</div>
