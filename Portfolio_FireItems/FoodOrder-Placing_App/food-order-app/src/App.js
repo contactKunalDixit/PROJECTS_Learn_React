@@ -31,7 +31,6 @@ function App() {
 		setModalReadMoreShows(true);
 	};
 	const hideModalReadMore = () => {
-		// console.log('WORKS');
 		setModalReadMoreShows(false);
 	};
 
@@ -54,9 +53,7 @@ function App() {
 								hideReadModal: hideModalReadMore,
 							}}
 						>
-							<Navbar
-							// onShowCart={showCartHandler}
-							/>
+							<Navbar />
 							{CartisShown && <Cart onClose={hideCartHandler} />}
 							{/* It doesnt matter where we place the 'Cart' because it is being handled through Portal whose opening has been placed in the HTML file  */}
 

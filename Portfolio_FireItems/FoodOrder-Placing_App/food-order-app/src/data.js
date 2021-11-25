@@ -124,7 +124,7 @@ export const SaladData = [
 	{
 		id: 1,
 		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrder-Placing_App/food-order-app/src/Img/salad1.jpeg',
-		prodPriceInfo: '1 for $12',
+		prodPriceInfo: 'Salad 1 for $12',
 		title: 'Salad 1',
 
 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod		perspiciatis accusantium ullam! Iste doloremque laboriosam minimaobcaecati. Quasi modi laboriosam beatae laudantium quam, optio odio.		Aperiam tempore eum temporibus dolor Lorem ipsum dolor sit amet		consectetur adipisicing elit. Rem necessitatibus consequatur vel totam		praesentium. Nesciunt quos velit dolorum incidunt hic.',
@@ -132,7 +132,7 @@ export const SaladData = [
 	{
 		id: 2,
 		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrder-Placing_App/food-order-app/src/Img/salad2.jpeg',
-		prodPriceInfo: '1 for $13.00',
+		prodPriceInfo: 'Salad 2 for $13.00',
 		title: 'Salad 2',
 
 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod		perspiciatis accusantium ullam! Iste doloremque laboriosam minimaobcaecati. Quasi modi laboriosam beatae laudantium quam, optio odio.		Aperiam tempore eum temporibus dolor Lorem ipsum dolor sit amet		consectetur adipisicing elit. Rem necessitatibus consequatur vel totam		praesentium. Nesciunt quos velit dolorum incidunt hic.',
@@ -140,7 +140,7 @@ export const SaladData = [
 	{
 		id: 3,
 		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrder-Placing_App/food-order-app/src/Img/salad3.png',
-		prodPriceInfo: '1 for $15',
+		prodPriceInfo: 'Salad 3 for $15',
 		title: 'Salad 3',
 
 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod		perspiciatis accusantium ullam! Iste doloremque laboriosam minimaobcaecati. Quasi modi laboriosam beatae laudantium quam, or vel totam		praesentium. Nesciunt quos velit dolorum incidunt hic.',
@@ -148,7 +148,7 @@ export const SaladData = [
 	{
 		id: 4,
 		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrder-Placing_App/food-order-app/src/Img/salad4.jpeg',
-		prodPriceInfo: '1 for $20',
+		prodPriceInfo: 'Salad 4 for $20',
 		title: 'Salad 4',
 
 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod		perspiciatis accusantium ullam! Iste doloremque laboriosam minimaobcaecati. Quasi modi laboriosam beatae laudantium quam, optio odio.		Aperiam tempore eum temporibus dolor Lorem ipsum dolor sit amet		consectetur adipisicing elit. Rem necessitatibus t hic.',
@@ -156,7 +156,7 @@ export const SaladData = [
 	{
 		id: 5,
 		img: 'https://raw.githubusercontent.com/contactKunalDixit/PROJECTS_React/main/Portfolio_FireItems/FoodOrder-Placing_App/food-order-app/src/Img/salad5.jpeg',
-		prodPriceInfo: '1 for $17',
+		prodPriceInfo: 'Salad 5 for $17',
 		title: 'Salad 5',
 
 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod		perspiciatis accusantium ullam! Iste doloremque laboriosam minimaobcaecati. Quasi modi laboriosam beatae laudantium quam,nt quos velit dolorum incidunt hic.',
