@@ -2,12 +2,12 @@
 	box-sizing: border-box;
 	width: 100vw;
 	height: 420px;
-	background-color: aquamarine;
+	background-color: #9bf6ff;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	border: 2px solid grey;
+	border: 0.5px solid grey;
 }
 .prodTitle {
 	font-weight: 400;

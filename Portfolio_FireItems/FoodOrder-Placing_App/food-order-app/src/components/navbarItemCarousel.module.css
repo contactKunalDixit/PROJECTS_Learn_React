@@ -12,8 +12,10 @@
 	/* height: 100px; */
 	padding: 5px 15px;
 	margin: 15px;
-	background-color: rgb(219, 219, 219);
+	background-color: #cdb4db;
 	border-radius: 5px;
+	box-sizing: border-box;
+	border: 0.5px solid grey;
 }
 
 .card > h2 {
