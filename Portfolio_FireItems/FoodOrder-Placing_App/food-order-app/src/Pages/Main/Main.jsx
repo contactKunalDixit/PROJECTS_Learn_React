@@ -10,6 +10,12 @@ const Main = () => {
 	return (
 		<main className={styles.Main}>
 			<div className={styles.wrapper}>
+				<div className={styles.BigScreen}>
+					<h1>
+						The website is purely targeted towards Mobile users and can be best
+						experienced on Mobile devices
+					</h1>
+				</div>
 				<Banner />
 				<GermanBeerCarousel />
 				<ChickenBurgerCarousel />

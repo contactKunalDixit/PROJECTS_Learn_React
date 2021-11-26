@@ -33,3 +33,20 @@
 	font-size: 18px;
 	font-weight: 400;
 }
+
+.BigScreen {
+	display: none;
+}
+
+@media only screen and (min-width: 500px) {
+	.BigScreen {
+		display: block;
+		background-color: blanchedalmond;
+		position: relative;
+		background-color: black;
+		color: white;
+	}
+	.BigScreen > h1 {
+		font-weight: 300;
+	}
+}
