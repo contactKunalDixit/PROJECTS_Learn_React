@@ -1,0 +1,9 @@
+.DashboardMainPage {
+	background-color: aqua;
+	flex: 4;
+	height: 100%;
+	position: sticky;
+	top: 50px;
+	box-sizing: border-box;
+	padding: 10px;
+}

@@ -1,0 +1,8 @@
+.mainPage {
+	display: flex;
+	margin-top: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	height: calc(100vh - 50px);
+	background-color: aqua;
+}

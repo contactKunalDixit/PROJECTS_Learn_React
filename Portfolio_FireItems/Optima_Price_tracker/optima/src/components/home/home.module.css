@@ -1,0 +1,12 @@
+.home {
+	flex: 4;
+	height: 100%;
+}
+.wrapper {
+	padding: 20px;
+}
+
+.homeWidgets {
+	display: flex;
+	margin: 20px;
+}
