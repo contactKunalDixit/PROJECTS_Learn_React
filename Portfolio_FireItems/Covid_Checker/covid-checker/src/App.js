@@ -1,5 +1,6 @@
 // import './App.css';
 import styles from './App.module.css';
+
 function App() {
 	return (
 		<div className={styles.app}>
@@ -13,9 +14,12 @@ function App() {
 					ABC corporation would like all its employees to do ART tests regularly
 					to avoid the risk of Covid transmission within workplace.
 				</p>
-				<p>Enter your date range period</p>
-				<p></p>
-				<ul>
+				<p>
+					Enter your date range period and this app shall apprise you of your
+					status
+				</p>
+
+				<ul className={styles.ulist}>
 					<h4>Conditions to qualify:</h4>
 					<li>
 						1. Every employee must take at least two tests in a week,not later
@@ -28,7 +32,36 @@ function App() {
 				</ul>
 			</section>
 			<section>
-				<form></form>
+				<form action='/action_page.php' method='get'>
+					<label for='fname'>First name:</label>
+					<input type='text' id='fname' name='fname' placeholder='First Name' />
+					<br />
+
+					<label for='lname'>Last name: </label>
+					<input type='text' id='lname' name='lname' placeholder='Last Name' />
+					<br />
+					<label for='dateRangeStart'>Date Period Start </label>
+					<input
+						type='date'
+						id='dateRangeStart'
+						name='dateRangeStart'
+						placeholder='Start Date'
+					/>
+					<br />
+					<label for='dateRangeEnd'>Date Period End </label>
+					<input
+						type='date'
+						id='dateRangeEnd'
+						name='dateRangeEnd'
+						placeholder='End Date'
+					/>
+					<br />
+					<label for='Testing Dates'>Testing Dates</label>
+					<input type='date' id='Testing Dates' name='TestingDates' />
+					<br />
+
+					<input type='submit' value='Submit' />
+				</form>
 			</section>
 		</div>
 	);
