@@ -1,5 +1,6 @@
 // import './App.css';
 import styles from './App.module.css';
+import FormCovid from './component/FormCovid';
 
 function App() {
 	return (
@@ -32,36 +33,7 @@ function App() {
 				</ul>
 			</section>
 			<section>
-				<form action='/action_page.php' method='get'>
-					<label for='fname'>First name:</label>
-					<input type='text' id='fname' name='fname' placeholder='First Name' />
-					<br />
-
-					<label for='lname'>Last name: </label>
-					<input type='text' id='lname' name='lname' placeholder='Last Name' />
-					<br />
-					<label for='dateRangeStart'>Date Period Start </label>
-					<input
-						type='date'
-						id='dateRangeStart'
-						name='dateRangeStart'
-						placeholder='Start Date'
-					/>
-					<br />
-					<label for='dateRangeEnd'>Date Period End </label>
-					<input
-						type='date'
-						id='dateRangeEnd'
-						name='dateRangeEnd'
-						placeholder='End Date'
-					/>
-					<br />
-					<label for='Testing Dates'>Testing Dates</label>
-					<input type='date' id='Testing Dates' name='TestingDates' />
-					<br />
-
-					<input type='submit' value='Submit' />
-				</form>
+				<FormCovid />
 			</section>
 		</div>
 	);
