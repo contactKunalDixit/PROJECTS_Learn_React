@@ -1,10 +1,10 @@
 import styles from './App.module.css';
-import YoutubeForm from './components/YoutubeForm';
+import YoutubeFormYupReducedBoilerPlate from './components/YoutubeFormYupReducedBoilerPlate';
 
 function App() {
 	return (
 		<div className={styles.App}>
-			<YoutubeForm />
+			<YoutubeFormYupReducedBoilerPlate />
 		</div>
 	);
 }

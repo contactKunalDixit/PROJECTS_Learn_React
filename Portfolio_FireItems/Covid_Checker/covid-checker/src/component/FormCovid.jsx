@@ -46,6 +46,10 @@ const validate = (values) => {
 const FormCovid = () => {
 	const formik = useFormik({ initialValues, onSubmit, validate });
 
+	console.log('Form Values', formik.values);
+	console.log('Form Errors', formik.errors);
+	console.log('Form Elements Visited', formik.touched); // formik.touched is also a property just like formik.values and holds the value as boolean as "true" if the element has been visited.
+
 	return (
 		<div className={styles.form}>
 			<form
@@ -60,10 +64,13 @@ const FormCovid = () => {
 					name='fname'
 					onChange={formik.handleChange}
 					value={formik.values.fname}
+					onBlur={formik.handleBlur}
 				/>
 				<br />
 				{/*  conditional rendering */}
-				{formik.errors.fname ? <div> {formik.errors.fname}</div> : null}
+				{formik.touched.fname && formik.errors.fname ? (
+					<div> {formik.errors.fname}</div>
+				) : null}
 
 				<label htmlFor='lname'>Last name: </label>
 				<input
@@ -72,10 +79,13 @@ const FormCovid = () => {
 					name='lname'
 					onChange={formik.handleChange}
 					value={formik.values.lname}
+					onBlur={formik.handleBlur}
 				/>
 				<br />
 				{/*  conditional rendering */}
-				{formik.errors.lname ? <div>{formik.errors.lname}</div> : null}
+				{formik.touched.lname && formik.errors.lname ? (
+					<div>{formik.errors.lname}</div>
+				) : null}
 				<label htmlFor='email'>Email: </label>
 				<input
 					type='email'
@@ -83,10 +93,13 @@ const FormCovid = () => {
 					name='email'
 					onChange={formik.handleChange}
 					value={formik.values.email}
+					onBlur={formik.handleBlur}
 				/>
 				<br />
 				{/*  conditional rendering */}
-				{formik.errors.email ? <div>{formik.errors.email}</div> : null}
+				{formik.touched.email && formik.errors.email ? (
+					<div>{formik.errors.email}</div>
+				) : null}
 				<label htmlFor='dateRangeStart'>Date Period Start </label>
 				<input
 					type='date'
@@ -94,10 +107,11 @@ const FormCovid = () => {
 					name='dateRangeStart'
 					onChange={formik.handleChange}
 					value={formik.values.dateRangeStart}
+					onBlur={formik.handleBlur}
 				/>
 				<br />
 				{/*  conditional rendering */}
-				{formik.errors.dateRangeStart ? (
+				{formik.touched.dateRangeStart && formik.errors.dateRangeStart ? (
 					<div>{formik.errors.dateRangeStart}</div>
 				) : null}
 				<label htmlFor='dateRangeEnd'>Date Period End </label>
@@ -107,10 +121,11 @@ const FormCovid = () => {
 					name='dateRangeEnd'
 					onChange={formik.handleChange}
 					value={formik.values.dateRangeEnd}
+					onBlur={formik.handleBlur}
 				/>
 				<br />
 				{/*  conditional rendering */}
-				{formik.errors.dateRangeEnd ? (
+				{formik.touched.dateRangeEnd && formik.errors.dateRangeEnd ? (
 					<div>{formik.errors.dateRangeEnd}</div>
 				) : null}
 				<label htmlFor='TestingDates'>Testing Dates</label>
@@ -120,10 +135,11 @@ const FormCovid = () => {
 					name='TestingDates'
 					onChange={formik.handleChange}
 					value={formik.values.TestingDates}
+					onBlur={formik.handleBlur}
 				/>
 				<br />
 				{/*  conditional rendering */}
-				{formik.errors.TestingDates ? (
+				{formik.touched.TestingDates && formik.errors.TestingDates ? (
 					<div>{formik.errors.TestingDates}</div>
 				) : null}
 

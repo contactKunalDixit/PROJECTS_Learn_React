@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import styles from '../App.module.css';
+import * as yup from 'yup';
 
 const initialValues = {
 	name: '',
@@ -12,36 +13,48 @@ const onSubmit = (values) => {
 	console.log('Form Data', values);
 };
 
-const validate = (values) => {
-	// 3 Rules for the validate method:
-	//Should return an error object
-	//The error object shouldve same nomenclature as values object key names which inturn are same as name attribute of the HTML input tags e.g.
-	//values.name, values.channel, values.email
-	//errors.name,errors.channel,errors.emailjs
-	//errors.name should store a string value e.g.
-	//errors.name = "This field is required"
-	let errors = {};
-	if (!values.name) {
-		errors.name = 'Name is Required';
-	}
+// const validate = (values) => {
+// 	// 3 Rules for the validate method:
+// 	//Should return an error object
+// 	//The error object shouldve same nomenclature as values object key names which inturn are same as name attribute of the HTML input tags e.g.
+// 	//values.name, values.channel, values.email
+// 	//errors.name,errors.channel,errors.emailjs
+// 	//errors.name should store a string value e.g.
+// 	//errors.name = "This field is required"
+// 	let errors = {};
+// 	if (!values.name) {
+// 		errors.name = 'Name is Required';
+// 	}
 
-	if (!values.email) {
-		errors.email = 'Email is Required';
-	} else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-		errors.email = 'Invalid Email Format';
-	}
-	if (!values.channel) {
-		errors.channel = 'Channel name is Required';
-	}
+// 	if (!values.email) {
+// 		errors.email = 'Email is Required';
+// 	} else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+// 		errors.email = 'Invalid Email Format';
+// 	}
+// 	if (!values.channel) {
+// 		errors.channel = 'Channel name is Required';
+// 	}
 
-	return errors;
-};
+// 	return errors;
+// };
 
-const YoutubeForm = () => {
+/* 
+! USING YUP
+! 1st step is defining validationObjectSchema
+*/
+
+const validationSchema = yup.object({
+	name: yup.string().required('Required'),
+	email: yup.string().email('Invalid Email format').required('Required'),
+	channel: yup.string().required('Required'),
+});
+
+const YoutubeFormYup = () => {
 	const formik = useFormik({
 		initialValues,
 		onSubmit,
-		validate,
+		// validate,
+		validationSchema,
 	});
 	// useFormik() hook accepts an object and returns an object which has been stored here under name "formik". The formik object will comprise of useful properties and methods that we'll be able to use for managing states of form elements, handling foprm submission and form validation and error msgs.
 	/*
@@ -83,6 +96,7 @@ const YoutubeForm = () => {
 
 	return (
 		<div>
+			<h1>Schema validation using YUP</h1>
 			<form onSubmit={formik.handleSubmit}>
 				<div className={styles['form-control']}>
 					{' '}
@@ -137,7 +151,7 @@ const YoutubeForm = () => {
 	);
 };
 
-export default YoutubeForm;
+export default YoutubeFormYup;
 
 /*
 7.	onBlur = {formik.handleBlur} is added as an attribute to each of the input fields so the visits capturing can be enabled.
