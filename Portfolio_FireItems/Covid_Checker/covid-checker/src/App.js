@@ -5,7 +5,7 @@ import FormCovid from './component/FormCovid';
 function App() {
 	return (
 		<div className={styles.app}>
-			<header className={styles.app_header}>
+			{/* <header className={styles.app_header}>
 				<h1>Covid Checker</h1>
 				<h3>Check your eligibility for returning to office</h3>
 			</header>
@@ -31,7 +31,7 @@ function App() {
 						must be taken within 3 days.
 					</li>
 				</ul>
-			</section>
+			</section> */}
 			<section>
 				<FormCovid />
 			</section>

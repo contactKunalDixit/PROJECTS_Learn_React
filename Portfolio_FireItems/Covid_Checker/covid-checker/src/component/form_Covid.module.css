@@ -1,8 +1,10 @@
 .form {
-	background-color: aquamarine;
+	background-color: rgb(226, 235, 231);
 	width: 60vw;
 	box-sizing: border-box;
 	padding: 20px;
+	display: flex;
+	justify-content: center;
 }
 
 label {

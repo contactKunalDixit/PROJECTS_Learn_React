@@ -1,151 +1,89 @@
 import React from 'react';
 import styles from './form_Covid.module.css';
-
-import { useFormik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as yup from 'yup';
 
 const initialValues = {
-	fname: '',
-	lname: '',
+	// fname: '',
+	// lname: '',
 	email: '',
-	dateRangeStart: '',
-	dateRangeEnd: '',
-	TestingDates: '',
+	// dateRangeStart: '',
+	// dateRangeEnd: '',
+	// TestingDates: '',
 };
 
 const onSubmit = (values) => {
-	console.log('Form Date', values);
+	console.log('Form Data', values);
 };
 
-const validate = (values) => {
-	let errors = {};
+const validationSchema = yup.object({
+	fname: yup.string().required('Required'),
+	lname: yup.string().required('Required'),
+	email: yup.string().email('Invalid Email format').required('Required'),
 
-	if (!values.fname) {
-		errors.fname = 'First name is mandatory';
-	}
-	if (!values.lname) {
-		errors.lname = 'Last name is mandatory';
-	}
-	if (!values.email) {
-		errors.email = 'Email ID is mandatory';
-	} else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-		errors.email = 'Invalid Email Format';
-	}
-
-	if (!values.dateRangeStart) {
-		errors.dateRangeStart = 'Select your first date';
-	}
-	if (!values.dateRangeEnd) {
-		errors.dateRangeEnd = 'Select your last date';
-	}
-	if (!values.TestingDates) {
-		errors.TestingDates = 'Select your testing date';
-	}
-	return errors;
-};
+	// fname: yup.string().required('Required'),
+	// lname: yup.string().required('Required'),
+	// email: yup.string().email('Invalid Email format').required('Required'),
+	// dateRangeStart: yup.date().default(function () {
+	// 	return new Date();
+	// }),
+	// dateRangeEnd: yup.date().default(function () {
+	// 	return new Date();
+	// }),
+	// TestingDates: yup.date().default(function () {
+	// 	return new Date();
+	// }),
+});
 
 const FormCovid = () => {
-	const formik = useFormik({ initialValues, onSubmit, validate });
-
-	console.log('Form Values', formik.values);
-	console.log('Form Errors', formik.errors);
-	console.log('Form Elements Visited', formik.touched); // formik.touched is also a property just like formik.values and holds the value as boolean as "true" if the element has been visited.
-
 	return (
-		<div className={styles.form}>
-			<form
-				action='/action_page.php'
-				method='get'
-				onSubmit={formik.handleSubmit}
-			>
-				<label htmlFor='fname'>First name:</label>
-				<input
-					type='text'
-					id='fname'
-					name='fname'
-					onChange={formik.handleChange}
-					value={formik.values.fname}
-					onBlur={formik.handleBlur}
-				/>
-				<br />
-				{/*  conditional rendering */}
-				{formik.touched.fname && formik.errors.fname ? (
-					<div> {formik.errors.fname}</div>
-				) : null}
+		<Formik
+			initialValues={initialValues}
+			onSubmit={onSubmit}
+			validateSchema={validationSchema}
+		>
+			{/* <div className={styles.form}> */}
+			<Form>
+				{/* <div className={styles['form-control']}>
+						<label htmlFor='fname'>First name:</label>
+						<Field type='text' id='fname' name='fname' />
 
-				<label htmlFor='lname'>Last name: </label>
-				<input
-					type='text'
-					id='lname'
-					name='lname'
-					onChange={formik.handleChange}
-					value={formik.values.lname}
-					onBlur={formik.handleBlur}
-				/>
-				<br />
-				{/*  conditional rendering */}
-				{formik.touched.lname && formik.errors.lname ? (
-					<div>{formik.errors.lname}</div>
-				) : null}
-				<label htmlFor='email'>Email: </label>
-				<input
-					type='email'
-					id='email'
-					name='email'
-					onChange={formik.handleChange}
-					value={formik.values.email}
-					onBlur={formik.handleBlur}
-				/>
-				<br />
-				{/*  conditional rendering */}
-				{formik.touched.email && formik.errors.email ? (
-					<div>{formik.errors.email}</div>
-				) : null}
-				<label htmlFor='dateRangeStart'>Date Period Start </label>
-				<input
-					type='date'
-					id='dateRangeStart'
-					name='dateRangeStart'
-					onChange={formik.handleChange}
-					value={formik.values.dateRangeStart}
-					onBlur={formik.handleBlur}
-				/>
-				<br />
-				{/*  conditional rendering */}
-				{formik.touched.dateRangeStart && formik.errors.dateRangeStart ? (
-					<div>{formik.errors.dateRangeStart}</div>
-				) : null}
-				<label htmlFor='dateRangeEnd'>Date Period End </label>
-				<input
-					type='date'
-					id='dateRangeEnd'
-					name='dateRangeEnd'
-					onChange={formik.handleChange}
-					value={formik.values.dateRangeEnd}
-					onBlur={formik.handleBlur}
-				/>
-				<br />
-				{/*  conditional rendering */}
-				{formik.touched.dateRangeEnd && formik.errors.dateRangeEnd ? (
-					<div>{formik.errors.dateRangeEnd}</div>
-				) : null}
-				<label htmlFor='TestingDates'>Testing Dates</label>
-				<input
-					type='date'
-					id='TestingDates'
-					name='TestingDates'
-					onChange={formik.handleChange}
-					value={formik.values.TestingDates}
-					onBlur={formik.handleBlur}
-				/>
-				<br />
-				{/*  conditional rendering */}
-				{formik.touched.TestingDates && formik.errors.TestingDates ? (
-					<div>{formik.errors.TestingDates}</div>
-				) : null}
+						<ErrorMessage name='fname' />
+					</div>
 
+					<div className={styles['form-control']}>
+						<label htmlFor='lname'>Last name: </label>
+						<Field type='text' id='lname' name='lname' />
+						<ErrorMessage name='lname' />
+					</div> */}
+				{/* <div className={styles['form-control']}>
+						<label htmlFor='email'>Email: </label>
+						<Field type='email' id='email' name='email' />
+						<ErrorMessage name='email' />
+					</div> */}
+				{/* <div className={styles['form-control']}>
+						<label htmlFor='dateRangeStart'>Date Period Start </label>
+						<Field type='date' id='dateRangeStart' name='dateRangeStart' />
+						<ErrorMessage name='dateRangeStart' />
+					</div>
+					<div className={styles['form-control']}>
+						<label htmlFor='dateRangeEnd'>Date Period End </label>
+						<Field type='date' id='dateRangeEnd' name='dateRangeEnd' />
+						<ErrorMessage name='dateRangeEnd' />
+					</div>
+					<div className={styles['form-control']}>
+						<label htmlFor='TestingDates'>Testing Dates</label>
+						<Field type='date' id='TestingDates' name='TestingDates' />
+						<ErrorMessage name='TestingDates' />
+					</div> */}
+				<div>
+					<Field type='email' id='email' name='email' />
+					<ErrorMessage name='email' />
+				</div>
 				<button type='submit'>Submit</button>
-			</form>
-		</div>
+			</Form>
+			{/* </div> */}
+		</Formik>
 	);
 };
 
