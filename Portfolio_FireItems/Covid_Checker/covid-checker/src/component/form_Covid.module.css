@@ -1,10 +1,11 @@
 .form {
 	background-color: rgb(226, 235, 231);
-	width: 60vw;
+	width: 70vw;
 	box-sizing: border-box;
 	padding: 20px;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 }
 
 label {
