@@ -7,6 +7,20 @@ function App() {
 	return (
 		<div className={styles.app}>
 			<header className={styles.app_header}>
+				<h1>THIS APP is in PROGRESS</h1>
+				<ul>
+					<li>
+						<b>FORMIK has been used succesfully</b>
+					</li>
+					<li>User's Data can be captured and returns an Object</li>
+
+					<li>Responsiveness needs attenttion</li>
+
+					<li>Date needs to be captured better in an Array</li>
+					<li>JS logic needs to be added</li>
+					<li>PHP is required to support backend support</li>
+				</ul>
+
 				<h1>Covid Checker</h1>
 				<h3>Check your eligibility for returning to office</h3>
 			</header>
