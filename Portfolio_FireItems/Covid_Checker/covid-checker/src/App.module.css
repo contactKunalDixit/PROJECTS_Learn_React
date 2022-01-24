@@ -18,3 +18,18 @@
 
 .dateRange {
 }
+
+button {
+	width: 25%;
+	margin: 50px auto;
+	border: 2px solid rgb(99, 80, 80);
+	font-size: 0.9rem;
+	border-radius: 3px;
+}
+button:hover {
+	background-color: antiquewhite;
+}
+
+.error {
+	color: red;
+}

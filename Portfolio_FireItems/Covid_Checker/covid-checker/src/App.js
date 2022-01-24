@@ -38,8 +38,8 @@ function App() {
 				<ul className={styles.ulist}>
 					<h4>Conditions to qualify:</h4>
 					<li>
-						YoutubeFormYupFormikCompoments 1. Every employee must take at least
-						two tests in a week,not later than 3 or 4 days from previous test
+						1. Every employee must take at least two tests in a week,not later
+						than 3 or 4 days from previous test
 					</li>
 					<li>
 						2. If a test is taken on 4th day from previous test, the next test
