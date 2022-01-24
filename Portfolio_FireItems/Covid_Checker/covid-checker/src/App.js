@@ -21,6 +21,8 @@ function App() {
 					<li>PHP is required to support backend support</li>
 				</ul>
 
+				<h2>***** Please RESUME after PHP understanding *****</h2>
+
 				<h1>Covid Checker</h1>
 				<h3>Check your eligibility for returning to office</h3>
 			</header>
