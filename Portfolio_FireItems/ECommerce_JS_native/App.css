@@ -77,6 +77,74 @@ nav {
 
 .carouselSection {
 	background: url('https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-	overflow: hidden;
+	/* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); */
+	/* overflow: hidden; */
+}
+
+.sliderWrapper {
+	display: flex;
+	width: 500vw;
+}
+
+.sliderItem {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.sliderImg {
+	z-index: 1;
+}
+
+.slideBg {
+	width: 750px;
+	height: 750px;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.sliderTitle {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	color: white;
+	font-size: 60px;
+	font-weight: 900;
+	text-align: center;
+	z-index: 1;
+}
+
+.sliderPrice {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	color: white;
+	font-size: 60px;
+	font-weight: 300;
+	text-align: center;
+	border: 1px solid gray;
+	z-index: 1;
+}
+
+.buyButton {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	color: white;
+	font-size: 30px;
+	font-weight: 300;
+	text-align: center;
+	border: 1px solid gray;
+	z-index: 1;
+	background-color: black;
+	cursor: pointer;
+}
+
+.buyButton:hover {
+	background-color: white;
+	color: black;
+	font-size: 35px;
+	transition: all 0.5s ease;
 }
