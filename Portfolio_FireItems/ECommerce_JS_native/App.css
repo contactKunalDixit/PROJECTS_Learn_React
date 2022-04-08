@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Lato', sans-serif;
 	padding: 0;
@@ -46,4 +50,33 @@ nav {
 	font-size: 20px;
 	border-bottom: 2px solid green;
 	cursor: pointer;
+}
+
+.navBottom {
+	margin-top: 25px;
+}
+
+.menuItemUL {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 15px;
+}
+
+.menuItemUL li a {
+	color: lightgray;
+	text-decoration: none;
+}
+
+.menuItemUL li a:hover {
+	font-size: 20px;
+}
+
+.carouselSection {
+	background: url('https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+	overflow: hidden;
 }
