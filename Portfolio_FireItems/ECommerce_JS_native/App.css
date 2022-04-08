@@ -1,0 +1,49 @@
+body {
+	font-family: 'Lato', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	background-color: black;
+	color: white;
+	padding: 20px 50px;
+}
+
+.navTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	background-color: gray;
+	padding: 10px 20px;
+	border-radius: 10px;
+	/* border: none; */
+	width: auto;
+}
+
+.searchInput {
+	border: none;
+	background-color: transparent;
+	font-size: 15px;
+}
+
+.MagnifyingGlass {
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.searchInput::placeholder {
+	color: lightgray;
+}
+
+.limitedOffer {
+	font-size: 20px;
+	border-bottom: 2px solid green;
+	cursor: pointer;
+}
