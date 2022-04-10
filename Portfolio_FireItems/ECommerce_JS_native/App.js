@@ -142,7 +142,7 @@ currentProductSizes.forEach((element, index) => {
 	element.addEventListener('click', () => {
 		currentProductSizes.forEach((element) => {
 			element.style.backgroundColor = 'black';
-			element.style.color = 'white';
+			element.style.color = 'lightgray';
 		});
 		element.style.backgroundColor = 'white';
 		element.style.color = 'black';
