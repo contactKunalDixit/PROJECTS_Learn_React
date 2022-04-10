@@ -71,6 +71,10 @@ nav {
 	text-decoration: none;
 }
 
+.landingPage {
+	/* height: 100vh; */
+}
+
 .carouselSection {
 	background: url('https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
@@ -128,6 +132,7 @@ nav {
 
 .buyButton {
 	position: absolute;
+	padding: 10px 20px;
 	top: 50%;
 	right: 10%;
 	color: white;
@@ -144,7 +149,7 @@ nav {
 	background-color: white;
 	color: black;
 	font-size: 32px;
-	transition: all 0.5s ease;
+	transition: all 0.5s ease-in-out;
 }
 
 .sliderItem:nth-child(1) .sliderBg {
@@ -177,4 +182,108 @@ nav {
 }
 .sliderItem:nth-child(5) .sliderPrice {
 	color: cornsilk;
+}
+
+.featureSection {
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px;
+}
+
+.feature {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.featureIcon {
+	width: 50px;
+	height: 50px;
+}
+
+.featureTitle {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 20px;
+}
+
+.featureDesc {
+	color: gray;
+	width: 50%;
+	height: 100px;
+}
+
+.productSection {
+	height: 100vh;
+	background-color: whitesmoke;
+	position: relative;
+	clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.productImg {
+	/* width: 50%; */
+	position: absolute;
+	top: 10%;
+}
+
+.productDetails {
+	position: absolute;
+	top: 10%;
+	right: 0;
+	width: 40%;
+	padding: 50px;
+}
+
+.productTitle {
+	font-size: 75px;
+	font-weight: 900;
+}
+
+.productDesc {
+	font-style: 24px;
+	color: gray;
+}
+
+.colors,
+.sizes {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.color {
+	width: 32px;
+	height: 32px;
+	border-radius: 5px;
+	background-color: black;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.color:last-child {
+	background-color: darkblue;
+}
+
+.size {
+	padding: 5px 20px;
+	border: 1px solid black;
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.productButton {
+	padding: 10px 20px;
+	background-color: black;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	float: right;
+}
+
+.productButton:hover {
+	background-color: white;
+	color: black;
+	transition: all 0.2s ease-in-out;
 }
