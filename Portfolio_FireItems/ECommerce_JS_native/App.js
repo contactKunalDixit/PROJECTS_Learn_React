@@ -1,6 +1,5 @@
 const wrapper = document.querySelector('.sliderWrapper');
-
-const menuItems = document.querySelectorAll('.menuItem');
+const menuItems = document.querySelectorAll('.menuItem'); //multiple elements gives array
 
 const products = [
 	{
@@ -86,29 +85,66 @@ const products = [
 	},
 ];
 
-let chosenProduct = products[0];
-
 const currentProductImg = document.querySelector('.productImg');
 const currentProductTitle = document.querySelector('.productTitle');
 const currentProductPrice = document.querySelector('.productPrice');
-const currentProductColors = document.querySelector('.color');
-const currentProductSize = document.querySelector('.size');
+const currentProductColors = document.querySelectorAll('.color'); //multiple elements gives array
+const currentProductSizes = document.querySelectorAll('.size'); //multiple elements gives array
 const currentProductDesc = document.querySelector('.productDesc');
+let chosenProduct = products[0];
 
-console.dir(currentProductTitle);
+// todo: inital info displayed when the site opens.
+
+console.log(chosenProduct);
+
 menuItems.forEach((item, index) => {
 	item.addEventListener('click', () => {
-		console.log('You CLicked' + ' ' + index);
+		console.log('You Clicked' + ' ' + index);
 		// change the current slide
 		wrapper.style.transform = `translateX(${-100 * index}vw)`;
 
 		// change the chosen product
-		let chosenProduct = products[index];
+		chosenProduct = products[index];
 
 		// change the text of current product
 		currentProductTitle.textContent = chosenProduct.title;
 		currentProductPrice.textContent = `$ ${chosenProduct.price}`;
 		currentProductImg.src = chosenProduct.colors[0].img;
 		currentProductDesc.textContent = chosenProduct.desc;
+		console.log(chosenProduct);
+
+		// assigning new colors
+
+		currentProductColors.forEach((color, index) => {
+			color.style.backgroundColor = chosenProduct.colors[index].code;
+		});
+	});
+});
+
+/* 
+ todo: Variable 'chosenProduct' has been initialized and declared in the global scope and set to the 1st itemn in the array 'products'. 
+
+ todo: Variable 'chosenProduct' within the function scope (aka block scope) will be treated seperately since it has a seperate scope. This LOCALLY SCOPED variable is therefore not accesible from the global scope, 
+ 
+ ! HOWEVER, SINCE THE VARIABLE HAS BEEN RE-ASSIGNED A NEW VALUE BUT (AND NOT RE-INITIALISED AGAIN ...note that "LET" has not been used again), IT  WILL LEAK OUT THE SCOPED VALUE AND WILL CHANGE THE FUTURE VALUE OF GLOBAL SCOPE TO THE NEW VALUE ASSIGNED. 
+*/
+
+// Choosing the Shoe Color
+currentProductColors.forEach((element, index) => {
+	element.addEventListener('click', () => {
+		currentProductImg.src = chosenProduct.colors[index].img;
+		console.log(chosenProduct);
+	});
+});
+
+// Choosing the shoe size
+currentProductSizes.forEach((element, index) => {
+	element.addEventListener('click', () => {
+		currentProductSizes.forEach((element) => {
+			element.style.backgroundColor = 'black';
+			element.style.color = 'white';
+		});
+		element.style.backgroundColor = 'white';
+		element.style.color = 'black';
 	});
 });

@@ -66,6 +66,11 @@ nav {
 	font-size: 15px;
 }
 
+.menuItemUL li {
+	cursor: pointer;
+	font-size: 18px;
+}
+
 .menuItemUL li a {
 	color: lightgray;
 	text-decoration: none;
