@@ -91,6 +91,11 @@ const currentProductPrice = document.querySelector('.productPrice');
 const currentProductColors = document.querySelectorAll('.color'); //multiple elements gives array
 const currentProductSizes = document.querySelectorAll('.size'); //multiple elements gives array
 const currentProductDesc = document.querySelector('.productDesc');
+
+const productButton = document.querySelector('.productButton');
+const paymentModal = document.querySelector('.paymentModal');
+const closeModal = document.querySelector('.closeModal');
+const payButton = document.querySelector('.payButton');
 let chosenProduct = products[0];
 
 // todo: inital info displayed when the site opens.
@@ -147,4 +152,21 @@ currentProductSizes.forEach((element, index) => {
 		element.style.backgroundColor = 'white';
 		element.style.color = 'black';
 	});
+});
+
+// Opening the Card details Payment Modal:
+
+productButton.addEventListener('click', () => {
+	paymentModal.style.display = 'flex';
+});
+
+// Closing the Payment Modal by clicking "X" corner:
+
+closeModal.addEventListener('click', () => {
+	paymentModal.style.display = 'none';
+});
+
+// Closing the payment Modal by CHECK OUT BUTTON
+payButton.addEventListener('click', () => {
+	paymentModal.style.display = 'none';
 });
