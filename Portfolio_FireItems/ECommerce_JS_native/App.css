@@ -319,7 +319,6 @@ nav {
 }
 
 .payInput {
-	font-size: 28px;
 }
 
 .payTitle {
@@ -337,9 +336,32 @@ label {
 	margin: 10px 0px;
 	border: none;
 	border-bottom: 1px solid gray;
+	font-size: 18px;
+}
+
+.payInput::placeholder {
+	color: rgb(183, 171, 171);
+}
+
+.cardIcons {
+	display: flex;
 }
 
 .cardIcon {
 	width: 40px;
 	height: 40px;
+	margin-right: 10px;
+}
+
+.cardInfo {
+	display: flex;
+	justify-content: space-between;
+}
+
+.sm {
+	width: 30%;
+}
+
+.payButton {
+	position: absolute;
 }
