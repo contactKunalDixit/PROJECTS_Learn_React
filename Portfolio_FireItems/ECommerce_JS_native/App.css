@@ -318,9 +318,6 @@ nav {
 	z-index: 200;
 }
 
-.payInput {
-}
-
 .payTitle {
 	font-size: 20px;
 	/* color: lightgray; */
@@ -479,4 +476,38 @@ footer {
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+	* {
+		box-sizing: border-box;
+	}
+	#nav {
+		padding: 10px;
+	}
+	.search {
+		display: none;
+	}
+
+	.navTop {
+		flex-direction: column;
+	}
+
+	.limitedOffer {
+		display: none;
+	}
+
+	.menuItemUL {
+		margin: 10px;
+		font-weight: 700;
+		font-size: 20px;
+		flex-wrap: wrap;
+	}
+
+	.menuItemUL li {
+		margin: 10px;
+	}
+
+	.navBottom {
+	}
 }
