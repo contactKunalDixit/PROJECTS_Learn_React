@@ -508,6 +508,159 @@ footer {
 		margin: 10px;
 	}
 
-	.navBottom {
+	.carouselSection {
+		clip-path: none;
+	}
+	.sliderImg {
+		width: 90%;
+	}
+	.sliderBg {
+		width: 100%;
+		height: 100%;
+	}
+	.sliderTitle {
+		display: none;
+	}
+
+	.sliderPrice {
+		top: unset;
+		bottom: 0;
+		left: 0;
+		font-size: 50px;
+		font-weight: 300;
+		background-color: rgb(197, 195, 195);
+		margin-bottom: 0;
+		border-radius: 10px;
+		margin: 15px;
+	}
+	.buyButton {
+		bottom: unset;
+		right: 0;
+		top: 0;
+		margin: 10px;
+		border-radius: 10px;
+		padding: 5px 10px;
+		font-size: 20px;
+	}
+
+	.featureSection {
+		flex-wrap: wrap;
+		/* flex-direction: column; */
+		padding: 20px;
+		justify-content: center;
+	}
+
+	.feature {
+		width: 40%;
+		margin-bottom: 10px;
+		margin: 10px;
+	}
+
+	.featureIcon {
+		width: 20%;
+		height: 20%;
+	}
+	.featureTitle {
+		font-size: 15px;
+		font-weight: 600;
+		margin: 10px;
+	}
+	.featureDesc {
+		color: gray;
+		width: 100%;
+		/* height: 80px; */
+	}
+
+	.productSection {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		clip-path: none;
+		position: unset;
+		height: auto;
+	}
+	.productImg {
+		position: unset;
+		width: 70%;
+		flex: 1;
+	}
+	.productDetails {
+		flex: 3;
+		position: unset;
+		padding: 20px;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.productTitle {
+		font-size: 50px;
+		font-weight: 900;
+		margin: 10px 0;
+	}
+
+	.productPrice {
+		margin: 10px 0;
+	}
+
+	.productButton {
+		width: 50%;
+		float: unset;
+		display: flex;
+		justify-content: center;
+		position: unset;
+		align-items: center;
+	}
+
+	.newSeason {
+		flex-direction: column;
+	}
+
+	footer {
+		flex-direction: column;
+		align-items: center;
+	}
+	.footerLeft {
+		padding: 15px;
+		width: 90%;
+	}
+	.footerRight {
+		padding: 15px;
+		width: 90%;
+	}
+	.fIcons {
+		width: 100vw;
+		display: flex;
+		justify-content: space-evenly;
+		margin: 10px 0;
+	}
+
+	.footerRightMenu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.fIcon {
+		margin: 0;
+	}
+
+	.fMenuTitle {
+		margin-top: 10px;
+	}
+
+	.SocialIcons {
+		margin: 20px 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.fIcon {
+		width: 30px;
+		height: 30px;
 	}
 }
