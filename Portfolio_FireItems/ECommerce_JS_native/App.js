@@ -21,7 +21,7 @@ const products = [
 	},
 	{
 		id: 2,
-		title: 'Blazer',
+		title: 'Air Blazer',
 		price: 149,
 		desc: 'Accusamus, tenetur magni quas corrupti nam ducimus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos placeat odit perferendis aperiam esse aspernatur inventore aliquid eveniculpa.icing elit. Eos placeat odit perferendis aperiam a',
 		colors: [
@@ -37,7 +37,7 @@ const products = [
 	},
 	{
 		id: 3,
-		title: 'Crater',
+		title: 'Air Crater',
 		price: 109,
 		desc: 'Aspernatur inventore aliquid eveniet reLorem ipsum dolor sit, amet consectetur adipisicing eliture, accusamus, tenetur magni quas corrupti nam ducimus culpa.',
 		colors: [
@@ -53,7 +53,7 @@ const products = [
 	},
 	{
 		id: 4,
-		title: 'Hippie',
+		title: 'Air Hippie',
 		price: 129,
 		desc: 'Magni quas corrupti nam ducimus culpaLorem ipsum dolor sit, amet consectetur adipisicing elit. Eos placeat odit perferendis aperiam esse aspernatur inventore aliquid eveniet repellat quam amet cu',
 		colors: [
@@ -69,7 +69,7 @@ const products = [
 	},
 	{
 		id: 5,
-		title: 'Jordon',
+		title: 'Air Jordon',
 		price: 99,
 		desc: 'TUur inventore aliquid eveniet repellat quam amet iure, accusamus, tenetur magni quas corrupti namLorem ipsum dolor sit, amet consectetur',
 		colors: [
