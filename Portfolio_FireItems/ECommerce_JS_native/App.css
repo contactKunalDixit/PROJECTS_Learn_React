@@ -154,9 +154,9 @@ nav {
 	border-radius: 10px;
 }
 
-.pulseAnimate {
+/* .pulseAnimate {
 	background-color: red;
-}
+} */
 
 .buyButton:hover {
 	background-color: white;
@@ -402,13 +402,13 @@ label {
 
 .newSeason {
 	display: flex;
+	background-color: rgb(201, 197, 197);
 }
 
 .nsItem {
 	flex: 1;
 	color: black;
-	background-color: white;
-	background-color: rgb(201, 197, 197);
+	background-color: transparent;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -495,12 +495,23 @@ footer {
 	margin-right: 10px;
 }
 
+/* For Smaller screens up to 600px  */
+
 @media only screen and (max-width: 600px) {
 	nav {
 		padding: 20px;
 	}
+	.navTop {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
 
 	.search {
+		display: none;
+	}
+	.limitedOffer {
 		display: none;
 	}
 
@@ -508,23 +519,26 @@ footer {
 		flex-wrap: wrap;
 	}
 
-	.menuItem {
-		margin: 20px;
-		font-weight: 700;
-		font-size: 20px;
+	.menuItemUL {
+		flex-wrap: wrap;
+	}
+	.menuItemUL li {
+		margin: 15px;
+		font-weight: 500;
+		font-size: 15px;
 	}
 
-	.slider {
+	.carouselSection {
 		clip-path: none;
 	}
 
 	.sliderImg {
-		width: 90%;
+		width: 80%;
 	}
 
 	.sliderBg {
-		width: 100%;
-		height: 100%;
+		width: 80vw;
+		height: 80vw;
 	}
 
 	.sliderTitle {
@@ -533,29 +547,56 @@ footer {
 
 	.sliderPrice {
 		top: unset;
-		bottom: -50;
-		left: 0;
+		bottom: 10px;
+		left: 15px;
 		background-color: lightgrey;
+		font-size: 50px;
+		border-radius: 5px;
 	}
 
 	.buyButton {
-		right: 0;
-		top: 0;
+		right: 10px;
+		top: 10px;
+		padding: 5px 10px;
+		font-size: 20px;
 	}
 
-	.features {
-		flex-direction: column;
+	.featureSection {
+		flex-wrap: wrap;
+		padding: 20px;
 	}
 
-	.product {
+	.feature {
+		width: 45%;
+		height: auto;
+	}
+	.featureIcon {
+		width: 40px;
+		height: 40px;
+	}
+	.featureTitle {
+		font-size: 18px;
+		font-weight: 500;
+		margin: 15px;
+	}
+	.featureDesc {
+		color: gray;
+		width: 100%;
+		height: auto;
+	}
+
+	.productSection {
 		clip-path: none;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
+		height: 100vh;
 	}
 
 	.productImg {
-		width: 80%;
+		width: 60vw;
+		position: unset;
 	}
 
 	.productDetails {
@@ -565,25 +606,42 @@ footer {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		position: relative;
-		top: 0;
+		position: unset;
 	}
 
 	.productTitle {
-		font-size: 50px;
+		font-size: 40px;
 		margin: 0;
 	}
+	.productPrice {
+		margin: 20px auto;
+	}
 
-	.gallery {
-		display: none;
+	.colors,
+	.sizes {
+		display: flex;
+		margin: 10px 0;
+	}
+
+	.productButton {
+		margin-bottom: 20px;
+	}
+
+	.paymentModal {
+		width: 90vw;
 	}
 
 	.newSeason {
 		flex-direction: column;
+		/* margin: 30px; */
 	}
 
 	.nsItem:nth-child(2) {
 		padding: 50px;
+	}
+
+	.nsImg {
+		width: 90%;
 	}
 
 	footer {
@@ -607,4 +665,354 @@ footer {
 		width: 90%;
 		padding: 20px;
 	}
+}
+
+/* For Smaller screens up to 768px  */
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+	nav {
+		padding: 20px;
+	}
+	.navTop {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.search {
+		display: none;
+	}
+	.limitedOffer {
+		display: none;
+	}
+
+	.navBottom {
+		flex-wrap: wrap;
+	}
+
+	.menuItemUL {
+		flex-wrap: wrap;
+	}
+	.menuItemUL li {
+		margin: 15px;
+		font-weight: 500;
+		font-size: 15px;
+	}
+
+	.carouselSection {
+		clip-path: none;
+	}
+
+	.sliderImg {
+		width: 80%;
+	}
+
+	.sliderBg {
+		width: 80vw;
+		height: 80vw;
+	}
+
+	.sliderTitle {
+		display: unset;
+		font-size: 48px;
+	}
+
+	.sliderPrice {
+		top: unset;
+		bottom: 10px;
+		left: 15px;
+		background-color: lightgrey;
+		font-size: 50px;
+		border-radius: 5px;
+	}
+
+	.buyButton {
+		right: 10%;
+		top: 50%;
+		padding: 5px 10px;
+		font-size: 20px;
+	}
+
+	.featureSection {
+		flex-wrap: wrap;
+		padding: 20px;
+	}
+
+	.feature {
+		width: 45%;
+		height: auto;
+	}
+	.featureIcon {
+		width: 40px;
+		height: 40px;
+	}
+	.featureTitle {
+		font-size: 18px;
+		font-weight: 500;
+		margin: 15px;
+	}
+	.featureDesc {
+		color: gray;
+		width: 100%;
+		height: auto;
+	}
+
+	.productSection {
+		clip-path: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	.productImg {
+		width: 50vw;
+		position: unset;
+	}
+
+	.productDetails {
+		width: 100%;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: unset;
+	}
+
+	.productTitle {
+		font-size: 40px;
+		margin: 0;
+	}
+	.productPrice {
+		margin: 20px auto;
+	}
+
+	.colors,
+	.sizes {
+		display: flex;
+		margin: 10px 0;
+	}
+
+	.productButton {
+		margin-bottom: 20px;
+	}
+
+	.paymentModal {
+		width: 90vw;
+	}
+
+	.newSeason {
+		flex-direction: column;
+	}
+
+	.nsItem:nth-child(2) {
+		padding: 50px;
+	}
+
+	.nsImg {
+		width: 90%;
+	}
+
+	footer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footerLeft {
+		padding: 20px;
+		width: 90%;
+	}
+
+	.footerRight {
+		padding: 20px;
+		width: 90%;
+		align-items: center;
+		background-color: whitesmoke;
+	}
+
+	.payment {
+		width: 90%;
+		padding: 20px;
+	}
+}
+
+/* For Smaller screens up to 768px  */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	nav {
+		padding: 20px;
+	}
+	.navTop {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.search {
+		display: relative;
+	}
+	.limitedOffer {
+		display: relative;
+	}
+
+	.navBottom {
+		flex-wrap: wrap;
+	}
+
+	.menuItemUL {
+		flex-wrap: wrap;
+	}
+	.menuItemUL li {
+		margin: 15px;
+		font-weight: 500;
+		font-size: 15px;
+	}
+
+	.carouselSection {
+		clip-path: none;
+	}
+
+	.sliderImg {
+		width: 80%;
+	}
+
+	.sliderBg {
+		width: 80vw;
+		height: 80vw;
+	}
+
+	.sliderTitle {
+		display: unset;
+		font-size: 48px;
+	}
+
+	.sliderPrice {
+		top: unset;
+		bottom: 10px;
+		left: 15px;
+		background-color: lightgrey;
+		font-size: 50px;
+		border-radius: 5px;
+	}
+
+	.buyButton {
+		right: 10%;
+		top: 50%;
+		padding: 10px 15px;
+		font-size: 24px;
+	}
+
+	.featureSection {
+		flex-wrap: wrap;
+		padding: 20px;
+	}
+
+	.feature {
+		width: 45%;
+		height: auto;
+	}
+	.featureIcon {
+		width: 40px;
+		height: 40px;
+	}
+	.featureTitle {
+		font-size: 18px;
+		font-weight: 500;
+		margin: 15px;
+	}
+	.featureDesc {
+		color: gray;
+		width: 100%;
+		height: auto;
+	}
+
+	.productSection {
+		clip-path: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	.productImg {
+		width: 40vw;
+		position: unset;
+	}
+
+	.productDetails {
+		width: 100%;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: unset;
+	}
+
+	.productTitle {
+		font-size: 40px;
+		margin: 0;
+	}
+	.productPrice {
+		margin: 20px 0;
+	}
+	.productDesc {
+		padding: 10px 30px;
+	}
+	.colors,
+	.sizes {
+		display: flex;
+		margin: 10px 0;
+	}
+
+	.productButton {
+		margin-bottom: 20px;
+	}
+
+	.paymentModal {
+		width: 90vw;
+	}
+
+	.newSeason {
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	.nsItem:nth-child(2) {
+		padding: 50px;
+	}
+
+	.nsImg {
+		width: 90%;
+	}
+
+	footer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footerLeft {
+		padding: 20px;
+		width: 90%;
+	}
+
+	.footerRight {
+		padding: 20px;
+		width: 90%;
+		align-items: center;
+		background-color: whitesmoke;
+	}
+
+	.payment {
+		width: 90%;
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
 }
