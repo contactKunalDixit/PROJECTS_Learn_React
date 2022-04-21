@@ -1,0 +1,13 @@
+.homeContainer {
+	font-size: 12px;
+	width: 85vw;
+	position: absolute;
+	top: 6vh;
+	right: 0;
+	box-sizing: border-box;
+	.wrapper_homeContainer {
+		margin: 10px;
+		padding: 10px;
+		display: flex;
+	}
+}
