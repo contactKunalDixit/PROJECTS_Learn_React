@@ -8,6 +8,11 @@
 	.wrapper_homeContainer {
 		margin: 10px;
 		padding: 10px;
-		display: flex;
+		.homeContainerWidget {
+			display: flex;
+		}
+		.homeContainer_Charts {
+			display: flex;
+		}
 	}
 }
