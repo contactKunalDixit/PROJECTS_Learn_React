@@ -4,6 +4,7 @@ import './homeContainer.scss';
 import Widget from '../widgets/Widget';
 import FeaturedChart from '../chart_Featured/FeaturedChart';
 import NormalChart from '../chart_Normal/NormalChart';
+import ListContainer from '../list_Container/ListContainer';
 const HomeContainer = () => {
 	return (
 		<div className='homeContainer'>
@@ -17,6 +18,10 @@ const HomeContainer = () => {
 				<div className='homeContainer_Charts'>
 					<FeaturedChart></FeaturedChart>
 					<NormalChart></NormalChart>
+				</div>
+
+				<div className='listContainer_Tables'>
+					<ListContainer></ListContainer>
 				</div>
 			</div>
 		</div>
