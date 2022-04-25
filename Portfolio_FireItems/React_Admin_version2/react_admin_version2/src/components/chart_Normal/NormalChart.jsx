@@ -10,23 +10,39 @@ import {
 	ResponsiveContainer,
 } from 'recharts';
 const data = [
-	{
-		Month: 'January',
-		Revenue: 1200,
-		Expense: 1400,
-		Profit: -200,
-	},
+	{ Month: 'January', Revenue: 1200, Expense: 1400, Profit: -200 },
 	{ Month: 'February', Revenue: 2100, Expense: 1200, Profit: 900 },
 	{ Month: 'March', Revenue: 800, Expense: 300, Profit: 500 },
 	{ Month: 'April', Revenue: 1400, Expense: 1300, Profit: 100 },
 	{ Month: 'May', Revenue: 900, Expense: 500, Profit: 400 },
 	{ Month: 'June', Revenue: 1700, Expense: 700, Profit: 1000 },
 ];
+function clicked() {
+	console.log('Clicked');
+}
 
+let LegendRevenue = () => {
+	return <button className='LegendRevenue' onClick={clicked}></button>;
+};
+let LegendExpense = () => {
+	return <button className='LegendExpense' onClick={clicked}></button>;
+};
+let LegendProfit = () => {
+	return <button className='LegendProfit' onClick={clicked}></button>;
+};
 const NormalChart = () => {
 	return (
 		<div className='normalChart'>
-			<div className='title'>Past 6 Months Sales Performance</div>
+			<div className='normalChartTopBar'>
+				<div className='title'>Past 6 Months Sales Performance</div>
+				<div className='chooseLegend'>
+					{/********** Needs click event functionality: graph appears and dissapears on clicking the legend button ********************************/}
+					<LegendRevenue></LegendRevenue>
+					<LegendExpense></LegendExpense>
+					<LegendProfit></LegendProfit>
+				</div>
+			</div>
+
 			<ResponsiveContainer width='100%' aspect={2 / 1}>
 				{/* Original value of height i.e. height=100% has been changed to aspect ratio. Now when width will be say 100px, then height accordingly would be hald of it i.e. 50px */}
 

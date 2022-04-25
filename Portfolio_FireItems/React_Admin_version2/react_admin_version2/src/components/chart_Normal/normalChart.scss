@@ -6,12 +6,43 @@
 	padding: 5px 10px;
 	border-radius: 10px;
 	gap: 20px;
-
 	color: gray;
-	.title {
-		margin-bottom: 20px;
-	}
-	.chartGrid {
-		stroke: lightgray;
+
+	.normalChartTopBar {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		.title {
+			margin-bottom: 20px;
+			font-size: 14px;
+			color: black;
+			font-weight: 500;
+		}
+		.chooseLegend {
+			display: flex;
+			.LegendRevenue,
+			.LegendExpense,
+			.LegendProfit {
+				width: 15px;
+				height: 15px;
+				margin-right: 15px;
+				cursor: pointer;
+				border-radius: 2px;
+				border: 1px solid black;
+			}
+			.LegendRevenue {
+				background-color: #8884d8;
+			}
+			.LegendExpense {
+				background-color: #ca82c0;
+			}
+			.LegendProfit {
+				background-color: #a4f299;
+			}
+		}
+		.chartGrid {
+			stroke: lightgray;
+		}
 	}
 }
