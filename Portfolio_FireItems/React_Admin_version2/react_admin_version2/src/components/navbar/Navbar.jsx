@@ -13,7 +13,7 @@ const Navbar = () => {
 		<div className='navbar'>
 			<div className='wrapper'>
 				<div className='startSec'>
-					<h1 className='logo'>App_Admin</h1>
+					<h1 className='logo'>Your_App_Admin</h1>
 				</div>
 				<div className='middleSec'>
 					<input type='text' placeholder='Search...' className='searchInput' />
