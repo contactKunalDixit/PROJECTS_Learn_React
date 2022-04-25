@@ -79,24 +79,22 @@ const List = () => {
 				<TableBody>
 					{rows.map((row) => (
 						<TableRow key={row.id}>
-							<TableCell
-								className='tableCell'
-								//   component="th" scope="row"
-							>
-								{row.id}
-							</TableCell>
+							<TableCell className='tableCell'>{row.id}</TableCell>
 							<TableCell className='tableCell'>
-								<div className='image'>
+								<div className='cellImageWrapper'>
 									<img src={row.img} alt='' className='image' />
+
+									<div className='product'>{row.product}</div>
 								</div>
-								<div className='product'>{row.product}</div>
 							</TableCell>
 
 							<TableCell className='tableCell'>{row.customer}</TableCell>
 							<TableCell className='tableCell'>{row.date}</TableCell>
 							<TableCell className='tableCell'>{row.amount}</TableCell>
 							<TableCell className='tableCell'>{row.method}</TableCell>
-							<TableCell className='tableCell'>{row.status}</TableCell>
+							<TableCell className='tableCell'>
+								<span className={`status ${row.status}`}>{row.status}</span>
+							</TableCell>
 						</TableRow>
 					))}
 				</TableBody>
