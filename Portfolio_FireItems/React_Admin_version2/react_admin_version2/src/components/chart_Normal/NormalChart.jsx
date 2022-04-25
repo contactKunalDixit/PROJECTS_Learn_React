@@ -10,18 +10,23 @@ import {
 	ResponsiveContainer,
 } from 'recharts';
 const data = [
-	{ Month: 'January', Revenue: 1200, Expenses: 1400 },
-	{ Month: 'February', Revenue: 2100, Expenses: 1200 },
-	{ Month: 'March', Revenue: 800, Expenses: 300 },
-	{ Month: 'April', Revenue: 1600, Expenses: 1200 },
-	{ Month: 'May', Revenue: 900, Expenses: 500 },
-	{ Month: 'June', Revenue: 1700, Expenses: 700 },
+	{
+		Month: 'January',
+		Revenue: 1200,
+		Expense: 1400,
+		Profit: -200,
+	},
+	{ Month: 'February', Revenue: 2100, Expense: 1200, Profit: 900 },
+	{ Month: 'March', Revenue: 800, Expense: 300, Profit: 500 },
+	{ Month: 'April', Revenue: 1400, Expense: 1300, Profit: 100 },
+	{ Month: 'May', Revenue: 900, Expense: 500, Profit: 400 },
+	{ Month: 'June', Revenue: 1700, Expense: 700, Profit: 1000 },
 ];
 
 const NormalChart = () => {
 	return (
 		<div className='normalChart'>
-			<div className='title'>Past 6 Months Profits</div>
+			<div className='title'>Past 6 Months Sales Performance</div>
 			<ResponsiveContainer width='100%' aspect={2 / 1}>
 				{/* Original value of height i.e. height=100% has been changed to aspect ratio. Now when width will be say 100px, then height accordingly would be hald of it i.e. 50px */}
 
@@ -36,9 +41,13 @@ const NormalChart = () => {
 							<stop offset='5%' stopColor='#8884d8' stopOpacity={0.8} />
 							<stop offset='95%' stopColor='#8884d8' stopOpacity={0} />
 						</linearGradient>
-						<linearGradient id='Expenses' x1='0' y1='0' x2='0' y2='1'>
+						<linearGradient id='Expense' x1='0' y1='0' x2='0' y2='1'>
 							<stop offset='5%' stopColor='#ca82c0' stopOpacity={0.8} />
 							<stop offset='95%' stopColor='#ca82c0' stopOpacity={0} />
+						</linearGradient>
+						<linearGradient id='Profit' x1='0' y1='0' x2='0' y2='1'>
+							<stop offset='5%' stopColor='#a4f299' stopOpacity={0.8} />
+							<stop offset='95%' stopColor='#b0e4b3' stopOpacity={0} />
 						</linearGradient>
 					</defs>
 					<XAxis dataKey='Month' stroke='gray' />
@@ -54,10 +63,17 @@ const NormalChart = () => {
 					/>
 					<Area
 						type='monotone'
-						dataKey='Expenses'
+						dataKey='Expense'
 						stroke='#b04927'
 						fillOpacity={1}
-						fill='url(#Expenses)'
+						fill='url(#Expense)'
+					/>
+					<Area
+						type='monotone'
+						dataKey='Profit'
+						stroke='#072f11'
+						fillOpacity={1}
+						fill='url(#Profit)'
 					/>
 				</AreaChart>
 			</ResponsiveContainer>
