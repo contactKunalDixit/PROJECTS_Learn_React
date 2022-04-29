@@ -1,10 +1,9 @@
 import './components/dataTable/dataTable.scss';
-
 export const userColumns = [
 	{ field: 'id', headerName: 'ID', width: 70 },
 	{
 		field: 'user',
-		headerName: 'User',
+		headerName: 'User Name',
 		width: 230,
 		renderCell: (params) => {
 			return (
@@ -40,6 +39,16 @@ export const userColumns = [
 	},
 ];
 
+export const buttonData = [
+	{
+		id: 1,
+		name: 'View',
+	},
+	{
+		id: 2,
+		name: 'Delete',
+	},
+];
 //temporary data
 export const userRows = [
 	{

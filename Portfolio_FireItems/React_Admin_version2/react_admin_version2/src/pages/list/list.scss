@@ -1,5 +1,5 @@
 .listContainer {
-	font-size: 12px;
+	font-size: 14px;
 	width: 85vw;
 	position: absolute;
 	top: 6vh;
@@ -8,5 +8,32 @@
 	.wrapper_listContainer {
 		margin: 10px;
 		padding: 10px;
+		.cellImg {
+			width: 40px;
+			height: 40px;
+			margin-right: 25px;
+			border-radius: 50%;
+		}
+		.cellWithImg {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			width: 100%;
+		}
+		.cellWithStatus {
+			padding: 2px 5px;
+			&.passive {
+				color: red;
+				background-color: rgba(255, 0, 0, 0.062);
+			}
+			&.active {
+				color: green;
+				background-color: rgba(0, 128, 0, 0.061);
+			}
+			&.pending {
+				color: orange;
+				background-color: rgba(255, 166, 0, 0.073);
+			}
+		}
 	}
 }
