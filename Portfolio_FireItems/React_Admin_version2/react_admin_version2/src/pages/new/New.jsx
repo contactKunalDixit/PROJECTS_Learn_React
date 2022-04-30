@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './new.scss';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
-import noImagePic from '../../Images/no-image-icon-0.jpeg';
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 import { userInputs, productInputs } from '../../formSource';
 
