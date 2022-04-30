@@ -2,7 +2,7 @@ import * as React from 'react';
 import './dataTable.scss';
 import { DataGrid } from '@mui/x-data-grid';
 import { userColumns, userRows } from '../../dataTablesource';
-
+import { Link } from 'react-router-dom';
 const DataTable = () => {
 	const actionColumn = [
 		{
@@ -12,8 +12,9 @@ const DataTable = () => {
 			renderCell: () => {
 				return (
 					<div className='cellAction'>
-						<button className='viewButton'>View</button>
-
+						<Link to='/users/123' style={{ textDecoration: 'none' }}>
+							<button className='viewButton'>View</button>
+						</Link>
 						<button className='deleteButton'> Delete</button>
 					</div>
 				);
@@ -24,8 +25,9 @@ const DataTable = () => {
 		<React.Fragment>
 			<div className='dataTable'>
 				<h1>Customers</h1>
-
-				<button className='ActionBtn'>Add New</button>
+				<Link to='/users/new' style={{ textDecoration: 'none' }}>
+					<button className='ActionBtn'>Add New</button>
+				</Link>
 			</div>
 			<div style={{ height: 500, width: '100%' }}>
 				<DataGrid

@@ -8,12 +8,15 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 	return (
 		<div className='navbar'>
 			<div className='wrapper'>
 				<div className='startSec'>
-					<h1 className='logo'>Your_App_Admin</h1>
+					<Link to='/' style={{ textDecoration: 'none' }}>
+						<h1 className='logo'>Your_App_Admin</h1>
+					</Link>
 				</div>
 				<div className='middleSec'>
 					<input type='text' placeholder='Search...' className='searchInput' />

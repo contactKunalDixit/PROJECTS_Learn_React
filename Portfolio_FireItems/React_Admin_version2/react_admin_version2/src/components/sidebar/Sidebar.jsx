@@ -12,6 +12,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
 	return (
@@ -22,8 +23,10 @@ const Sidebar = () => {
 						<span className='testChild_sidebar'>MAIN</span>
 						<ul className='mainSec_sidebar'>
 							<li>
-								<DashboardIcon />
-								<span> Dashboard</span>
+								<Link to='/' style={{ textDecoration: 'none' }}>
+									<DashboardIcon />
+									<span> Dashboard</span>
+								</Link>
 							</li>
 						</ul>
 					</li>
@@ -32,12 +35,16 @@ const Sidebar = () => {
 						LISTS
 						<ul className='listsSec_sidebar'>
 							<li>
-								<PersonIcon></PersonIcon>
-								<span> Users</span>
+								<Link to='/users' style={{ textDecoration: 'none' }}>
+									<PersonIcon></PersonIcon>
+									<span> Users</span>
+								</Link>
 							</li>
 							<li>
-								<Inventory2Icon></Inventory2Icon>
-								<span> Products</span>
+								<Link to='/products ' style={{ textDecoration: 'none' }}>
+									<Inventory2Icon></Inventory2Icon>
+									<span> Products</span>
+								</Link>
 							</li>
 							<li>
 								<BookmarkBorderIcon></BookmarkBorderIcon>

@@ -35,7 +35,7 @@ const New = ({ inputs, title }) => {
 									<input
 										type='file'
 										id='file'
-										onClick={(e) => {
+										onChange={(e) => {
 											setFile(e.target.files[0]);
 											console.log('Kunal');
 										}}
