@@ -5,6 +5,7 @@ import New from './pages/new/New.jsx';
 import List from './pages/list/List.jsx';
 import Single from './pages/single/Single.jsx';
 import NotFound from './pages/notFound/NotFound.jsx';
+import { userInputs, productInputs } from './formSource';
 
 function App() {
 	return (
@@ -17,12 +18,18 @@ function App() {
 						<Route path='users'>
 							<Route index element={<List />} />
 							<Route path=':userId' element={<Single />} />
-							<Route path='new' element={<New />} />
+							<Route
+								path='new'
+								element={<New inputs={userInputs} title='Add New User' />}
+							/>
 						</Route>
 						<Route path='products'>
 							<Route index element={<List />} />
 							<Route path=':productId' element={<Single />} />
-							<Route path='new' element={<New />} />
+							<Route
+								path='new'
+								element={<New inputs={productInputs} title='Add New Product' />}
+							/>
 						</Route>
 					</Route>
 					<Route path='*' element={<NotFound />} />

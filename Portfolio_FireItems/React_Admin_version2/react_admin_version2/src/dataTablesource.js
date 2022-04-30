@@ -49,6 +49,7 @@ export const buttonData = [
 		name: 'Delete',
 	},
 ];
+
 //temporary data
 export const userRows = [
 	{
@@ -130,5 +131,137 @@ export const userRows = [
 		email: 'snow@gmail.com',
 		status: 'active',
 		age: 65,
+	},
+];
+
+export const prodColumns = [
+	{ field: 'id', headerName: 'ID', width: 70 },
+	{
+		field: 'product',
+		headerName: 'Product Name',
+		width: 230,
+		renderCell: (params) => {
+			return (
+				<div className='cellWithImg'>
+					<img className='cellImg' src={params.productRow.img} alt='avatar' />
+					{params.productRow.Title}
+				</div>
+			);
+		},
+	},
+	{
+		field: 'price',
+		headerName: 'Price',
+		width: 230,
+	},
+
+	{
+		field: 'category',
+		headerName: 'Category',
+		width: 100,
+	},
+	{
+		field: 'stock',
+		headerName: 'Stock',
+		width: 160,
+		renderCell: (params) => {
+			return (
+				<div className={`cellWithStatus ${params.productRow.stock}`}>
+					{params.productRow.stock}
+				</div>
+			);
+		},
+	},
+];
+export const productRow = [
+	{
+		id: 1,
+		Title: 'Product 1',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 2,
+		Title: 'Product 2',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 3,
+		Title: 'Product 3',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 4,
+		Title: 'Product 4',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 5,
+		Title: 'Product 5',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 6,
+		Title: 'Product 6',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 7,
+		Title: 'Product 7',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 8,
+		Title: 'Product 8',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
+	},
+	{
+		id: 9,
+		Title: 'Product 9',
+		category: 'computers',
+		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
+		Description:
+			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
+		stock: 'in stock',
+		Price: '$100',
 	},
 ];

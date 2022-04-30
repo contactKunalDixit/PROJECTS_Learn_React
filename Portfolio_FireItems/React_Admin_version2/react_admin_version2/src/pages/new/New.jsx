@@ -3,9 +3,8 @@ import './new.scss';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
-import { userInputs, productInputs } from '../../formSource';
 
-const New = () => {
+const New = ({ inputs, title }) => {
 	const [file, setFile] = useState('');
 	return (
 		<div className='newUser'>
@@ -13,7 +12,7 @@ const New = () => {
 			<Sidebar></Sidebar>
 			<div className='newContainer'>
 				<div className='wrapper_newContainer'>
-					<div className='newTitle'>Add New User</div>
+					<div className='newTitle'>{title}</div>
 					<div className='newBottom'>
 						<div className='newDP'>
 							<img
@@ -27,7 +26,7 @@ const New = () => {
 						</div>
 
 						<div className='newInfoForm'>
-							<form action='#'>
+							<form>
 								<div className='formInput'>
 									<label htmlFor={file}>
 										Image:
@@ -36,11 +35,14 @@ const New = () => {
 									<input
 										type='file'
 										id='file'
-										onChange={(e) => setFile(e.target.files[0])}
+										onClick={(e) => {
+											setFile(e.target.files[0]);
+											console.log('Kunal');
+										}}
 										style={{ display: 'none' }}
 									/>
 								</div>
-								{userInputs.map((input) => (
+								{inputs.map((input) => (
 									<div className='formInput' key={input.id}>
 										<label>{input.label}</label>
 										<input type={input.type} placeholder={input.placeholder} />

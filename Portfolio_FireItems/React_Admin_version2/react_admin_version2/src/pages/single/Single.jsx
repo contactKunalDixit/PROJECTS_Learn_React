@@ -18,7 +18,6 @@ const Single = () => {
 						<UserChart></UserChart>
 					</div>
 					<div className='listContainer_SinglePage'>
-						{/* <Widget></Widget> */}
 						<ListContainer></ListContainer>
 					</div>
 				</div>
