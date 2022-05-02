@@ -1,21 +1,21 @@
 import React from 'react';
-import './list.scss';
+import './userList.scss';
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
-import DataTable from '../../components/dataTable/DataTable';
+import ProdDataTable from '../../components/dataTable/ProdDataTable';
 
-const List = () => {
+const ProdList = () => {
 	return (
 		<div className='list'>
 			<Navbar></Navbar>
 			<Sidebar></Sidebar>
 			<div className='listContainer'>
 				<div className='wrapper_listContainer'>
-					<DataTable></DataTable>
+					<ProdDataTable></ProdDataTable>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default List;
+export default ProdList;

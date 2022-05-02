@@ -143,8 +143,8 @@ export const prodColumns = [
 		renderCell: (params) => {
 			return (
 				<div className='cellWithImg'>
-					<img className='cellImg' src={params.productRow.img} alt='avatar' />
-					{params.productRow.Title}
+					<img className='cellImg' src={params.row.img} alt='avatar' />
+					{params.row.Title}
 				</div>
 			);
 		},
@@ -166,8 +166,8 @@ export const prodColumns = [
 		width: 160,
 		renderCell: (params) => {
 			return (
-				<div className={`cellWithStatus ${params.productRow.stock}`}>
-					{params.productRow.stock}
+				<div className={`cellWithStatus ${params.row.stock}`}>
+					{params.row.stock}
 				</div>
 			);
 		},
@@ -181,7 +181,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 	{
@@ -191,7 +191,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Finished',
 		Price: '$100',
 	},
 	{
@@ -201,7 +201,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 	{
@@ -211,7 +211,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 	{
@@ -221,7 +221,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Finished',
 		Price: '$100',
 	},
 	{
@@ -231,7 +231,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 	{
@@ -241,7 +241,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 	{
@@ -251,7 +251,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 	{
@@ -261,7 +261,7 @@ export const productRow = [
 		img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'",
 		Description:
 			'lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 lorem20 ',
-		stock: 'in stock',
+		stock: 'Available',
 		Price: '$100',
 	},
 ];

@@ -2,8 +2,9 @@ import * as React from 'react';
 import './dataTable.scss';
 import { DataGrid } from '@mui/x-data-grid';
 import { prodColumns, productRow } from '../../dataTablesource';
+import { Link } from 'react-router-dom';
 
-const prodDataTable = () => {
+const ProdDataTable = () => {
 	const actionColumn = [
 		{
 			field: 'action',
@@ -24,8 +25,9 @@ const prodDataTable = () => {
 		<React.Fragment>
 			<div className='dataTable'>
 				<h1>Products</h1>
-
-				<button className='ActionBtn'>Add New</button>
+				<Link to='/products/new' style={{ textDecoration: 'none' }}>
+					<button className='ActionBtn'>Add New</button>
+				</Link>
 			</div>
 			<div style={{ height: 500, width: '100%' }}>
 				<DataGrid
@@ -41,4 +43,4 @@ const prodDataTable = () => {
 	);
 };
 
-export default prodDataTable;
+export default ProdDataTable;
