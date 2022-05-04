@@ -7,10 +7,14 @@ import ProdList from './pages/list/ProdList';
 import Single from './pages/single/Single.jsx';
 import NotFound from './pages/notFound/NotFound.jsx';
 import { userInputs, productInputs } from './formSource';
+import './style/dark.scss';
+import { useContext } from 'react';
+import { DarkModeContext } from './context/darkModeContext.js';
 
 function App() {
+	const { darkMode } = useContext(DarkModeContext);
 	return (
-		<div className='App'>
+		<div className={darkMode ? 'App dark' : 'App'}>
 			<BrowserRouter>
 				<Routes>
 					<Route path='/'>

@@ -1,0 +1,111 @@
+.App.dark {
+	background-color: #222;
+	height: 200vh;
+	color: rgb(182, 182, 182);
+
+	.chartGrid {
+		stroke: rgba(28, 228, 228, 0.413);
+	}
+	.table {
+		background-color: #222;
+		.tableCell {
+			color: rgb(182, 182, 182);
+		}
+	}
+	.navbar {
+		background-color: #222;
+		color: #999;
+		border: 1px solid rgba(171, 163, 163, 0.241);
+		.searchInput {
+			border-color: rgb(131, 128, 128);
+			background-color: #222;
+			color: rgb(182, 182, 182);
+		}
+		.logo {
+			color: rgba(0, 255, 255, 0.708);
+		}
+	}
+
+	.sidebar_sidebar {
+		background-color: #222;
+		border: 0.5px solid gray;
+
+		.center_sidebar {
+			.ParentList_sidebar {
+				color: rgba(0, 255, 255, 0.708);
+				.listTitle_sidebar {
+					li {
+						&:hover {
+							background-color: rgba(0, 255, 255, 0.267);
+						}
+					}
+
+					.Link {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						color: rgba(0, 255, 255, 0.708);
+					}
+				}
+			}
+		}
+
+		.bottom_sidebar {
+			color: rgba(0, 255, 255, 0.708);
+
+			ul > li {
+				color: rgba(0, 255, 255, 0.708);
+			}
+		}
+	}
+	.dataTable {
+		h1,
+		a {
+			color: rgba(0, 255, 255, 0.708);
+		}
+		button {
+			color: rgba(0, 255, 255, 0.708);
+		}
+		.dataGrid {
+			color: rgba(0, 255, 255, 0.708);
+		}
+	}
+	.featuredChart {
+		h1 {
+			color: antiquewhite;
+		}
+	}
+	.normalChart {
+		.title {
+			color: antiquewhite;
+		}
+	}
+	.dataGridTable > * {
+		color: rgba(0, 255, 255, 0.708);
+	}
+	.dataGridTable > button {
+		color: rgba(0, 255, 255, 0.708);
+	}
+	.viewButton {
+		color: rgba(0, 255, 255, 0.708);
+	}
+	.User_FeaturedDP {
+		.top_featured {
+			color: rgba(0, 255, 255, 0.708);
+		}
+		.top_featured > h1 {
+			color: rgba(0, 255, 255, 0.708);
+		}
+		.bottom_featured {
+			color: rgba(0, 255, 255, 0.708);
+		}
+	}
+	.normalChart {
+		.normalChartTopbar {
+			color: rgba(0, 255, 255, 0.708);
+			.title {
+				color: rgba(0, 255, 255, 0.708);
+			}
+		}
+	}
+}

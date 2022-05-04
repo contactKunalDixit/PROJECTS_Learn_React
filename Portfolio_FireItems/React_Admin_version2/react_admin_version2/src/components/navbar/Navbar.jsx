@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import './navbar.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -9,7 +9,10 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import { Link } from 'react-router-dom';
+import { DarkModeContext } from '../../context/darkModeContext';
+
 const Navbar = () => {
+	const { dispatch } = useContext(DarkModeContext);
 	return (
 		<div className='navbar'>
 			<div className='wrapper'>
@@ -33,7 +36,12 @@ const Navbar = () => {
 						<LanguageIcon sx={{ fontSize: 18 }}></LanguageIcon>
 						<span>English</span>
 					</div>
-					<div className='theme'>
+					<div
+						className='theme'
+						onClick={() => {
+							dispatch({ type: 'TOGGLE' });
+						}}
+					>
 						<LightModeOutlinedIcon
 							sx={{ fontSize: 18 }}
 						></LightModeOutlinedIcon>

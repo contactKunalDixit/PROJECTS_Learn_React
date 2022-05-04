@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './normalChart.scss';
 import {
 	AreaChart,
@@ -17,20 +17,37 @@ const data = [
 	{ Month: 'May', Revenue: 900, Expense: 500, Profit: 400 },
 	{ Month: 'June', Revenue: 1700, Expense: 700, Profit: 1000 },
 ];
-function clicked() {
-	console.log('Clicked');
-}
 
-let LegendRevenue = () => {
-	return <button className='LegendRevenue' onClick={clicked}></button>;
-};
-let LegendExpense = () => {
-	return <button className='LegendExpense' onClick={clicked}></button>;
-};
-let LegendProfit = () => {
-	return <button className='LegendProfit' onClick={clicked}></button>;
-};
 const NormalChart = () => {
+	const [colorStateRev, setcolorStateRev] = useState(true);
+	let graphActivateRev = () => {
+		setcolorStateRev(!colorStateRev);
+	};
+	const [colorStateExp, setcolorStateExp] = useState(true);
+	let graphActivateExp = () => {
+		setcolorStateExp(!colorStateExp);
+	};
+	const [colorStatePro, setcolorStatePro] = useState(true);
+	let graphActivatePro = () => {
+		setcolorStatePro(!colorStatePro);
+	};
+
+	let LegendRevenue = () => {
+		return (
+			<button className='LegendRevenue' onClick={graphActivateRev}></button>
+		);
+	};
+	let LegendExpense = () => {
+		return (
+			<button className='LegendExpense' onClick={graphActivateExp}></button>
+		);
+	};
+	let LegendProfit = () => {
+		return (
+			<button className='LegendProfit' onClick={graphActivatePro}></button>
+		);
+	};
+
 	return (
 		<div className='normalChart'>
 			<div className='normalChartTopBar'>
@@ -53,44 +70,69 @@ const NormalChart = () => {
 					margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
 				>
 					<defs>
-						<linearGradient id='Revenue' x1='0' y1='0' x2='0' y2='1'>
-							<stop offset='5%' stopColor='#8884d8' stopOpacity={0.8} />
-							<stop offset='95%' stopColor='#8884d8' stopOpacity={0} />
-						</linearGradient>
-						<linearGradient id='Expense' x1='0' y1='0' x2='0' y2='1'>
-							<stop offset='5%' stopColor='#ca82c0' stopOpacity={0.8} />
-							<stop offset='95%' stopColor='#ca82c0' stopOpacity={0} />
-						</linearGradient>
-						<linearGradient id='Profit' x1='0' y1='0' x2='0' y2='1'>
-							<stop offset='5%' stopColor='#a4f299' stopOpacity={0.8} />
-							<stop offset='95%' stopColor='#b0e4b3' stopOpacity={0} />
-						</linearGradient>
+						{colorStateRev ? (
+							<linearGradient id='Revenue' x1='0' y1='0' x2='0' y2='1'>
+								<stop offset='5%' stopColor='#8884d8' stopOpacity={0.8} />
+								<stop offset='95%' stopColor='#8884d8' stopOpacity={0} />
+							</linearGradient>
+						) : (
+							''
+						)}
+						{colorStateExp ? (
+							<linearGradient id='Expense' x1='0' y1='0' x2='0' y2='1'>
+								<stop offset='5%' stopColor='#ca82c0' stopOpacity={0.8} />
+								<stop offset='95%' stopColor='#ca82c0' stopOpacity={0} />
+							</linearGradient>
+						) : (
+							''
+						)}
+						{colorStatePro ? (
+							<linearGradient id='Profit' x1='0' y1='0' x2='0' y2='1'>
+								<stop offset='5%' stopColor='#a4f299' stopOpacity={0.8} />
+								<stop offset='95%' stopColor='#b0e4b3' stopOpacity={0} />
+							</linearGradient>
+						) : (
+							''
+						)}
 					</defs>
 					<XAxis dataKey='Month' stroke='gray' />
 					<YAxis />
 					<CartesianGrid strokeDasharray='3 3' className='chartGrid' />
 					<Tooltip />
-					<Area
-						type='monotone'
-						dataKey='Revenue'
-						stroke='#1b1596'
-						fillOpacity={1}
-						fill='url(#Revenue)'
-					/>
-					<Area
-						type='monotone'
-						dataKey='Expense'
-						stroke='#b04927'
-						fillOpacity={1}
-						fill='url(#Expense)'
-					/>
-					<Area
-						type='monotone'
-						dataKey='Profit'
-						stroke='#072f11'
-						fillOpacity={1}
-						fill='url(#Profit)'
-					/>
+					{colorStateRev ? (
+						<Area
+							type='monotone'
+							dataKey='Revenue'
+							stroke='#1b1596'
+							fillOpacity={1}
+							fill='url(#Revenue)'
+						/>
+					) : (
+						''
+					)}
+
+					{colorStateExp ? (
+						<Area
+							type='monotone'
+							dataKey='Expense'
+							stroke='#b04927'
+							fillOpacity={1}
+							fill='url(#Expense)'
+						/>
+					) : (
+						''
+					)}
+					{colorStatePro ? (
+						<Area
+							type='monotone'
+							dataKey='Profit'
+							stroke='#072f11'
+							fillOpacity={1}
+							fill='url(#Profit)'
+						/>
+					) : (
+						''
+					)}
 				</AreaChart>
 			</ResponsiveContainer>
 		</div>

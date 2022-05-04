@@ -29,8 +29,9 @@ const DataTable = () => {
 					<button className='ActionBtn'>Add New</button>
 				</Link>
 			</div>
-			<div style={{ height: 500, width: '100%' }}>
+			<div style={{ height: 500, width: '100%' }} className='dataGridTable'>
 				<DataGrid
+					className='dataGrid'
 					rows={userRows}
 					columns={userColumns.concat(actionColumn)}
 					pageSize={7}

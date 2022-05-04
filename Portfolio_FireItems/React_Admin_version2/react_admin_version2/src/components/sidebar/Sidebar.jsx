@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import './sidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
@@ -13,8 +13,10 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
+import { DarkModeContext } from '../../context/darkModeContext';
 
 const Sidebar = () => {
+	const { dispatch } = useContext(DarkModeContext);
 	return (
 		<div className='sidebar_sidebar'>
 			<div className='center_sidebar'>
@@ -23,7 +25,11 @@ const Sidebar = () => {
 						<span className='testChild_sidebar'>MAIN</span>
 						<ul className='mainSec_sidebar'>
 							<li>
-								<Link to='/' style={{ textDecoration: 'none' }}>
+								<Link
+									to='/'
+									style={{ textDecoration: 'none' }}
+									className='Link'
+								>
 									<DashboardIcon />
 									<span> Dashboard</span>
 								</Link>
@@ -32,16 +38,24 @@ const Sidebar = () => {
 					</li>
 
 					<li className='listTitle_sidebar'>
-						LISTS
+						<span className='testChild_sidebar'>LISTS</span>
 						<ul className='listsSec_sidebar'>
 							<li>
-								<Link to='/users' style={{ textDecoration: 'none' }}>
+								<Link
+									to='/users'
+									style={{ textDecoration: 'none' }}
+									className='Link'
+								>
 									<PersonIcon></PersonIcon>
 									<span> Users</span>
 								</Link>
 							</li>
 							<li>
-								<Link to='/products ' style={{ textDecoration: 'none' }}>
+								<Link
+									to='/products '
+									style={{ textDecoration: 'none' }}
+									className='Link'
+								>
 									<Inventory2Icon></Inventory2Icon>
 									<span> Products</span>
 								</Link>
@@ -107,10 +121,20 @@ const Sidebar = () => {
 						THEMES
 						<ul className='themeSec_sidebar themeButton_sidebar'>
 							<li>
-								<div className='black_sidebar'></div>
+								<div
+									className='black_sidebar'
+									onClick={() => {
+										dispatch({ type: 'DARK' });
+									}}
+								></div>
 							</li>
 							<li>
-								<div className='white_sidebar'></div>
+								<div
+									className='white_sidebar'
+									onClick={() => {
+										dispatch({ type: 'LIGHT' });
+									}}
+								></div>
 							</li>
 						</ul>
 					</li>
